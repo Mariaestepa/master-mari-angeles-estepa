@@ -2,10 +2,59 @@
 <html>
     <head>
        <meta charset="UTF-8">
+       <!--No existe la metaetiqueta title, es la etiqueta title-->
+       <title>Aprendiendo SEO técnico</title>
     </head>
 <body>
-    <h1>Hola soy Mari Ángeles Estepa</h1>
-    <div>Esto no es Hola Mundo</div>
-    <p>Esto es un párrafo</p>
+    <header>
+     <!--La etiqueta nav tiene que estar dentro de la etiqueta body nunca dentro de la etiqueta head-->
+     <nav>
+        <ul>
+           <li><a href="/">Incio</a></li>
+           <li><a href="/sobre-mi.html">Sobre mi</a></li>
+           <li><a href="/servicios.html"style="color:rgb(217, 49, 181);">Servicios</a></li>
+           <li><a href="/contacto.html">Contacto</a></li>
+           <li><a href="/carpeta/archivo-carpeta.html">Archivo dentro de una carpeta</a></li>
+           <li><a href="https://carlos.sanchezdonate.com/master-seo-tecnico/" target="_blank">Más información</a></li>
+        </ul> 
+     </nav>
+    </header>
+    <section>
+         <!--No se me actualizan ciertos cambios en la página hasta que no guardo aquí, además te explico un error que cometí desde el principio, 
+         que fue no volcar la carpeta de github aquí sino solo la de ejemplo, 
+         esto lo he hecho a posteriori cuando vi que dentro de ejemplo no podia crear carpetas, 
+         entonces fue cuando me traje toda la carpeta de github, ¿esto influye en algo?-->
+        <h1 class="h1big">Hola soy Mari Ángeles Estepa</h1>
+        <div title="Este texto se lee cuando pasas el ratón por encima">Esto no es Hola Mundo</div>
+        <p>Estamos <b style="color: aquamarine;">aquí</b> para aprender SEO</p>
+        <p>Estamos <b style="color: rgb(217, 49, 181);">aquí</b> para <br> aprender</br>SEO</p>
+        <img src="/Imágenes/BLOG_que-es-seo_800x533.jpg">
+    </section>
+    <section>
+      <div>
+         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+         <h2>El pasaje estándar <b style="font-size: large;">Lorem Ipsum</b>, usado desde el año 1500.</h2>
+         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<a href="https://es.lipsum.com/" target="_blank"><b style="color: coral;">rem aperiam</b></a>, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+         <ul>
+             <li>Traducci�n hecha por H. Rackham en 1914</li>
+             <li>Traducci�n hecha por H. Rackham en 1914</li>
+             <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
+             <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</li>
+             <li>sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+         </ul> 
+         <!--No me funciona el atributo title-->
+         <span title="Se lee cuando pasas">On the other hand, we denounce with righteous indignation and dislike</spam>
+      </div>
+    </section>
+    <section>
+      <div>
+         <span> <p>voluptate velit esse cillum dolore eu fugiat nulla pariatur.uando pasas"On the other hand, we denounce with righteous indignation and dislike</p>
+            <p>Es muy importante cuidar al paciente y el paciente será seguido por el paciente, pero durante este tiempo hay mucho trabajo y dolor.</p>
+            <h2 title="Hola">El pasaje estándar</h2>
+            <!--He intentado añadir a una parte del texto el estilo de color sin añadir la etiqueta b y no me deja-->
+            <p>Para llegar al más mínimo detalle, <b style="color: crimson;"> nadie debe practicar ningún tipo de trabajo </b> a menos que obtenga algún beneficio de él.</p>
+         </spam> 
+      </div>
+    </section>
 </body>
 </html>
