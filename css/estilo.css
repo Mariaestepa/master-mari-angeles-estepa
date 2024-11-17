@@ -1,0 +1,58 @@
+nav>ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    margin: 0px;
+    top: 0;
+    height: 50px;
+}
+body {
+    margin-top: 65px;
+}
+.tabla {
+    background-color: lightgreen;
+    height: 7cm;
+    width: 10cm;
+    text-align: center;
+    padding: 2cm;
+    display: flex
+;
+    border: solid chocolate 0.5cm;
+    margin: 2cm 7cm;
+    font-size: medium;
+}
+#preguntas-frecuentes {
+    padding: 40px;
+    background: #cf73cf9c;
+    margin: 30px;
+    width: auto;
+}
+h1 {
+    font-family: cursive;
+    color: #c237c2;
+    display: flex;
+    justify-content: space-around;
+}
+.bloque.texto {
+    padding: 25px;
+    width: fit-content;
+    height: fit-content;
+    font-family: math;
+    font-size: medium;
+}
+div.bloque.texto.largo {
+    text-align: justify;
+    margin: 15px;
+    font-size: 20px;
+}
+.herencias>p {
+    text-align: center;
+}
+.herencias p {
+    font-size: 20px;
+    width: 100vw;
+}
