@@ -18,12 +18,15 @@ body {
     height: 7cm;
     width: 10cm;
     text-align: center;
-    padding: 2cm;
-    display: flex
-;
+    padding: 1cm;
+    display: flex;
     border: solid chocolate 0.5cm;
     margin: 2cm 7cm;
     font-size: medium;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: baseline;
 }
 #preguntas-frecuentes {
     padding: 40px;
@@ -36,6 +39,27 @@ h1 {
     color: #c237c2;
     display: flex;
     justify-content: space-around;
+}
+section.imagenizquierda {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+}
+section.imagenderecha {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.h2 {
+    color: coral;
+    position: relative;
+    display: flex
+;
+    align-content: stretch;
+    justify-content: space-evenly;
 }
 .bloque.texto {
     padding: 25px;
@@ -55,4 +79,29 @@ div.bloque.texto.largo {
 .herencias p {
     font-size: 20px;
     width: 100vw;
+}
+.imagenfondo {
+    height: 800px;
+    width: 1200px;
+    background-image: url(/imagenes/perritos.jpg);
+    margin: auto;
+    background-attachment: fixed;
+    background-size: 600px;
+}
+.imagenfondonorepeat {
+    height: 500px;
+    width: 1200px;
+    background-image: url(/imagenes/carrito.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a[href^="https:"] {
+    color: fuchsia;
+    padding-right: 20px;
+    padding-left: 5px;
+    background-image: url(/imagenes/carrito.png);
+    z-index: 3;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position-x: right;
 }
