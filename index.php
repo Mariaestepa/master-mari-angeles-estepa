@@ -1,45 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-      <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta charset="UTF-8">
-       <link rel="stylesheet" href="/css/estilo.css">
-       <!--No existe la metaetiqueta title, es la etiqueta title-->
-       <title>Aprendiendo SEO técnico</title>
-       <style>
-           .intro {
-               background: coral;
-               width: fit-content;
-               height: auto;
-               padding: 30px;
-               align-content: center;
-               margin: 25px;
-               border: solid violet 20px;
-           }
-           p.intro {
-               background: yellow;
-           }
-           .intro.cita {
-               color: white;
-               font-size: 25px;
-           }
-       </style>
-    </head>
-<body>
-    <header>
-     <!--La etiqueta nav tiene que estar dentro de la etiqueta body nunca dentro de la etiqueta head-->
-     <nav>
-        <ul>
-           <li><a href="/">Inicio</a></li>
-           <li><a href="/sobre-mi.html">Sobre mi</a></li>
-           <li><a href="/servicios.html"style="color:rgb(217, 49, 181);">Servicios</a></li>
-           <li><a href="/contacto.html">Contacto</a></li>
-           <li><a href="/carpeta/archivo-carpeta.html">Archivo dentro de una carpeta</a></li>
-           <li><a href="https://carlos.sanchezdonate.com/master-seo-tecnico/" target="_blank">Más información</a></li>
-        </ul> 
-     </nav>
-    </header>
+     <?php 
+      include $_SERVER['DOCUMENT_ROOT'].'/assets/header.php';
+     ?>
+     <?php 
+         echo $_SERVER['DOCUMENT_ROOT'];
+     ?>
+    
     <section>
          <!--No se me actualizan ciertos cambios en la página hasta que no guardo aquí, además te explico un error que cometí desde el principio, 
          que fue no volcar la carpeta de github aquí sino solo la de ejemplo, 
@@ -48,7 +13,34 @@
          
          Respuesta: Ahora esta todo correcto, no influye en nada, va perfecto
          En cuanto a los cambios es normal, hay que guardar los cambios para poder verlos en la página-->
-        <h1>Hola soy Mari Ángeles Estepa</h1>
+        <h1>Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
+      <?php 
+      $geles ="Tengo que ponerme a darle forma a la web";
+      echo "$geles más pronto que tarde";
+        ?>
+     <section>
+         <?php 
+           $mensaje= "Hay disponibilidad";
+           $producto="camisetas"; 
+           $disponible="$";
+           if ("$producto"=="$disponible"){
+              echo "$mensaje" ." de producto.";
+           }
+           elseif($disponible=='$'){
+            echo 'Tenemos disponiblidad suficiente de $producto';
+           }
+           else{
+            echo 'No hay stock';
+           }
+        ?>
+      </section>
+      <section>
+       Hola <?php echo htmlspecialchars($_POST['nombre']);  /*Es un mensaje personalizado que se le manda a un usuario después de rellenar
+       el formulario de contacto, teniendo en cuenta los datos facilitados. htmlspecialchars garantiza que si alguien pone un carácter 
+       especial se codificque correctamente.La parte (int) hace mención a un número que en este caso es la edad y si alguien pone algo 
+       distinto a un número no se mostrará o dará error (duda: esta última parte no la tengo del todo clara) También tengo la duda */?>.
+       Usted tiene <?php echo (int)$_POST['edad']; ?> años.
+     </section>
         <div title="Este texto se lee cuando pasas el ratón por encima">Esto no es Hola Mundo</div>
         <p>Estamos <b style="color: aquamarine;">aquí</b> para aprender SEO</p>
         <p>Estamos <b style="color: rgb(217, 49, 181);">aquí</b> para <br> aprender</br>SEO</p>
@@ -86,6 +78,13 @@
             <p>Para llegar al más mínimo detalle, <b style="color: crimson;"> nadie debe practicar ningún tipo de trabajo </b> a menos que obtenga algún beneficio de él.</p>
          </span> 
       </div>
+   <section>
+      <h3>Formulario de Contacto</h3>
+       <form action="accion.php" method="post">
+           <p>Su nombre: <input type="text" name="nombre" /></p>
+           <p>Su edad: <input type="text" name="edad" /></p>
+           <p><input type="submit" /></p>
+       </form>
    </section>
    <!--Table row, table heading, table data-->
        <section>
@@ -205,13 +204,6 @@
    <section>
       <div class="imagenfondonorepeat"></div>
 </section>
-       <footer>
-         <!--La etiqueta address sirve tanto para contacto como para dirección física-->
-         <address>
-         (c) <a href="mailto:maestepamadera@hotmail.com">Mª Ángeles Estepa</a>
-         Granada, España
-         </address>
-         <a href="http://ejemplo.test/servicios.html">Servicios</a>
-       </footer>
-</body>
-</html>
+<?php 
+      include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
+     ?>
