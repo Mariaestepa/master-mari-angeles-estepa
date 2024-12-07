@@ -1,4 +1,8 @@
 <?php 
+ $titulo = "Contacto";
+ $producto1="";
+ define("titulo", "Titulo concreto sobre cada página");
+ define("pagina", "contacto");
       include $_SERVER['DOCUMENT_ROOT'].'/assets/header.php';
      ?>
      <?php 

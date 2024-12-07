@@ -105,3 +105,29 @@ a[href^="https:"] {
     background-repeat: no-repeat;
     background-position-x: right;
 }
+.bloquecito {
+    margin: 60px;
+    width: 1500px;
+    background-color: coral;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    font-size: 30px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 20px; 
+}
+
+h2.bloqueprecios { 
+    width: 120px;
+    height: 100px;
+    padding: 50px;
+    background-color: coral;
+    text-align: center; 
+}

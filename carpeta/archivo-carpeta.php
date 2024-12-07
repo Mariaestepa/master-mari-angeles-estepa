@@ -1,4 +1,8 @@
 <?php 
+$titulo = "Archivo de carpeta";
+$producto1="";
+define("titulo", "Titulo concreto sobre cada página");
+define("pagina", "archivo de carpeta");
       include $_SERVER['DOCUMENT_ROOT'].'/assets/header.php';
      ?>
      <?php 

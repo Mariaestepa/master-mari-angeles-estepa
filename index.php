@@ -1,4 +1,12 @@
      <?php 
+     $titulo = "Página de Inicio";
+     $producto1="camisetasrojas";
+      /* Una variable se define primero con una constante y segundo con el significado de la contante. La variable y la constante 
+      se pueden llamar igual*/
+     define("titulo", "Titulo concreto sobre cada página");
+     define("pagina", "inicio");
+     define("$producto1", "camisetasrojas");
+     define("banner", "/contacto");
       include $_SERVER['DOCUMENT_ROOT'].'/assets/header.php';
      ?>
      <?php 
@@ -17,6 +25,7 @@
       <?php 
       $geles ="Tengo que ponerme a darle forma a la web";
       echo "$geles más pronto que tarde";
+      include $_SERVER['DOCUMENT_ROOT'].'/assets/tablasql.php';
         ?>
      <section>
          <?php 
@@ -197,6 +206,11 @@
             <h2 class="h2">Causas</h2>
             <p>sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
+         </section>
+         <section>
+         <?php
+         ctas();
+         ?>
          </section>
           <section>
             <div class="imagenfondo"></div>
