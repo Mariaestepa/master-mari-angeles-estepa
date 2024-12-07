@@ -6,7 +6,6 @@ echo '<div class="bloquecito">
      </div';
     }
 
-     /* No me funciona cuando llamo a la función*/
 function precios(){
     echo ' <div class="container">
            <h2 class="bloqueprecios">' . precio1 . '</h2> 
