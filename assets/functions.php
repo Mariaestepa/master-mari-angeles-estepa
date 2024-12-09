@@ -5,7 +5,6 @@ echo '<div class="bloquecito">
      <div class="bloquecito"><a href="' . banner . '">Pide información</a></div>
      </div';
     }
-
 function precios(){
     echo ' <div class="container">
            <h2 class="bloqueprecios">' . precio1 . '</h2> 

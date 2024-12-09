@@ -1,4 +1,4 @@
-     <?php 
+   <?php 
      $titulo = "Página de Inicio";
      $producto1="camisetasrojas";
       /* Una variable se define primero con una constante y segundo con el significado de la contante. La variable y la constante 
@@ -12,7 +12,6 @@
      <?php 
          echo $_SERVER['DOCUMENT_ROOT'];
      ?>
-    
     <section>
          <!--No se me actualizan ciertos cambios en la página hasta que no guardo aquí, además te explico un error que cometí desde el principio, 
          que fue no volcar la carpeta de github aquí sino solo la de ejemplo, 
@@ -21,12 +20,14 @@
          
          Respuesta: Ahora esta todo correcto, no influye en nada, va perfecto
          En cuanto a los cambios es normal, hay que guardar los cambios para poder verlos en la página-->
-        <h1>Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
+        <h1 id="headinginicio">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
+      <noscript> Código en noscript con php <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></noscript>
       <?php 
       $geles ="Tengo que ponerme a darle forma a la web";
       echo "$geles más pronto que tarde";
       include $_SERVER['DOCUMENT_ROOT'].'/assets/tablasql.php';
         ?>
+         </section>
      <section>
          <?php 
            $mensaje= "Hay disponibilidad";
@@ -66,7 +67,14 @@
     <section>
       <div class="intro">
          <h2>El pasaje estándar <b style="font-size: large;">Lorem Ipsum</b>, usado desde el año 1500.</h2>
-         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<a href="https://es.lipsum.com/" target="_blank"><b style="color: rgb(144, 238, 144);">rem aperiam</b></a>, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<a href="https://es.lipsum.com/" target="_blank"><b style="color:white;">rem aperiam</b></a>, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+         <script>
+             /* Me da fallo cuando añado la clase tabla*/
+            const collection = document.querySelectorAll('a[href^="https:"], .tabla');
+            for (let i=0; i < collection.length; i++){
+            collection[i].innerHTML ="Frase hecha con javascript";
+         }
+         </script>
          <ul>
              <li>Traducción hecha por H. Rackham en 1914</li>
              <li>Traducción hecha por H. Rackham en 1914</li>
@@ -103,9 +111,39 @@
            <p><input type="submit" /></p>
        </form>
    </section>
+   <section>
+      <script>
+          let servicios = ['SEO', 'SEM', 'Analítica'];
+          var completartexto =' Un paso más';
+          const ejemplo = ' Servicios con Javascript';
+      </script> 
+      <p id="firstjs">Mi primer Javascript onclick</p>
+      <button type="button" 
+         onclick='document.getElementById("firstjs").innerHTML ="Funciona 😬."+ servicios[0] + ejemplo'>
+         Clica aquí
+      </button>
+      <button type="button" 
+         onclick='document.getElementById("firstjs").innerHTML ="Funciona Perfecto." + completartexto'>
+         Pincha aquí
+      </button>
+
+      <div id="cambiante"> 
+      </div>
+      <div class="boton" onclick="funcionmaria()">
+         Púlsame para funcionar
+      </div>
+      <script>
+         function funcionmaria(){
+          const collection = document.getElementsByClassName("firstjs");
+          for (let i =0; i < collection.length; i++){
+            collection [i].classlist.add("redjs");
+          }
+          }
+      </script>
+   </section>
    <!--Table row, table heading, table data-->
        <section>
-            <table class="tabla">
+            <table class="tabla">    
                     <tr>
                        <th>Cursos</th>
                        <td>SEO avanzado</td>
@@ -125,6 +163,8 @@
        </section>
    <!--Cuando se pone id no hay que dejar espacios, hay que poner(-)-->
    <section id="preguntas-frecuentes">
+   <!--No me funciona el botón-->
+      <button onclick="w3.hide('h2')">Hide h2</button>
       <h2>Preguntas frecuentes</h2>
       <!--Sección acordeón-->
         <details>
@@ -158,6 +198,9 @@
                 Curabitur ut lacus eu nisl malesuada ornare in at nisi. Ut commodo lorem vitae tortor euismod, id volutpat dui hendrerit. Sed non risus blandit, elementum sem quis, 
                 tempus tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit sem ac sollicitudin aliquam. In id neque ac mi volutpat hendrerit. 
                 Proin eu mauris ligula. Donec tempus in urna sit amet pellentesque. Nullam facilisis mi vitae fermentum finibus. Duis sodales convallis dui, nec euismod tellus.</div>
+                <script>
+                  document.querySelector('.bloque.texto').innerHTML ="Ahora no eres un bloque de texto, eres solo una frase hecha con javascript";
+                </script>
       </section>
       <section>
             <div>
@@ -229,3 +272,7 @@
 <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
+  <script>
+        document.getElementById("headinginicio").innerHTML= "Bienvenido a la página inicio con javascript";
+   </script>
+   <script src="/scripts/archivo.js"></script>

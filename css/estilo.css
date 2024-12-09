@@ -96,7 +96,7 @@ div.bloque.texto.largo {
     background-position: center;
 }
 a[href^="https:"] {
-    color: fuchsia;
+    color: rgb(36, 30, 206);
     padding-right: 20px;
     padding-left: 5px;
     background-image: url(/imagenes/carrito.png);
@@ -130,4 +130,17 @@ h2.bloqueprecios {
     padding: 50px;
     background-color: coral;
     text-align: center; 
+}
+.boton {
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    background-color: coral;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
 }
