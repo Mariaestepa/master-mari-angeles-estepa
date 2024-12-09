@@ -11,9 +11,20 @@
      <?php 
          echo $_SERVER['DOCUMENT_ROOT'];
      ?>
-   <h1 id="heading"style="color: fuchsia"><?php echo "Servicios";?></h1>
+   <h1 id="heading" style="color: fuchsia"><?php echo "Servicios";?></h1>
   <script> 
-      document.getElementById("heading").innerHTML= "Servicios con javascript";
+      document.getElementById("heading").innerHTML= "Servicios con javascript...";
+
+      document.getElementById("heading").innerHTML= "Servicios con javascript!!!!!!";
+
+      document.getElementById("heading").outerHTML= "<h1 id='noheading'>El orden del JS importa y mucho</h1>";
+      
+      document.getElementById("heading").innerHTML= "Hola Mari Angeles";
+
+     // Si lo pones así si funciona porque has cambiado el id al nuevo que ha puesto js
+     // document.getElementById("noheading").innerHTML= "Hola Mari Angeles";
+
+
     </script>
     <?php
      /* Me daba error la función se la ponia antes del include header pero justo debajo me funciona, no entiendo el por qué */

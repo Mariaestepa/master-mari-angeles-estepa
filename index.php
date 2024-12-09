@@ -164,8 +164,8 @@
    <!--Cuando se pone id no hay que dejar espacios, hay que poner(-)-->
    <section id="preguntas-frecuentes">
    <!--No me funciona el botón-->
-      <button onclick="w3.hide('h2')">Hide h2</button>
-      <h2>Preguntas frecuentes</h2>
+      <button onclick="eliminaelemento()">Hide h2</button>
+      <h2 id="borrarelemento">Preguntas frecuentes</h2>
       <!--Sección acordeón-->
         <details>
            <summary>¿Qué hacer para aprender SEO técnico?</summary>
