@@ -4,7 +4,7 @@
          (c) <a href="mailto:maestepamadera@hotmail.com">Mª Ángeles Estepa</a>
          Granada, España
          </address>
-         <a href="http://ejemplo.test/servicios">Servicios</a>
+         <a href="/servicios">Servicios</a>
        </footer>
 </body>
 </html>

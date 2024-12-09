@@ -4,7 +4,7 @@
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8">
-       <link rel="stylesheet" href="http://ejemplo.test/css/estilo.css">
+       <link rel="stylesheet" href="/css/estilo.css">
        <?php
        include_once $_SERVER['DOCUMENT_ROOT'].'/assets/functions.php';
        ?>
