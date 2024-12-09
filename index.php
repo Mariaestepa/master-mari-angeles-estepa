@@ -47,7 +47,15 @@
        Hola <?php echo htmlspecialchars($_POST['nombre']);  /*Es un mensaje personalizado que se le manda a un usuario después de rellenar
        el formulario de contacto, teniendo en cuenta los datos facilitados. htmlspecialchars garantiza que si alguien pone un carácter 
        especial se codificque correctamente.La parte (int) hace mención a un número que en este caso es la edad y si alguien pone algo 
-       distinto a un número no se mostrará o dará error (duda: esta última parte no la tengo del todo clara) También tengo la duda */?>.
+       distinto a un número no se mostrará o dará error (duda: esta última parte no la tengo del todo clara) También tengo la duda
+       
+       Respuesta: Entiendo que esto lo habrás ssacado de ChatGPT o de otro sitio (está genial, sin problema). A lo que se refiere con lo de los 
+       carácteres, es que htmlspecialchars evita que alguien meta en el formulario carácteres distinto a los que se espera, es decir, si le
+       decimos que ahí tiene que haber números, solo se pueden poner números, esto evita que un atacante meta código malicioso por medio
+       del formulario. Es un tema de ciberseguridad, por eso no tiene mucho sentido ahondar mucho en el tema. Simplemente entiende que 
+       se limita el tipo de caracteres que se pueden poner para evitar problemas de hackeos.
+       
+       */?>.
        Usted tiene <?php echo (int)$_POST['edad']; ?> años.
      </section>
         <div title="Este texto se lee cuando pasas el ratón por encima">Esto no es Hola Mundo</div>
