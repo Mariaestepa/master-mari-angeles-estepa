@@ -27,26 +27,21 @@
 
     </script>
     <?php
-     /* Me daba error la función se la ponia antes del include header pero justo debajo me funciona, no entiendo el por qué */
+
     precios();
     ?>
-  <!--Si añado secciones para separar precios de h3 se ponen en la misma fila, también si en lugar de H3 pongo H2
-   me selecciona los precios y aunque vaya cambiando el número nunca me coge el h3 de SEO -->
      <h3 id="javascript" class="prueba">SEO</h3>
-     <h3 id="javascript" class="prueba">SEM</h3>
-     <h3 id="javascript" class="prueba">Analítica</h3>
-  <script>
+     <h3 id="javascript1" class="prueba">SEM</h3>
+     <h3 id="javascript2" class="prueba">Analítica</h3>
+    <script>
          const collection = document.getElementsByTagName("h3");
          for (let i = 0; i < collection.length; i++) {
          collection[i].innerHTML = "Servicios modificados con javascript";
          }
-      
-      /*Empiezo a tener problemas porque he puesto este código de condicionlaes en la página de servicios y no me funciona,
-      es más desaparece la funcionalidad de este código const collection = document.getElementsByTagName("h3");
-         for (let i = 0; i < collection.length; i++) {
-         collection[i].innerHTML = "Servicios modificados con javascript";
-         } y no sé por qué es */
-         <div id="variante"></div>
+      </script> 
+     <!-- No me funcionaban los condicionales porque tenia el div metido dentro de un script-->
+    <div id="variante"></div>
+    <script>
     let precio = 100;
     let servicios;
           if (precio > 200){

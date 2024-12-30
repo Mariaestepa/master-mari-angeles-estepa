@@ -11,11 +11,7 @@ define("pagina", "archivo de carpeta");
     <h1 style="color: darkgoldenrod;">Esta es la página de archivo de carpeta</h1>
     <div id="variante"></div>
     <script>
-      /*Empiezo a tener problemas porque he puesto este código de condicionlaes en la página de servicios y no me funciona,
-      es más desaparece la funcionalidad de este código const collection = document.getElementsByTagName("h3");
-         for (let i = 0; i < collection.length; i++) {
-         collection[i].innerHTML = "Servicios modificados con javascript";
-         } y no sé por qué es */
+    
     let precio = 100;
     let servicios;
           if (precio > 200){

@@ -20,8 +20,8 @@
          
          Respuesta: Ahora esta todo correcto, no influye en nada, va perfecto
          En cuanto a los cambios es normal, hay que guardar los cambios para poder verlos en la página-->
-        <h1 id="headinginicio">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
-      <noscript> Código en noscript con php <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></noscript>
+        <h1 class="clase" id="headinginicio">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
+      <noscript> Código en noscript con php <?php echo date("d/M/Y"); echo " Bienvenido a mi web 😬";?></noscript>
       <?php 
       $geles ="Tengo que ponerme a darle forma a la web";
       echo "$geles más pronto que tarde";
@@ -68,20 +68,20 @@
       <div class="intro">
          <h2>El pasaje estándar <b style="font-size: large;">Lorem Ipsum</b>, usado desde el año 1500.</h2>
          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<a href="https://es.lipsum.com/" target="_blank"><b style="color:white;">rem aperiam</b></a>, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-         <script>
-             /* Me da fallo cuando añado la clase tabla*/
-            const collection = document.querySelectorAll('a[href^="https:"], .tabla');
-            for (let i=0; i < collection.length; i++){
-            collection[i].innerHTML ="Frase hecha con javascript";
-         }
-         </script>
+      
          <ul>
-             <li>Traducción hecha por H. Rackham en 1914</li>
+             <li class="intro2">Traducción hecha por H. Rackham en 1914</li>
              <li>Traducción hecha por H. Rackham en 1914</li>
              <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
              <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</li>
              <li>sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
          </ul> 
+         <script>
+            const collection = document.querySelectorAll('a[href^="https:"], .intro2');
+            for (let i=0; i < collection.length; i++){
+            collection[i].innerHTML ="Frase hecha con javascript";
+         }
+         </script>
          <!--No me funciona el atributo title
          Respuesta: - Si funciona, aparece al pasar el cursor por la primera palabra. 
                   - Revisa el cierre de esta etiqueta de debajo (aparece varias veces en el html) 
@@ -111,7 +111,7 @@
            <p><input type="submit" /></p>
        </form>
    </section>
-   <section>
+
       <script>
           let servicios = ['SEO', 'SEM', 'Analítica'];
           var completartexto =' Un paso más';
@@ -126,23 +126,8 @@
          onclick='document.getElementById("firstjs").innerHTML ="Funciona Perfecto." + completartexto'>
          Pincha aquí
       </button>
-
-      <div id="cambiante"> 
-      </div>
-      <div class="boton" onclick="funcionmaria()">
-         Púlsame para funcionar
-      </div>
-      <script>
-         function funcionmaria(){
-          const collection = document.getElementsByClassName("firstjs");
-          for (let i =0; i < collection.length; i++){
-            collection [i].classlist.add("redjs");
-          }
-          }
-      </script>
-   </section>
+   <section>
    <!--Table row, table heading, table data-->
-       <section>
             <table class="tabla">    
                     <tr>
                        <th>Cursos</th>
@@ -161,9 +146,42 @@
                     </tr>
             </table>
        </section>
+
+       <div id="javascript1" class="prueba">¿Quieres saber más?</div>
+   <div id="javascript2" class="prueba">¿Quieres saber más?</div>
+   <p id="javascript3" class="prueba">¿Quieres saber más?</p>
+   <div id="cambiante"> 
+</div>
+<div class="boton">
+   Clicame para funcionar
+</div>
+      <script>
+   const activador = document.getElementsByClassName("boton");
+   activador[0].addEventListener("click", funcionmaria);
+
+     function funcionmaria(){
+     const collection = document.getElementsByClassName("prueba");
+      for (let i = 0; i < collection.length; i++) {
+      collection[i].classList.add("redjs");
+    }
+    activador[0].setAttribute("onclick", "funcionNumero2()");
+    }
+
+    function funcionNumero2() {
+    const ejemplazo = document.getElementsByClassName("prueba");
+    for (let i = 0; i < ejemplazo.length; i++) {
+      ejemplazo[i].classList.remove("redjs");
+    }
+    activador[0].setAttribute("onclick", "funcionmaria()");
+    }
+    </script>
+    <style>
+     .redjs{
+     color: red;
+     }
+   </style>
    <!--Cuando se pone id no hay que dejar espacios, hay que poner(-)-->
    <section id="preguntas-frecuentes">
-   <!--No me funciona el botón-->
       <button onclick="eliminaelemento()">Hide h2</button>
       <h2 id="borrarelemento">Preguntas frecuentes</h2>
       <!--Sección acordeón-->
@@ -272,7 +290,8 @@
 <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
-  <script>
-        document.getElementById("headinginicio").innerHTML= "Bienvenido a la página inicio con javascript";
-   </script>
+  
    <script src="/scripts/archivo.js"></script>
+   <script>
+        document.getElementById("headinginicio").innerHTML= "Hola";
+   </script>

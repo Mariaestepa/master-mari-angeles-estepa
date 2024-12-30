@@ -1,4 +1,4 @@
-
+// document.getElementById("headinginicio").outerHTML= "<h1>He cambiado el elemento entero</h1>";
 // Eliminar un elemento aunque no haya función:
 // document.getElementById("borrarelemento").outerHTML = "";
 
@@ -40,21 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-/* No me funciona 
-el script de contacto
- ni de inicio a pesar de tener el script abajo, 
- viendo la parte de selectores dice que clases
-puede haber muchas pero id solo uno*/
 document.getElementById("heading1").innerHTML= "Bienvenido a la página de contacto con javascript";
-/*No me funciona la redirección. No es una buena práctica hacer este tipo de redirecciones porque Google no lee el javascript ni lo 
+/*No es una buena práctica hacer este tipo de redirecciones porque Google no lee el javascript ni lo 
 ejecuta hasta que no lo ha renderizado todo y no siempre lo hace, por lo tanto este tipo de redirecciones solo se deben hacer cuando no 
 hay otras alternativas. Además con este tipo de redirecciones Google lee la página porque da un código 200 y después la redirige.*/
 window.location.href = "https://carlos.sanchezdonate.com/redireccion-301-desde-sitebuilders/";
-/* Hasta que no he puesto este código no me salía el js en la consola*/
 
 
-// Elimar elemento ejemplo:
+
 
 
 

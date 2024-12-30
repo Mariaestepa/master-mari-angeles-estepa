@@ -11,11 +11,11 @@
     <h1 id="heading1"><?php echo "Bienvenido a la página de contacto";?></h1>
      <div id="javascript" class="prueba">Blog</div>
      <script>
-        document.getElementById("javascript").innerHTML = "Blog SEO con JavaScript";
+        document.getElementById("javascript").innerHTML = "Contacto SEO con JavaScript";
      </script>
     <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
-     <script src="/scripts/archivo.js"></script>
-
+    
+    <script src="/scripts/archivo.js"></script>
      
