@@ -96,6 +96,7 @@
         month ="diciembre";
         break;
       }
+      
       document.getElementById("variante").innerHTML = "Los servicios " + servicios + " en " + month;
     </script>
      <?php 
