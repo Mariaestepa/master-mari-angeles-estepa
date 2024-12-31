@@ -8,3 +8,5 @@
 
 29/11/2024: 04 HTML - Ejercicio revisado
 09/12/2024: 04 HTML - Ejercicio revisado
+
+31/12/2024: Ejercicios revisados

@@ -41,9 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById("heading1").innerHTML= "Bienvenido a la página de contacto con javascript";
-/*No es una buena práctica hacer este tipo de redirecciones porque Google no lee el javascript ni lo 
-ejecuta hasta que no lo ha renderizado todo y no siempre lo hace, por lo tanto este tipo de redirecciones solo se deben hacer cuando no 
-hay otras alternativas. Además con este tipo de redirecciones Google lee la página porque da un código 200 y después la redirige.*/
+/*No es una buena práctica hacer este
+ tipo de redirecciones porque Google no lee el javascript ni lo 
+ejecuta hasta que no lo ha renderizado todo y no s
+iempre lo hace, por lo tanto este tipo de redirecciones solo
+ se deben hacer cuando no 
+hay otras alternativas. Además con este tipo de redirecciones
+ Google lee la página porque da un código 200 y después la redirige.*/
 window.location.href = "https://carlos.sanchezdonate.com/redireccion-301-desde-sitebuilders/";
 
 
