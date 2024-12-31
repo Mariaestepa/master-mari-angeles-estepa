@@ -1,3 +1,9 @@
+:root{
+    --naranja: rgb(235, 138, 102);
+    --rosa: rgb(217, 49, 181); 
+    --verde: rgb(101, 233, 101);
+}
+
 nav>ul {
     list-style: none;
     display: flex;
@@ -12,9 +18,10 @@ nav>ul {
 }
 body {
     margin-top: 65px;
+    font-family: "Catamaran", serif;
 }
 .tabla {
-    background-color: lightgreen;
+    background-color: var(--verde);
     height: 7cm;
     width: 10cm;
     text-align: center;
@@ -30,13 +37,13 @@ body {
 }
 #preguntas-frecuentes {
     padding: 40px;
-    background: #cf73cf9c;
+    background: var(--rosa);
     margin: 30px;
     width: auto;
 }
 h1 {
     font-family: cursive;
-    color: #c237c2;
+    color: var(--rosa);
     display: flex;
     justify-content: space-around;
 }
@@ -54,7 +61,7 @@ section.imagenderecha {
     align-items: flex-start;
 }
 .h2 {
-    color: coral;
+    color: var(--naranja);
     position: relative;
     display: flex
 ;
@@ -69,10 +76,11 @@ section.imagenderecha {
     font-size: medium;
 }
 div.bloque.texto.largo {
+    width: calc(100% - 40px);
     text-align: justify;
     margin: 15px;
     font-size: 20px;
-}
+    }
 .herencias>p {
     text-align: center;
 }
@@ -108,7 +116,7 @@ a[href^="https:"] {
 .bloquecito {
     margin: 60px;
     width: 1500px;
-    background-color: coral;
+    background-color: var(--naranja);
     display: flex;
     align-content: stretch;
     justify-content: space-between;
@@ -128,14 +136,14 @@ h2.bloqueprecios {
     width: 120px;
     height: 100px;
     padding: 50px;
-    background-color: coral;
+    background-color: var(--naranja);
     text-align: center; 
 }
 .boton {
     margin: auto;
     width: 200px;
     height: 50px;
-    background-color: coral;
+    background-color: var(--naranja);
     padding: 50px;
     display: flex;
     flex-direction: row;
@@ -143,4 +151,63 @@ h2.bloqueprecios {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
+}
+.intro {
+    background: var(--naranja);
+    width: fit-content;
+    height: auto;
+    padding: 30px;
+    align-content: center;
+    margin: 25px;
+    border: solid 20px var(--rosa);
+}
+p.intro {
+background: yellow;
+width: max(50%);
+animation-name: cambiocolor;
+animation-duration: 4s;
+}
+@keyframes cambiocolor {
+from {background: yellow;}
+to {background: var(--naranja);}
+}
+
+.intro.cita {
+    color: white;
+    font-size: 25px;
+    width: max(50%);
+}
+/* Modificación elementos responsive */
+@media all and (min-width: 400px) and (max-width: 800px){
+    nav>ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: fixed;
+        width: 100%;
+        background: white;
+        margin: 0px;
+        top: 0;
+        height: 50px;
+        flex-direction: column;
+        align-content: space-around;
+        padding: 20px;
+        z-index: auto;
+    }
+    nav>ul li {
+        margin: 2px 0px;
+    }
+    body {
+        margin-top: 190px;
+        font-family: "Catamaran", serif;
+
+    }
+    img {
+        max-width: 100%;
+    }
+    html {
+        max-width: 1500px;
+        margin: auto;
+    }
 }

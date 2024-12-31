@@ -23,16 +23,15 @@
 
      // Si lo pones así si funciona porque has cambiado el id al nuevo que ha puesto js
      // document.getElementById("noheading").innerHTML= "Hola Mari Angeles";
-
-
     </script>
     <?php
-
     precios();
     ?>
-     <h3 id="javascript" class="prueba">SEO</h3>
-     <h3 id="javascript1" class="prueba">SEM</h3>
-     <h3 id="javascript2" class="prueba">Analítica</h3>
+    <div>
+     <h3 id="javascript1" class="prueba">SEO</h3>
+     <h3 id="javascript2" class="prueba">SEM</h3>
+     <h3 id="javascript3" class="prueba">Analítica</h3>
+    </div>
     <script>
          const collection = document.getElementsByTagName("h3");
          for (let i = 0; i < collection.length; i++) {
@@ -102,4 +101,5 @@
      <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
+      <script src="/scripts/archivo.js"></script>
   

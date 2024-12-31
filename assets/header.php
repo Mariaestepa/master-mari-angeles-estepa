@@ -4,6 +4,7 @@
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8">
+       <link href="/css/fonts.css" rel="stylesheet">
        <link rel="stylesheet" href="/css/estilo.css">
        <?php
        include_once $_SERVER['DOCUMENT_ROOT'].'/assets/functions.php';
@@ -51,25 +52,7 @@
        </title>
 <!--Pregunta: ¿Los estilos de CSS también hay que moverlos? Si no entendí mal las clases de CSS, 
 los que estan a nivel de página repercuten en la página, al contrario que la hoja de estilos externa que repercute en toda la web.-->
-       <style>
-           .intro {
-               background: coral;
-               width: fit-content;
-               height: auto;
-               padding: 30px;
-               align-content: center;
-               margin: 25px;
-               border: solid violet 20px;
-           }
-           p.intro {
-               background: yellow;
-           }
-           .intro.cita {
-               color: white;
-               font-size: 25px;
-           }
-       </style>
-    </head>
+</head>
 <body>
     <header>
      <!--La etiqueta nav tiene que estar dentro de la etiqueta body nunca dentro de la etiqueta head-->
@@ -77,7 +60,7 @@ los que estan a nivel de página repercuten en la página, al contrario que la h
         <ul>
            <li><a href="/">Inicio</a></li>
            <li><a href="/sobre-mi">Sobre mi</a></li>
-           <li><a href="/servicios"style="color:rgb(217, 49, 181);">Servicios</a></li>
+           <li><a href="/servicios"style="color: var(--rosa);">Servicios</a></li>
            <li><a href="/contacto">Contacto</a></li>
            <li><a href="/carpeta/archivo-carpeta">Archivo dentro de una carpeta</a></li>
            <li><a href="/blog">Blog</a></li>

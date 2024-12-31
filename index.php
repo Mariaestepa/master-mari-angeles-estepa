@@ -60,8 +60,8 @@
        Usted tiene <?php echo (int)$_POST['edad']; ?> años.
      </section>
         <div title="Este texto se lee cuando pasas el ratón por encima">Esto no es Hola Mundo</div>
-        <p>Estamos <b style="color: aquamarine;">aquí</b> para aprender SEO</p>
-        <p>Estamos <b style="color: rgb(217, 49, 181);">aquí</b> para <br> aprender</br>SEO</p>
+        <p>Estamos <b style="color: var(--verde);;">aquí</b> para aprender SEO</p>
+        <p>Estamos <b style="color: var(--rosa);">aquí</b> para <br> aprender</br>SEO</p>
         <img src="/imagenes/blog_que-es-seo_800x533.jpg" width="600" height="450" alt="Qué es SEO">
     </section>
     <section>
