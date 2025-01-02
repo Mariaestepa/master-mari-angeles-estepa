@@ -42,4 +42,5 @@ $producto1="";
     <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
+     <div>Hola ndsjjdsjdj </div>
      <script src="/scripts/archivo.js"></script>
