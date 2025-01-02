@@ -10,3 +10,5 @@
 09/12/2024: 04 HTML - Ejercicio revisado
 
 31/12/2024: Ejercicios revisados
+
+02/01/2025: CSS Revisado, perfecto
