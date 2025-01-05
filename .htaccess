@@ -1,3 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://master-mari-angeles-estepa.test/ [R=301,L]
+</IfModule>
+
 RewriteEngine on
 
 # Rewrite /foo/bar to /foo/bar.php

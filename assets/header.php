@@ -17,6 +17,9 @@
             echo ' <link rel="stylesheet" href="/css/otro.css">';
              /* Creo que te salen las dos hojas de estilo porque no has puesto break*/
             break;
+            case'Web básica':
+              echo ' <link rel="stylesheet" href="/css/basica.css">';
+              break;
           case 'sobre mi':
           case 'archivo de carpeta':
             echo ' <link rel="stylesheet" href="/css/estilo.css">';
@@ -61,6 +64,7 @@ los que estan a nivel de página repercuten en la página, al contrario que la h
            <li><a href="/">Inicio</a></li>
            <li><a href="/sobre-mi">Sobre mi</a></li>
            <li><a href="/servicios"style="color: var(--rosa);">Servicios</a></li>
+           <li><a href="/basica">Web básica</a></li>
            <li><a href="/contacto">Contacto</a></li>
            <li><a href="/carpeta/archivo-carpeta">Archivo dentro de una carpeta</a></li>
            <li><a href="/blog">Blog</a></li>
