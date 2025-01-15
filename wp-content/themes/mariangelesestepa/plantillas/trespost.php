@@ -2,7 +2,7 @@
  <?php
  $args = array(
         //-1 es para ver todos los posts//
-    'posts_per_page' => '3',
+    'posts_per_page' => 3,
     'post_type' => 'post',
     'orderby' => 'date', //poniendolo como rand se ordenan de manera aleatoria//
     'order' => 'DESC',
