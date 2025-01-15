@@ -4,7 +4,7 @@ get_header();
  <section>
    <div> 
         <h1>
-             <?php the_title();?>
+             <?php the_title();?>Hola carlso
         </h1>
              <p >Tan sólo con la mejor calidad se pueden alcanzar los mejores resultados.</p>
      </div> 

@@ -11,7 +11,7 @@ get_header();
      </div> 
 </section>
 <?php
-echo the_content();
+//echo the_content();
 ?>
 <?php
 include $plantillas .'trespost.php';
