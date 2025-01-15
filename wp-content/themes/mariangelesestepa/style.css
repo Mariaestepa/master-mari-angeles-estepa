@@ -1,0 +1,229 @@
+/*
+Theme Name: mariangelesestepa
+Author: Mª Ángeles Estepa (Alumno master de SEO Técnico)
+Description: Tema personalizado mariangelesestepa
+Version: 1.3
+*/
+
+:root{
+    --naranja: rgb(235, 138, 102);
+    --rosa: rgb(217, 49, 181); 
+    --verde: rgb(101, 233, 101);
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    margin: 0px;
+    top: 0;
+    height: 50px;
+}
+body {
+    margin-top: 65px;
+    font-family: "Catamaran", serif;
+}
+.tabla {
+    background-color: var(--verde);
+    height: 7cm;
+    width: 10cm;
+    text-align: center;
+    padding: 1cm;
+    display: flex;
+    border: solid chocolate 0.5cm;
+    margin: 2cm 7cm;
+    font-size: medium;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+#preguntas-frecuentes {
+    padding: 40px;
+    background: var(--rosa);
+    margin: 30px;
+    width: auto;
+}
+h1 {
+    font-family: cursive;
+    color: var(--rosa);
+    display: flex;
+    justify-content: space-around;
+}
+section.imagenizquierda {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+}
+section.imagenderecha {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.h2 {
+    color: var(--naranja);
+    position: relative;
+    display: flex
+;
+    align-content: stretch;
+    justify-content: space-evenly;
+}
+.bloque.texto {
+    padding: 25px;
+    width: fit-content;
+    height: fit-content;
+    font-family: math;
+    font-size: medium;
+}
+div.bloque.texto.largo {
+    width: calc(100% - 40px);
+    text-align: justify;
+    margin: 15px;
+    font-size: 20px;
+    }
+.herencias>p {
+    text-align: center;
+}
+.herencias p {
+    font-size: 20px;
+    width: 100vw;
+}
+.imagenfondo {
+    height: 800px;
+    width: 1200px;
+    background-image: url(/imagenes/perritos.jpg);
+    margin: auto;
+    background-attachment: fixed;
+    background-size: 600px;
+}
+.imagenfondonorepeat {
+    height: 500px;
+    width: 1200px;
+    background-image: url(/imagenes/carrito.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a[href^="https:"] {
+    color: rgb(36, 30, 206);
+    padding-right: 20px;
+    padding-left: 5px;
+    background-image: url(/imagenes/carrito.png);
+    z-index: 3;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.bloquecito {
+    margin: 60px;
+    width: 1500px;
+    background-color: var(--naranja);
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    font-size: 30px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 20px; 
+}
+
+h2.bloqueprecios { 
+    width: 120px;
+    height: 100px;
+    padding: 50px;
+    background-color: var(--naranja);
+    text-align: center; 
+}
+.boton {
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--naranja);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.intro {
+    background: var(--naranja);
+    width: fit-content;
+    height: auto;
+    padding: 30px;
+    align-content: center;
+    margin: 25px;
+    border: solid 20px var(--rosa);
+}
+p.intro {
+background: yellow;
+width: max(50%);
+animation-name: cambiocolor;
+animation-duration: 4s;
+}
+
+@keyframes cambiocolor {
+from {background: yellow;}
+to {background: var(--naranja);}
+}
+
+.intro.cita {
+    color: white;
+    font-size: 25px;
+    width: max(50%);
+}
+
+section.footer {
+    background-color: #ff7f504d;
+    width: -webkit-fill-available;
+    height: 150px;
+}
+section.basica {background-image: url('https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/agencia seo.jpg"');
+}
+/* Modificación elementos responsive */
+@media all and (min-width: 400px) and (max-width: 800px){
+    nav>ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: fixed;
+        width: 100%;
+        background: white;
+        margin: 0px;
+        top: 0;
+        height: 50px;
+        flex-direction: column;
+        align-content: space-around;
+        padding: 20px;
+        z-index: auto;
+    }
+    nav>ul li {
+        margin: 2px 0px;
+    }
+    body {
+        margin-top: 190px;
+        font-family: "Catamaran", serif;
+
+    }
+    img {
+        max-width: 100%;
+    }
+    html {
+        max-width: 1500px;
+        margin: auto;
+    }
+}
