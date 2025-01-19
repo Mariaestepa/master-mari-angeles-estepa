@@ -198,7 +198,7 @@
            <p>Si, es posible aprenderlas.</p>
          </details>
    </section>   
-   <section class="intro cita">
+   <section class="intro cita" data-nosnippet="Cuando añadimos el atributo data-nosnippet significa que el contenido que hay dentro de él no se muestra en las serps">
       <blockquote cite="https://desiremarketing.io/es/seo-quotes/">
          Un buen trabajo de SEO mejora con el tiempo. Lo único que hay que cambiar son los trucos de los motores de búsqueda cuando cambian los algoritmos de clasificación.<cite>Jill Whalen</cite> 
       </blockquote>
