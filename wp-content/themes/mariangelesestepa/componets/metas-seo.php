@@ -78,6 +78,6 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
     
 
       <meta name="twitter:site" content="@Mª_Ángeles">
-      <meta name="twitter:creator" content="<?php the_field( 'twitter_creator' ); ?>">
+      <meta name="twitter:creator" content="<?php the_field( 'twitter_creator', $term  ); ?>">
 
       <meta name="rating" content="adult">
