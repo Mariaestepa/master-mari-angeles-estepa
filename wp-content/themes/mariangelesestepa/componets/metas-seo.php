@@ -1,11 +1,9 @@
 <?php 
-$imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/imagen chica 600px60px.webp"
 $term = get_queried_object();
 $protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
 $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '?');
-
+$imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/imagen chica 600px60px.webp"
 ?>
-  
       
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +54,7 @@ $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["R
           else {echo $url_sin_string;}
           ?>">
 
-
+<!--Aunque tengo imagen en el og:image se muestra la de la variable-->
       <meta property="og:image" content="<?php 
           if (get_field ('og:image', $term))
           {the_field( 'og_image', $term );}
@@ -80,6 +78,6 @@ $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["R
     
 
       <meta name="twitter:site" content="@Mª_Ángeles">
-      <meta name="twitter:creator" content="@Mª_Ángeles">
+      <meta name="twitter:creator" content="<?php the_field( 'twitter_creator' ); ?>">
 
       <meta name="rating" content="adult">

@@ -10,6 +10,7 @@
           /* <link href="/css/fonts.css" rel="stylesheet">
              include_once $_SERVER['DOCUMENT_ROOT'].'/assets/functions.php'; */
        
+include 'componets/metas-seo.php';
 wp_head(); 
        ?>
 </head>
