@@ -8,8 +8,14 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
-      <meta name="robots" content="">
-
+      
+      
+      <?php $metarobots_checked_values = get_field( 'metarobots', $term ); 
+      if ( $metarobots_checked_values ) : ?>
+      <meta name="robots" content="<?php the_field( 'metarobots', $term  ); ?>">
+      <?php endif; ?>
+      
+      
       <?php the_field( 'custom_meta', $term); ?>
     
       <title><?php the_field( 'title', $term ); ?></title>
