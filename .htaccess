@@ -1,3 +1,10 @@
+# Duda: Si pongo este código para redireccionar de la versión http a la https, cuando le quito la s a los post me redirige a la home,
+# en lugar de redirigirme a la misma versión con https.
+
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://master-mari-angeles-estepa.test/$1 [R=301,L,QSA]
+</IfModule>
 
 # BEGIN WordPress
 # Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son

@@ -2,7 +2,7 @@
 $term = get_queried_object();
 $protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
 $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["REQUEST_URI"], '?');
-$imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/imagen chica 600px60px.webp"
+
 ?>
       
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
@@ -31,18 +31,18 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
           else{the_field( 'title', $term );}?>">
 
    
-         <?php
-            if ( in_category('festivales') ){
-            $metadesc_festivales = 'Si te gusta la música' . ' '. get_field( 'tipo_de_musica' ) . ' ' .
-            'no te puedes perder el' . ' ' . get_field( 'nombre_festival' ) . ' ' . 'que dura' . ' '. get_field( 'numero_de_dias' ) . ' '. 'dias,' . ' ' . 'desde el' . ' ' 
-            . get_field( 'fecha_inicio' ) . ' ' . 'hasta el' . ' ' . get_field( 'fecha_fin' ) . ' ' . 'en' . ' ' . get_field( 'ciudad' ) . ' ' .'y su precio es de' . ' '
-            . get_field( 'precio' ) . ' ' . 'euros.';
-            ?>
-            <meta name="description" content="<?php echo $metadesc_festivales; ?>">
-            <meta property="og:description" content="<?php echo $metadesc_festivales; ?>">
-            <meta property="twitter:description" content="<?php echo $metadesc_festivales; ?>">
+     <?php
+        if ( in_category('festivales') ){
+        $metadesc_festivales = 'Si te gusta la música' . ' '. get_field( 'tipo_de_musica', $term) . ' ' .
+        'no te puedes perder el' . ' ' . get_field( 'nombre_festival', $term ) . ' ' . 'que dura' . ' '. get_field( 'numero_de_dias', $term ) . ' '. 'dias,' . ' ' . 'desde el' . ' ' 
+        . get_field( 'fecha_inicio', $term) . ' ' . 'hasta el' . ' ' . get_field( 'fecha_fin', $term ) . ' ' . 'en' . ' ' . get_field( 'ciudad', $term ) . ' ' .'y su precio es de' . ' '
+        . get_field( 'precio', $term ) . ' ' . 'euros.';
+        ?>
+        <meta name="description" content="<?php echo $metadesc_festivales; ?>">
+        <meta property="og:description" content="<?php echo $metadesc_festivales; ?>">
+        <meta property="twitter:description" content="<?php echo $metadesc_festivales; ?>">
             
-        <?php
+     <?php
            }
            else {
         ?>
@@ -76,30 +76,50 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
           else {echo $url_sin_string;}
           ?>">
 
-<!--Aunque tengo imagen en el og:image se muestra la de la variable-->
+
+<?php $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/imagen chica 600px60px.webp";?>
+
+      <meta property="og:image" content="<?php 
+          $og_image = get_field('og_image', $term); // Obtener el campo personalizado
+          if ($og_image) {
+              echo $og_image; // Mostrar la imagen personalizada
+          } else {
+              echo $imagenpersonalizada; // Mostrar la imagen predeterminada
+          }
+      ?>">
+      <!--De esta manera no me funciona el condicional-->
       <meta property="og:image" content="<?php 
           if (get_field ('og:image', $term))
           {the_field( 'og_image', $term );}
-          else echo $imagenpersonalizada; ?>" />
-      <meta property="og:image:secure_url" content="<?php 
-          if (get_field ('og:image:secure_url', $term))
-          {the_field( 'og:image:secure_url', $term );}
-          else echo $imagenpersonalizada;
-         ?>">
-      <meta property="twitter:image" content="<?php 
-           if (get_field ('twitter:image', $term))
-           {the_field( 'twitter:image', $term );}
-           else echo $imagenpersonalizada; ?>">
+          else {echo $imagenpersonalizada;} ?>">
+    
 
+    <meta property="og:image:secure_url" content="<?php
+        $og_image_secure_url = get_field('og:image:secure_url', $term); 
+        if ($og_image_secure_url) {
+            echo $og_image_secure_url; 
+        } else {
+            echo $imagenpersonalizada; 
+        }
+     ?>">
+
+   <meta property="twitter:image" content="<?php 
+       $twitter_image = get_field('twitter:image', $term);
+       if ($twitter_image) {
+           echo $twitter_image; 
+       } else {
+           echo $imagenpersonalizada; }?>">
 
 
       <meta property="og:image.alt" content="<?php the_field( 'title', $term ); ?>">
 
-      <meta property="og:type" content="website">
+      <meta property="og:type" content="<?php the_field( 'tipo_contenido' ); ?>">
+       <!--No se hacerla-->
       <meta property="twitter:card" content="summary_large_image">
     
 
-      <meta name="twitter:site" content="@Mª_Ángeles">
+      <meta name="twitter:site" content="<?php $twitter_site_username = get_field( 'twitter_site_username' ); ?><?php if ( $twitter_site_username ): ?><a href="<?php echo esc_url( $twitter_site_username); ?>></a>
+        <?php endif; ?>
       <meta name="twitter:creator" content="<?php the_field( 'twitter_creator', $term ); ?>">
-
+          
       <meta name="rating" content="adult">
