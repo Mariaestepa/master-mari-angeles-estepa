@@ -6,7 +6,11 @@ get_header();
           <?php the_title();?>
      </h1>
  <section id="contenido">
-     <?php
+
+ <?php
+   if ( in_category('festivales') ){
+    }
+     else {;}
      echo the_content();
      ?>
 </section>

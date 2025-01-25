@@ -8,7 +8,7 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
-      
+
       
       <?php $metarobots_checked_values = get_field( 'metarobots', $term ); 
       if ( $metarobots_checked_values ) : ?>
@@ -30,19 +30,35 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
           elseif(get_field('og_title', $term )){the_field( 'og_title', $term );}
           else{the_field( 'title', $term );}?>">
 
+   
+         <?php
+            if ( in_category('festivales') ){
+            $metadesc_festivales = 'Si te gusta la música' . ' '. get_field( 'tipo_de_musica' ) . ' ' .
+            'no te puedes perder el' . ' ' . get_field( 'nombre_festival' ) . ' ' . 'que dura' . ' '. get_field( 'numero_de_dias' ) . ' '. 'dias,' . ' ' . 'desde el' . ' ' 
+            . get_field( 'fecha_inicio' ) . ' ' . 'hasta el' . ' ' . get_field( 'fecha_fin' ) . ' ' . 'en' . ' ' . get_field( 'ciudad' ) . ' ' .'y su precio es de' . ' '
+            . get_field( 'precio' ) . ' ' . 'euros.';
+            ?>
+            <meta name="description" content="<?php echo $metadesc_festivales; ?>">
+            <meta property="og:description" content="<?php echo $metadesc_festivales; ?>">
+            <meta property="twitter:description" content="<?php echo $metadesc_festivales; ?>">
+            
+        <?php
+           }
+           else {
+        ?>
+         <meta name="description" content="<?php the_field( 'metadescripcion', $term ); ?>">
+         <meta property="og:description" content="<?php
+             if (get_field('og_description', $term )){
+             the_field( 'og_description', $term );
+             } else{the_field( 'metadescripcion', $term );}?>">
+   
+         <meta property="twitter:description" content="<?php
+             if (get_field('twitter_description', $term ))
+             {the_field( 'twitter_description', $term );} 
+             elseif(get_field('og_description', $term )){the_field( 'og_description', $term );}
+             else{the_field( 'metadescripcion', $term );}?>">
 
-      <meta name="description" content="<?php the_field( 'metadescripcion', $term ); ?>">
-      <meta property="og:description" content="<?php
-          if (get_field('og_description', $term )){
-          the_field( 'og_description', $term );
-          } else{the_field( 'metadescripcion', $term );}?>">
-
-      <meta property="twitter:description" content="<?php
-          if (get_field('twitter_description', $term ))
-          {the_field( 'twitter_description', $term );} 
-          elseif(get_field('og_description', $term )){the_field( 'og_description', $term );}
-          else{the_field( 'metadescripcion', $term );}?>">
-
+        <?php ;} ?>
 
       <link rel="canonical" href="<?php 
           if (get_field ('canonical', $term))
@@ -64,16 +80,16 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
       <meta property="og:image" content="<?php 
           if (get_field ('og:image', $term))
           {the_field( 'og_image', $term );}
-          else {echo $imagenpersonalizada;} ?>" />
+          else echo $imagenpersonalizada; ?>" />
       <meta property="og:image:secure_url" content="<?php 
           if (get_field ('og:image:secure_url', $term))
           {the_field( 'og:image:secure_url', $term );}
-          else {echo $imagenpersonalizada;}
+          else echo $imagenpersonalizada;
          ?>">
       <meta property="twitter:image" content="<?php 
            if (get_field ('twitter:image', $term))
            {the_field( 'twitter:image', $term );}
-           else {echo $imagenpersonalizada;} ?>">
+           else echo $imagenpersonalizada; ?>">
 
 
 
@@ -84,6 +100,6 @@ $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes
     
 
       <meta name="twitter:site" content="@Mª_Ángeles">
-      <meta name="twitter:creator" content="<?php the_field( 'twitter_creator', $term  ); ?>">
+      <meta name="twitter:creator" content="<?php the_field( 'twitter_creator', $term ); ?>">
 
       <meta name="rating" content="adult">
