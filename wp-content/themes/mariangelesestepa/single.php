@@ -6,13 +6,20 @@ get_header();
           <?php the_title();?>
      </h1>
  <section id="contenido">
-
  <?php
-   if ( in_category('festivales') ){
-    }
-     else {;}
-     echo the_content();
+ //Duda con respecto al plugin: ¿cuándo hay que usar el echo get_field('campo')? es también para el tema de las metaetiquetas
+ // que a veces el plugin me da errores
+ if (get_field('descripcion_corta')){
      ?>
+ <div class="descripcioncorta"><?php echo get_field( 'descripcion_corta' ); ?></div>
+   <?php
+}
+else {;}
+      if ( in_category('festivales') ){
+       }
+        else {;}
+        echo the_content();
+   ?>
 </section>
 </div>
 <?php

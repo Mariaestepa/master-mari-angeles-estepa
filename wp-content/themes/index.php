@@ -1,2 +1,1 @@
-<?php
-// Silence is golden.
+Esto es un index php

@@ -191,6 +191,37 @@ section.footer {
     width: -webkit-fill-available;
     height: 150px;
 }
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px auto;
+}
+.post-card a {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #ff00ff1c;
+    padding: 0px;
+}
+
+.post-card a .post-name{
+    text-decoration: auto;
+    background: coral;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    min-height: 2em;
+    box-sizing: border-box;
+}
+.post-card a .post-desc{
+    color: rgb(0, 0, 0);
+    text-decoration: auto;
+    padding: 20px;
+}
+
 section.basica {background-image: url('https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/agencia seo.jpg"');
 }
 /* Modificación elementos responsive */
