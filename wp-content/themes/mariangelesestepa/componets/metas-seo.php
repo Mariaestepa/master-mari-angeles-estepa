@@ -77,44 +77,29 @@ $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["R
           ?>">
 
 
-<?php $imagenpersonalizada ="https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/imagen chica 600px60px.webp";?>
+<?php $imagenpersonalizada =__DIR__.'/imagenes/imagenchica600px60px.webp';?>
 
       <meta property="og:image" content="<?php 
-          $og_image = get_field('og_image', $term); // Obtener el campo personalizado
-          if ($og_image) {
-              echo $og_image; // Mostrar la imagen personalizada
-          } else {
-              echo $imagenpersonalizada; // Mostrar la imagen predeterminada
-          }
-      ?>">
-      <!--De esta manera no me funciona el condicional-->
-      <meta property="og:image" content="<?php 
-          if (get_field ('og:image', $term))
+          if (get_field ('og_image', $term))
           {the_field( 'og_image', $term );}
           else {echo $imagenpersonalizada;} ?>">
     
 
     <meta property="og:image:secure_url" content="<?php
-        $og_image_secure_url = get_field('og:image:secure_url', $term); 
-        if ($og_image_secure_url) {
-            echo $og_image_secure_url; 
-        } else {
-            echo $imagenpersonalizada; 
-        }
-     ?>">
+        if (get_field ('og_image', $term))
+        {the_field( 'og_image', $term );}
+        else {echo $imagenpersonalizada;} ?>">
 
    <meta property="twitter:image" content="<?php 
-       $twitter_image = get_field('twitter:image', $term);
-       if ($twitter_image) {
-           echo $twitter_image; 
-       } else {
-           echo $imagenpersonalizada; }?>">
+        if (get_field ('twitter_image', $term))
+        {the_field( 'twitter_image', $term );}
+        else {echo $imagenpersonalizada;} ?>">
 
 
       <meta property="og:image.alt" content="<?php the_field( 'title', $term ); ?>">
 
       <meta property="og:type" content="<?php the_field( 'tipo_contenido' ); ?>">
-       <!--No se hacerla-->
+       <!--Esta incluye el title, descripction y la imagen-->
       <meta property="twitter:card" content="summary_large_image">
     
 
