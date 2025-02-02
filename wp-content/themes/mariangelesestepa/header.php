@@ -6,9 +6,10 @@
        <?php
           /* <link href="/css/fonts.css" rel="stylesheet">
              include_once $_SERVER['DOCUMENT_ROOT'].'/assets/functions.php'; */
-       
-             wp_head(); 
-            // include 'componets/metas-seo.php';
+             
+   include 'componets/metas-seo.php';
+   wp_head(); 
+           
        ?>
 </head>
 <body>
