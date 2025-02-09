@@ -11,6 +11,7 @@ get_header();
  // que a veces el plugin me da errores
  if (get_field('descripcion_corta')){
      ?>
+ <img class= "cabecerapost" height="300px" src="<?php the_field( 'imagen_cabecera' ); ?>" />
  <div class="descripcioncorta"><?php echo get_field( 'descripcion_corta' ); ?></div>
    <?php
 }

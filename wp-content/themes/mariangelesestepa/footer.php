@@ -4,7 +4,7 @@
              Granada, España
              (c) <a href="mailto:maestepamadera@hotmail.com">Mª Ángeles Estepa</a>
          </address>
-         <a href="/servicios">Servicios</a>
+         <a href="/nosotros">Nosotros</a>
 <?php wp_footer(); ?>
     </footer>
 </body>

@@ -1,14 +1,13 @@
 <?php
 get_header();
 ?>
-
- <section>
-   <div> 
+ <section class="imagencabecera">
+     <div class="cabecera">
         <h1>
              <?php the_title();?>
         </h1>
-             <p>Tan sólo con la mejor calidad se pueden alcanzar los mejores resultados.</p>
-     </div> 
+             <p class="slider">Tan sólo con la mejor calidad se pueden alcanzar los mejores resultados.</p>
+    </div>
 </section>
  <section id="contenido">
      <?php
@@ -19,10 +18,11 @@ get_header();
    <section class="imagenizquierda">
          <!--La etiqueta picture es para ofrecer distintas fuentes o formatos de imagenes antes de la fuente principal-->
       <picture>
-         <source type="image/avif" srcset="wp-content\themes\mariangelesestepa\imagenes/agencia seo.avif">
-         <img src="wp-content\themes\mariangelesestepa\imagenes/agencia seo.jpg" loading="lazy" width="600" height="300" title="Imagen de SEO para imagenes" alt="SEO para imagenes">
+         <source type="image/avif" srcset="wp-content\themes\mariangelesestepa\imagenes/nosotros.avif">
+         <source type="image/webp" srcset="wp-content\themes\mariangelesestepa\imagenes/nosotros.webp">
+         <img src="wp-content\themes\mariangelesestepa\imagenes/nosotros.jpg" loading="lazy" width="500" height="300" title="Imagen de SEO para imagenes" alt="SEO para imagenes">
       </picture>
-      <div> 
+      <div class="acordeon"> 
          <h2>Todo sobre nosotros</h2>
               <!--Sección acordeón-->
         <details>

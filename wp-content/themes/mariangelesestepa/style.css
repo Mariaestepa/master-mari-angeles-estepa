@@ -57,8 +57,8 @@ h1 {
 section.imagenizquierda {
     display: flex;
     align-content: space-between;
-    justify-content: space-evenly;
     align-items: center;
+    margin: 60px 300px;
 }
 section.imagenderecha {
     display: flex;
@@ -175,6 +175,12 @@ animation-name: cambiocolor;
 animation-duration: 4s;
 }
 
+.acordeon {
+    padding: 100px;
+    margin-left: 50px;
+    text-align: -webkit-auto;
+}
+
 @keyframes cambiocolor {
 from {background: yellow;}
 to {background: var(--naranja);}
@@ -221,9 +227,29 @@ section.footer {
     text-decoration: auto;
     padding: 20px;
 }
-
-section.basica {background-image: url('https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/agencia seo.jpg"');
+.post-card {
+    display: flex;
+    flex-direction: column;
 }
+img.cabecerapost {
+    aspect-ratio: 6 / 1;
+    object-fit: contain;
+}
+section.imagencabecera {
+    width: 2000px;
+    height: 600px;
+    background-image: url(https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/agenciamarketingdigital.jpg);
+    background-repeat: no-repeat;
+}
+.cabecera {
+    padding: 20px;
+    text-align: -webkit-center;
+}
+p.slider {
+    font-size: 26px;
+}
+
+
 /* Modificación elementos responsive */
 @media all and (min-width: 400px) and (max-width: 800px){
     nav>ul {
@@ -258,3 +284,4 @@ section.basica {background-image: url('https://master-mari-angeles-estepa.test/w
         margin: auto;
     }
 }
+
