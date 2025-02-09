@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 09-02-2025 a las 12:13:04
+-- Tiempo de generación: 09-02-2025 a las 12:20:50
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -5920,7 +5920,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6044, 64, '_wp_trash_meta_time', '1737908648'),
 (6045, 64, '_wp_desired_post_slug', 'field_678cde94ee270'),
 (6046, 304, '_edit_last', '1'),
-(6047, 304, '_edit_lock', '1739100255:1'),
+(6047, 304, '_edit_lock', '1739103480:1'),
 (6050, 108, 'descripcion_corta', 'La IA ha revolucionado el marketing digital, ofreciendo nuevas herramientas y estrategias que optimizan el trabajo de los especialistas en SEO y marketing.'),
 (6051, 108, '_descripcion_corta', 'field_679661ae082c1'),
 (6052, 307, 'precio', ''),

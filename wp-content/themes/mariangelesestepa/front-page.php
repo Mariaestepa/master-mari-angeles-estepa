@@ -18,9 +18,9 @@ get_header();
    <section class="imagenizquierda">
          <!--La etiqueta picture es para ofrecer distintas fuentes o formatos de imagenes antes de la fuente principal-->
       <picture>
-         <source type="image/avif" srcset="wp-content\themes\mariangelesestepa\imagenes/nosotros.avif">
-         <source type="image/webp" srcset="wp-content\themes\mariangelesestepa\imagenes/nosotros.webp">
-         <img src="wp-content\themes\mariangelesestepa\imagenes/nosotros.jpg" loading="lazy" width="500" height="300" title="Imagen de SEO para imagenes" alt="SEO para imagenes">
+         <source type="image/avif" srcset="https://master-mari-angeles-estepa.test/wp-content\themes\mariangelesestepa\imagenes/nosotros.avif">
+         <source type="image/webp" srcset="https://master-mari-angeles-estepa.test/wp-content\themes\mariangelesestepa\imagenes/nosotros.webp">
+         <img src="https://master-mari-angeles-estepa.test/wp-content\themes\mariangelesestepa\imagenes/nosotros.jpg" loading="lazy" width="500" height="300" title="Imagen de SEO para imagenes" alt="SEO para imagenes">
       </picture>
       <div class="acordeon"> 
          <h2>Todo sobre nosotros</h2>
