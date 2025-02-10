@@ -235,6 +235,7 @@ img.cabecerapost {
     aspect-ratio: 6 / 1;
     object-fit: contain;
 }
+/* Las imágenes decorativas necesitan alto y ancho */
 section.imagencabecera {
     width: 2000px;
     height: 600px;
