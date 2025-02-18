@@ -252,6 +252,7 @@ p.slider {
 #iframeboxing {
     width: 600px;
     padding-top: 450px;
+    margin: auto;
     cursor: pointer;
     background-size: cover!important;
     position: relative;

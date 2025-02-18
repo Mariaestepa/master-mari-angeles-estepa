@@ -48,7 +48,6 @@ get_header();
 <?php
 include $plantillas .'trespost.php';
 ?>
-
    <section class="footer">
        <?php
            get_footer();
