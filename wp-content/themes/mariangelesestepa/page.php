@@ -4,7 +4,7 @@ get_header();
  <section>
    <div> 
         <h1>
-             <?php the_title();?>Hola carlso
+             <?php the_title();?>Hola Carlos
         </h1>
              <p >Tan sólo con la mejor calidad se pueden alcanzar los mejores resultados.</p>
      </div> 
@@ -41,6 +41,14 @@ echo the_content();
         <h2> Servicios</h2>
       </div>
    </section>
+   <section>
+      <div>
+        <h2>Localización agencia marketing digital</h2>
+        <div id="iframeboxing" onclick="load_on_iframe()" style="background: url('https://carlos.sanchezdonate.com/wp-content/uploads/onload-iframe.jpg');">
+          <iframe id="iframeonclick" class="hidden" src="" width="600" height="450"allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        </section>
+
    <section class="footer">
        <?php
            get_footer();
