@@ -1,5 +1,11 @@
 function load_on_iframe(){document.getElementById("iframeonclick").setAttribute("onClick",""),document.getElementById("iframeonclick").className=document.getElementById("iframeonclick").className.replace(/(?:^|\s)hidden(?!\S)/g,""),document.getElementById("iframeonclick").src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12640.309781091826!2d-0.9916284999999999!3d37.62386605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1659971988650!5m2!1ses!2ses"}
 
+const element = document.getElementById ('ofuscacion');
+element.addEventListener("click", linktree);
+
+function linktree(){
+    location.href='/sobre-mi';
+}
 
 // document.getElementById("headinginicio").outerHTML= "<h1>He cambiado el elemento entero</h1>";
 // Eliminar un elemento aunque no haya función:

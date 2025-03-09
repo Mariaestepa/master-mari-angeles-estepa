@@ -131,7 +131,10 @@ a[href^="https:"] {
     align-items: center;
     gap: 20px; 
 }
-
+#ofuscacion {
+    cursor: pointer;
+    color: rgb(30, 198, 66);
+}
 h2.bloqueprecios { 
     width: 120px;
     height: 100px;
