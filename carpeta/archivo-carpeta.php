@@ -9,6 +9,10 @@ define("pagina", "archivo de carpeta");
          echo $_SERVER['DOCUMENT_ROOT'];
      ?>
     <h1 style="color: darkgoldenrod;">Esta es la página de archivo de carpeta</h1>
+    <div>
+     <a href="/enlaces/enlaces-internos">Enlaces internos</a>
+     <a href="/unica">Única</a>
+    </div>
     <div id="variante"></div>
     <script>
     
@@ -64,7 +68,7 @@ define("pagina", "archivo de carpeta");
         case 11:
         month ="diciembre";
         break;
-      }
+      }    
       
       document.getElementById("variante").innerHTML = "Los servicios " + servicios + " en " + month;
        </script>
