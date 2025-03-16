@@ -20,4 +20,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 2 months"
+</IfModule>
+
 # END WordPress
