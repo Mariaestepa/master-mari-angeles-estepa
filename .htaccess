@@ -12,5 +12,10 @@ RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
 RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
 RewriteRule .* - [L,R=404]
 
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 2 months"
+</IfModule>
+
 # NOTE! FOR APACHE ON WINDOWS: Add [NC] to RewriteCond like this:
 # RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
