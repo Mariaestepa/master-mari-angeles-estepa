@@ -66,14 +66,17 @@ section.imagenderecha {
     align-content: center;
     justify-content: space-around;
     align-items: flex-start;
+    
 }
-.h2 {
-    color: var(--naranja);
+h2 {
+    color: olive;
     position: relative;
-    display: flex
-;
+    font-size: 40px;
+    display: flex;
+    font-weight: 600;;
     align-content: stretch;
     justify-content: space-evenly;
+    padding-top: 30px;
 }
 .bloque.texto {
     padding: 25px;
@@ -268,6 +271,113 @@ p.slider {
     visibility: hidden;
     }
 
+
+    .zona-servicios {
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .tarjetas {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .tarjeta {
+        background-color: #fff;
+        padding: 30px 20px;
+        border-radius: 20px;
+        width: 300px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      
+      .icono {
+        margin-bottom: 20px;
+      }
+      
+      .icono img {
+        width: 50px;
+        opacity: 0.4;
+      }
+      
+      .tarjeta h3 {
+        background-color:var(--rosa);
+        margin: 0 -20px 10px;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+      
+      .tarjeta p {
+        font-size: 14px;
+        color: #333;
+      }
+
+      a.boton {
+        display: inline-block;
+        background: linear-gradient(90deg, #f6baba, var(--rosa)); /* gradiente rosado-rojizo */
+        color: #ffffff;
+        padding: 5px 25px;
+        border-radius: 9999px; /* forma de píldora */
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        display:flex;
+      }
+      
+      .boton:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+   
+      }
+  
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+  
+      .item {
+        flex: 1;
+        min-width: 280px;
+        max-width: 360px;
+      }
+  
+      .item h3 {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 700;
+        color: var(--rosa);
+     
+      }
+  
+      .item p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      
+      
 /* Modificación elementos responsive */
 @media all and (min-width: 400px) and (max-width: 800px){
     nav>ul {
