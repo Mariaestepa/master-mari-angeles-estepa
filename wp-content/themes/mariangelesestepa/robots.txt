@@ -1,0 +1,27 @@
+# Mª Ángeles Estepa Madera
+
+User-agent: Yandexbot
+Disallow: / 
+
+User-agent: AdsBot-Google
+Allow: /oferta-blackfriday/
+
+User-agent: Googlebot
+Disallow: /oferta-blackfriday/
+Disallow: /scripts/?prescindible.js
+Allow: /scripts/*.js
+Allow: /scripts/*.json
+Disallow: /nomeves/
+Allow: /nomeves/cartagena/
+Allow:/nomeves/sources/
+
+User-agent: *
+Disallow: /scripts/?prescindible.js
+Allow: /scripts/*.js
+Allow: /scripts/*.json
+Disallow: /nomeves/
+Allow: /nomeves/cartagena/
+Allow:/nomeves/sources/
+
+
+Sitemap: https://master-mari-angeles-estepa.test/sitemap.xml
