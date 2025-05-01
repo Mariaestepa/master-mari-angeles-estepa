@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
     <loc>https://master-mari-angeles-estepa.test/</loc>
@@ -17,7 +18,7 @@
     <loc>https://master-mari-angeles-estepa.test/nosotros/</loc>
        <lastmod>2025-04-29</lastmod>
 
-         <video:video>
+        <video:video>
             <video:thumbnail_loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/seo-imagenes-video.jpg</video:thumbnail_loc>
             <video:title>Oso en el rio</video:title>
             <video:description>Es un video random en la página de nosotros en la que aparece un oso.</video:description>
@@ -31,10 +32,8 @@
                 <!--Es útil cuando hay varios videos en la página, ej:horizontal, vertical 
                 y queremos mostrar cada video en distintas plataformas-->
             <video:platform relationship="allow">web mobile</video:platform>
-
-         </video:video>
-      
-  </url>
+        </video:video>
+    </url>
 
   <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/como-configurar-eventos-personalizados-ga4/</loc>
@@ -42,7 +41,17 @@
         <image:image>
          <image:loc>https://master-mari-angeles-estepa.test/wp-content/uploads/2025/01/Google-Analyics-1.jpg</image:loc>
         </image:image>
-  </url>
+
+        <news:news>
+           <news:publication>
+            <!--News name es el equivalente al H1-->
+           <news:name>Cómo Configurar Eventos Personalizados en GA4 para Medir el Rendimiento de tu Sitio Web</news:name>
+           <news:language>es</news:language>
+           </news:publication>
+           <news:publication_date>2025-01-30T19:20+01:00</news:publication_date>
+           <news:title>Cómo Configurar Eventos Personalizados en GA4</news:title>
+       </news:news>
+    </url>
 
   <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/estrategias-contenido-seo/</loc>
@@ -50,6 +59,16 @@
        <image:image>
         <image:loc>https://master-mari-angeles-estepa.test/wp-content/uploads/2025/01/contenido-seo.jpg</image:loc>
        </image:image>
+
+        <news:news>
+           <news:publication>
+            <!--News name es el equivalente al H1-->
+           <news:name>Estrategias de Contenido SEO: Cómo Crear Contenido que Posicione en 2025</news:name>
+           <news:language>es</news:language>
+           </news:publication>
+           <news:publication_date>2025-02-15T19:20+01:00</news:publication_date>
+           <news:title>Estrategias de Contenido SEO</news:title>
+       </news:news>
   </url>
 
   <url>
@@ -58,6 +77,16 @@
        <image:image>
          <image:loc>https://master-mari-angeles-estepa.test/wp-content/uploads/2025/01/inteligencia-artificial.jpg</image:loc>
        </image:image>
+
+        <news:news>
+           <news:publication>
+            <!--News name es el equivalente al H1-->
+           <news:name>La Inteligencia Artificial en el Marketing Digital: Claves para el 2025</news:name>
+           <news:language>es</news:language>
+           </news:publication>
+           <news:publication_date>2025-02-28T19:20+01:00</news:publication_date>
+           <news:title>La Inteligencia Artificial en el Marketing Digital</news:title>
+       </news:news>
   </url>
   
 </urlset>
