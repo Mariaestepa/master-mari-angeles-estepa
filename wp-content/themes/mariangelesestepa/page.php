@@ -39,8 +39,13 @@ echo the_content();
    <section>
       <div>
         <h2> Servicios</h2>
-      </div>
-   </section>
+         <video width="320" height="240" controls poster="\wp-content\themes\mariangelesestepa\imagenes\seo-imagenes-video.jpg">
+            <source src="\wp-content\themes\mariangelesestepa\videos\movie.mp4" type="video/mp4">
+            <source src="\wp-content\themes\mariangelesestepa\videos\movie.ogg" type="video/ogg">
+          </video>
+          </div>
+         </section>
+
    <section>
         <h2>Localización agencia marketing digital</h2>
         <div id="iframeboxing" onclick="load_on_iframe()" style="background: url('https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/onload-iframe.webp');">

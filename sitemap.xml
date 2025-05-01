@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
-      <loc>https://master-mari-angeles-estepa.test/</loc>
+    <loc>https://master-mari-angeles-estepa.test/</loc>
       <lastmod>2025-04-29</lastmod>
   
        <image:image>
         <image:loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/nosotros.avif</image:loc> 
        </image:image>
+
   </url>
 
   <url>
-       <loc>https://master-mari-angeles-estepa.test/nosotros/</loc>
+    <loc>https://master-mari-angeles-estepa.test/nosotros/</loc>
        <lastmod>2025-04-29</lastmod>
+
+         <video:video>
+            <video:thumbnail_loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/seo-imagenes-video.jpg</video:thumbnail_loc>
+            <video:title>Oso en el rio</video:title>
+            <video:description>Es un video random en la página de nosotros en la que aparece un oso.</video:description>
+             <video:content_loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/videos/movie.mp4</video:content_loc>
+         </video:video>
+      
   </url>
 
   <url>
-       <loc>https://master-mari-angeles-estepa.test/articulo/como-configurar-eventos-personalizados-ga4/</loc>
+    <loc>https://master-mari-angeles-estepa.test/articulo/como-configurar-eventos-personalizados-ga4/</loc>
    
         <image:image>
          <image:loc>https://master-mari-angeles-estepa.test/wp-content/uploads/2025/01/Google-Analyics-1.jpg</image:loc>
