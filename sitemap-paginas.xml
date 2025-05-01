@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <url>
+    <loc>https://master-mari-angeles-estepa.test/</loc>
+      <lastmod>2025-04-29</lastmod>
+       <!--Etiquetas de imágenes que solo sirven para Google-->
+       <image:image>
+        <image:loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/nosotros.avif</image:loc> 
+       </image:image>
+
+  </url>
+
+  <url>
+    <loc>https://master-mari-angeles-estepa.test/nosotros/</loc>
+       <lastmod>2025-04-29</lastmod>
+
+        <video:video>
+            <video:thumbnail_loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/seo-imagenes-video.jpg</video:thumbnail_loc>
+            <video:title>Oso en el rio</video:title>
+            <video:description>Es un video random en la página de nosotros en la que aparece un oso.</video:description>
+            <video:content_loc>https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/videos/movie.mp4</video:content_loc>
+               <!--Etiquetas opcionales para video que solo funcionan para Google-->
+            <video:duration>12</video:duration>
+            <video:publication_date>2025-04-29</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+                <!--No se muestra el video en Google en estos paises, el código de los paises se busca en la ISO-->
+            <video:restriction relationship="deny">RU CN</video:restriction>
+                <!--Es útil cuando hay varios videos en la página, ej:horizontal, vertical 
+                y queremos mostrar cada video en distintas plataformas-->
+            <video:platform relationship="allow">web mobile</video:platform>
+        </video:video>
+    </url>
+</urlset>
