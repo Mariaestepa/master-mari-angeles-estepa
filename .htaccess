@@ -25,10 +25,5 @@ ExpiresActive On
 ExpiresByType text/css "access plus 2 months"
 </IfModule>
 
-# Redirecciona una página individual a otra página 
-RedirectMatch 301 ^/sitemap-index.xml$ https://master-mari-angeles-estepa.test/mariangeles-index.xml
-RedirectMatch 301 ^/sitemap-posts.xml$ https://master-mari-angeles-estepa.test/mariangeles-posts.xml
-RedirectMatch 301 ^/sitemap-paginas.xml$ https://master-mari-angeles-estepa.test/mariangeles-paginas.xml
-
 # END WordPress
 
