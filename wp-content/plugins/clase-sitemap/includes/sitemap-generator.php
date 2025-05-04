@@ -20,7 +20,7 @@ $argsblog = array(
 'posts_per_page' => -1,
 //'post__not_in' => array($post->ID), // Ensure that the current post is not displayed
 'post_type' => 'post',
-'orderby' => 'desc',
+'orderby' => 'date',
 'order' => 'DESC',
 'post_status' => 'publish',
 );
@@ -60,7 +60,7 @@ $argspage = array(
 'posts_per_page' => -1,
 //'post__not_in' => array($post->ID), // Ensure that the current post is not displayed
 'post_type' => 'page',
-'orderby' => 'desc',
+'orderby' => 'date',
 'order' => 'DESC',
 'post_status' => 'publish',
 );
@@ -87,8 +87,76 @@ echo '<a class="exitbutton" href="' . $rutita . '/mariangeles-paginas.xml" targe
 $dompage->save('mariangeles-paginas.xml') or die('XML Create Error');
 
 
-echo "<h2>Sitemap Index</h2>";
+echo "<h2>Noticias</h2>";
+$domnoticia = new DOMDocument('1.0','UTF-8');
+$domnoticia->formatOutput = true;
+$domnoticia->preserveWhiteSpace = false;
+$rootnoticia = $domnoticia->createElement('urlset');
+$domnoticia->appendChild($rootnoticia);
+$rootnoticia->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+$rootnoticia->setAttribute('xmlns:news', 'http://www.google.com/schemas/sitemap-news/0.9');
+//$resultnoticia->setAttribute('id', 1);
+$argsnoticia = array(
+'posts_per_noticia' => -1,
+//'post__not_in' => array($post->ID), // Ensure that the current post is not displayed
+'post_type' => 'noticia',
+'orderby' => 'date',
+'order' => 'DESC',
+'post_status' => 'publish',
+);
+$obtencionnoticia = new WP_Query( $argsnoticia );
+if ($obtencionnoticia->have_posts()) :
+while ($obtencionnoticia->have_posts()) : $obtencionnoticia->the_post();
+if (!get_field("canonical")) {
+$metarobots_checked_values = get_field('metarobots');
+if ($metarobots_checked_values && (in_array('all', $metarobots_checked_values) || in_array('index', $metarobots_checked_values))) {
+$enlace = get_permalink();
+$lastestmod = get_the_modified_date('Y-m-d');
+$resultnoticia = $domnoticia->createElement('url');
+$rootnoticia->appendChild($resultnoticia);
+$resultnoticia->appendChild($domnoticia->createElement('loc', $enlace));
+$resultnoticia->appendChild($domnoticia->createElement('lastmod', $lastestmod));
+$newsnoticia->appendChild($domnoticia->createElement('news:news', $lastestmod));
 
+$publicationDate = get_the_modified_date('Y-m-d\TH:i:s.uP');
+$publicationDateTimestamp = strtotime($publicationDate);
+$currentDateTimestamp = strtotime(date('Y-m-d'));
+$daysDifference = floor(($currentDateTimestamp - $publicationDateTimestamp) / (60 * 60 * 24));
+
+if ($daysDifference <= 2) {
+
+// Añadir estructura adicional dentro de <news:news>
+$newsElement = $domblog->createElement('news:news');
+$resultblog->appendChild($newsElement);
+$tituloblog = get_the_title();
+$publishedblog = get_the_modified_date('Y-m-d\TH:i:s.uP');
+$newstitle = get_field('title');
+// Definir las variables dentro de <news:news> según tus necesidades
+$publicationElement = $domblog->createElement('news:publication');
+$publicationNameElement = $domblog->createElement('news:name', $tituloblog);
+$publicationLanguageElement = $domblog->createElement('news:language', 'es');
+$publicationElement->appendChild($publicationNameElement);
+$publicationElement->appendChild($publicationLanguageElement);
+$newsElement->appendChild($publicationElement);
+$publicationDateElement = $domblog->createElement('news:publication_date', $publishedblog);
+$newsElement->appendChild($publicationDateElement);
+$titleElement = $domblog->createElement('news:title', $newstitle);
+$newsElement->appendChild($titleElement);
+}
+}
+}
+endwhile;
+wp_reset_postdata();
+endif;
+// Así vemos el código que se hace
+echo '<code class="codigo-post"><xmp>'. $domnoticia->saveXML() .'</xmp></code>';
+echo '<a class="exitbutton" href="' . $rutita . '/mariangeles-noticias.xml" target="_blank">Comprobar Sitemap</a>';
+$domnoticia->save('mariangeles-noticias.xml') or die('XML Create Error');
+
+
+
+echo "<h2>Sitemap Index</h2>";
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
 $domindex = new DOMDocument('1.0', 'UTF-8');
 $domindex->formatOutput = true;
 $domindex->preserveWhiteSpace = false;
@@ -100,7 +168,8 @@ $rootindex->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 // URLs de los sitemaps
 $sitemaps = array(
     'mariangeles-posts.xml',
-    'mariangeles-paginas.xml'
+    'mariangeles-paginas.xml',
+    'mariangeles-noticias.xml',
 );
 
 foreach ($sitemaps as $sitemapfile) {
