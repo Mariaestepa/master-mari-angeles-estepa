@@ -47,7 +47,7 @@ echo the_content();
          </section>
 
    <section>
-         <!--Al personalizar el sitemap con estilos me deja de funcionar el onclick-->
+   
         <h2>Localización agencia marketing digital</h2>
         <div id="iframeboxing" onclick="load_on_iframe()" style="background: url('https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/onload-iframe.webp');">
         <iframe id="iframeonclick" class="hidden" style="border: 0;" src="" width="600" height="450" allowfullscreen="allowfullscreen"></iframe></div>

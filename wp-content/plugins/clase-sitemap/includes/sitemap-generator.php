@@ -3,6 +3,7 @@ $protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http' . '://';
 $rutita = $current_url="//".$_SERVER['HTTP_HOST'];
 $canonical = get_field( 'canonical' );
 ?><x-layout>
+
 <section>
 <div style="height:44px;"> </div>
 <?php
@@ -98,8 +99,8 @@ $rootindex->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 
 // URLs de los sitemaps
 $sitemaps = array(
-    'sitemap-posts.xml',
-    'sitemap-paginas.xml'
+    'mariangeles-posts.xml',
+    'mariangeles-paginas.xml'
 );
 
 foreach ($sitemaps as $sitemapfile) {
@@ -116,7 +117,6 @@ echo '<a class="exitbutton" href="' . $rutita . '/mariangeles-index.xml" target=
 $domindex->save('mariangeles-index.xml') or die('No se pudo crear el índice de sitemaps');
 ?>
 
-<?xml-stylesheet href="/wp-content/themes/mariangelesestepa/stylesheet.xsl" type="text/xsl"?>
 </section>
 <style>
 .site-footer{display:none}.codigo-post{background:var(--light-grey);padding:40px 16px 16px;cursor:text;font-size:16px;overflow-x:scroll;display:block;max-width:100%;min-width:100px;background-color:#0c1021;color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='14' viewBox='0 0 54 14'%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(1 1)'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23FF5F56' stroke='%23E0443E' stroke-width='.5'%3E%3C/circle%3E%3Ccircle cx='26' cy='6' r='6' fill='%23FFBD2E' stroke='%23DEA123' stroke-width='.5'%3E%3C/circle%3E%3Ccircle cx='46' cy='6' r='6' fill='%2327C93F' stroke='%231AAB29' stroke-width='.5'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;background-position:16px 8px;font-family:monospace;background-attachment:local}.codigo-post pre{margin:none}a.exitbutton{background:#8d096b;color:#faf7fb;text-decoration:inherit;font-size:22px;margin:16px auto auto;display:flex;width:fit-content;padding:16px;font-weight:700}h2{color:#8d096b;font-size:40px}

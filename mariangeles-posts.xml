@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://master-mari-angeles-estepa.test/articulo/comprobacion-sitemap-automatico/</loc>
-    <lastmod>2025-05-04</lastmod>
-  </url>
-  <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/como-configurar-eventos-personalizados-ga4/</loc>
     <lastmod>2025-05-03</lastmod>
   </url>
@@ -27,5 +23,9 @@
   <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/granada-sound/</loc>
     <lastmod>2025-05-03</lastmod>
+  </url>
+  <url>
+    <loc>https://master-mari-angeles-estepa.test/articulo/comprobacion-sitemap-automatico/</loc>
+    <lastmod>2025-05-04</lastmod>
   </url>
 </urlset>
