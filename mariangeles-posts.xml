@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/como-configurar-eventos-personalizados-ga4/</loc>
-    <lastmod>2025-05-03</lastmod>
+    <lastmod>2025-05-05</lastmod>
+    <image:image>
+      <image:loc>https://master-mari-angeles-estepa.test/wp-content/uploads/2025/01/Google-Analyics-1.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/estrategias-contenido-seo/</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2025-05-05</lastmod>
+    <image:image>
+      <image:loc>https://master-mari-angeles-estepa.test/wp-content/uploads/2025/01/contenido-seo.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://master-mari-angeles-estepa.test/articulo/inteligencia-artificial-marketing-digital/</loc>

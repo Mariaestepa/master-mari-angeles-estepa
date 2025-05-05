@@ -15,6 +15,8 @@ $domblog->preserveWhiteSpace = false;
 $rootblog = $domblog->createElement('urlset');
 $domblog->appendChild($rootblog);
 $rootblog->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+$rootblog->setAttribute('xmlns:image', 'http://www.google.com/schemas/sitemap-image/1.1');
+
 //$resultblog->setAttribute('id', 1);
 $argsblog = array(
 'posts_per_page' => -1,
@@ -36,6 +38,21 @@ $resultblog = $domblog->createElement('url');
 $rootblog->appendChild($resultblog);
 $resultblog->appendChild($domblog->createElement('loc', $enlace));
 $resultblog->appendChild($domblog->createElement('lastmod', $lastestmod));
+
+
+ // Obtener imágenes del contenido
+ $post_content = get_the_content();
+ preg_match_all('/<img[^>]+src=["\']([^"\']+)["\']/i', $post_content, $matches);
+
+ if (!empty($matches[1])) {
+     foreach ($matches[1] as $img_url) {
+         $image_tag = $domblog->createElement('image:image');
+         $image_loc = $domblog->createElement('image:loc', $img_url);
+         $image_tag->appendChild($image_loc);
+         $resultblog->appendChild($image_tag);
+     }
+ }
+
 }
 }
 endwhile;
@@ -55,6 +72,7 @@ $dompage->preserveWhiteSpace = false;
 $rootpage = $dompage->createElement('urlset');
 $dompage->appendChild($rootpage);
 $rootpage->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+$rootpage->setAttribute('xmlns:image', 'http://www.google.com/schemas/sitemap-image/1.1');
 //$resultpage->setAttribute('id', 1);
 $argspage = array(
 'posts_per_page' => -1,
@@ -76,6 +94,20 @@ $resultpage = $dompage->createElement('url');
 $rootpage->appendChild($resultpage);
 $resultpage->appendChild($dompage->createElement('loc', $enlace));
 $resultpage->appendChild($dompage->createElement('lastmod', $lastestmod));
+
+
+// Obtener imágenes del contenido
+$page_content = get_the_content();
+preg_match_all('/<img[^>]+src=["\']([^"\']+)["\']/i', $page_content, $matches);
+
+if (!empty($matches[1])) {
+    foreach ($matches[1] as $img_url) {
+        $image_tag = $dompage->createElement('image:image');
+        $image_loc = $dompage->createElement('image:loc', $img_url);
+        $image_tag->appendChild($image_loc);
+        $resultpage->appendChild($image_tag);
+    }
+}
 }
 }
 endwhile;

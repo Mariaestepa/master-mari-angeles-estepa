@@ -98,8 +98,9 @@ get_header();
     </div>
   </div>
   </section>
-
- 
+  <section>
+  <img src="https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/agenciamarketingdigital.jpg" alt="Agencia marketing digital">
+</section>
 <section>
 <h2>Últimas novedades del blog</h2>
 <div class="centrados">Descubre cómo podemos ayudarte a alcanzar tus metas con nuestra amplia gama de servicios. 
