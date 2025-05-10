@@ -148,7 +148,7 @@ $resultnoticia = $domnoticia->createElement('url');
 $rootnoticia->appendChild($resultnoticia);
 $resultnoticia->appendChild($domnoticia->createElement('loc', $enlace));
 $resultnoticia->appendChild($domnoticia->createElement('lastmod', $lastestmod));
-$newsnoticia->appendChild($domnoticia->createElement('news:news', $lastestmod));
+
 
 $publicationDate = get_the_modified_date('Y-m-d\TH:i:s.uP');
 $publicationDateTimestamp = strtotime($publicationDate);
@@ -156,35 +156,38 @@ $currentDateTimestamp = strtotime(date('Y-m-d'));
 $daysDifference = floor(($currentDateTimestamp - $publicationDateTimestamp) / (60 * 60 * 24));
 
 if ($daysDifference <= 2) {
-
 // Añadir estructura adicional dentro de <news:news>
-$newsElement = $domblog->createElement('news:news');
-$resultblog->appendChild($newsElement);
-$tituloblog = get_the_title();
-$publishedblog = get_the_modified_date('Y-m-d\TH:i:s.uP');
+$newsElement = $domnoticia->createElement('news:news');
+$resultnoticia->appendChild($newsElement);
+$titulonoticia = get_the_title();
+$publishednoticia = get_the_modified_date('Y-m-d\TH:i:s.uP');
 $newstitle = get_field('title');
+
 // Definir las variables dentro de <news:news> según tus necesidades
-$publicationElement = $domblog->createElement('news:publication');
-$publicationNameElement = $domblog->createElement('news:name', $tituloblog);
-$publicationLanguageElement = $domblog->createElement('news:language', 'es');
+$publicationElement = $domnoticia->createElement('news:publication');
+$publicationNameElement = $domnoticia->createElement('news:name', $titulonoticia);
+$publicationLanguageElement = $domnoticia->createElement('news:language', 'es');
 $publicationElement->appendChild($publicationNameElement);
 $publicationElement->appendChild($publicationLanguageElement);
 $newsElement->appendChild($publicationElement);
-$publicationDateElement = $domblog->createElement('news:publication_date', $publishedblog);
+
+$publicationDateElement = $domnoticia->createElement('news:publication_date', $publishednoticia);
 $newsElement->appendChild($publicationDateElement);
-$titleElement = $domblog->createElement('news:title', $newstitle);
+
+$titleElement = $domnoticia->createElement('news:title', $newstitle);
 $newsElement->appendChild($titleElement);
 }
-}
-}
-endwhile;
-wp_reset_postdata();
+    }
+    }
+    
+    endwhile;
+    wp_reset_postdata();
 endif;
-// Así vemos el código que se hace
-echo '<code class="codigo-post"><xmp>'. $domnoticia->saveXML() .'</xmp></code>';
-echo '<a class="exitbutton" href="' . $rutita . '/mariangeles-noticias.xml" target="_blank">Comprobar Sitemap</a>';
-$domnoticia->save('mariangeles-noticias.xml') or die('XML Create Error');
 
+echo '<code class="codigo-post"><xmp>' . $domnoticia->saveXML() . '</xmp></code>';
+echo '<a class="exitbutton" href="' . get_site_url() . '/mariangeles-noticias.xml" target="_blank">Comprobar Sitemap</a>';
+
+$domnoticia->save(ABSPATH . 'mariangeles-noticias.xml') or die('Error al crear XML');
 
 
 echo "<h2>Sitemap Index</h2>";

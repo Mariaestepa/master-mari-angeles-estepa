@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"/>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://master-mari-angeles-estepa.test/articulo/noticias/sitemap-de-noticias/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>Noticias para el sitemap de noticias</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2025-05-10T18:07:07.000000+02:00</news:publication_date>
+      <news:title>Esta es la noticia para el sitemap</news:title>
+    </news:news>
+  </url>
+</urlset>

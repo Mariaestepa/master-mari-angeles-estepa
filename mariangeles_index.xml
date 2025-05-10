@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://master-mari-angeles-estepa.test/mariangeles-posts.xml</loc>
+    <loc>https://master-mari-angeles-estepa.test/mariangeles_posts.xml</loc>
     <lastmod>2025-05-10</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://master-mari-angeles-estepa.test/mariangeles-paginas.xml</loc>
+    <loc>https://master-mari-angeles-estepa.test/mariangeles_paginas.xml</loc>
     <lastmod>2025-05-10</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://master-mari-angeles-estepa.test/mariangeles-noticias.xml</loc>
+    <loc>https://master-mari-angeles-estepa.test/mariangeles_noticias.xml</loc>
     <lastmod>2025-05-10</lastmod>
   </sitemap>
 </sitemapindex>
