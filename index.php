@@ -1,4 +1,5 @@
-   <?php 
+  
+  <?php 
      $titulo = "Página de Inicio";
      $producto1="camisetasrojas";
       /* Una variable se define primero con una constante y segundo con el significado de la contante. La variable y la constante 
@@ -9,6 +10,8 @@
      define("banner", "/contacto");
       include $_SERVER['DOCUMENT_ROOT'].'/assets/header.php';
      ?>
+              <script src="/scripts/wpo.js" defer></script>
+
      <?php 
          echo $_SERVER['DOCUMENT_ROOT'];
      ?>
@@ -19,9 +22,14 @@
          entonces fue cuando me traje toda la carpeta de github, ¿esto influye en algo?
          
          Respuesta: Ahora esta todo correcto, no influye en nada, va perfecto
+         <h1 class="clase" id="headinginicio">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
          En cuanto a los cambios es normal, hay que guardar los cambios para poder verlos en la página-->
-        <h1 class="clase" id="headinginicio">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
-      <noscript> Código en noscript con php <?php echo date("d/M/Y"); echo " Bienvenido a mi web 😬";?></noscript>
+
+         
+
+
+
+         <noscript> Código en noscript con php <?php echo date("d/M/Y"); echo " Bienvenido a mi web 😬";?></noscript>
       <?php 
       $geles ="Tengo que ponerme a darle forma a la web";
       echo "$geles más pronto que tarde";
@@ -287,11 +295,16 @@
    <section>
       <div class="imagenfondonorepeat"></div>
 </section>
+<h1 class="clase" id="wpo">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
+
 <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
   
    <script src="/scripts/archivo.js"></script>
+
    <script>
         document.getElementById("headinginicio").innerHTML= "Hola";
+
+
    </script>
