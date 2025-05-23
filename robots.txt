@@ -8,20 +8,24 @@ Allow: /oferta-blackfriday/
 
 User-agent: Googlebot
 Disallow: /oferta-blackfriday/
-Disallow: /scripts/?prescindible.js
+# Disallow: /scripts/?prescindible.js 
+Disallow: /scripts/*?prescindible
 Allow: /scripts/*.js
 Allow: /scripts/*.json
 Disallow: /nomeves/
 Allow: /nomeves/cartagena/
-Allow:/nomeves/sources/
+#Allow:/nomeves/sources/
+Allow: /nomeves/sources/*.css
 
 User-agent: *
-Disallow: /scripts/?prescindible.js
+#Disallow: /scripts/?prescindible.js
+Disallow: /scripts/*?prescindible
 Allow: /scripts/*.js
 Allow: /scripts/*.json
 Disallow: /nomeves/
 Allow: /nomeves/cartagena/
-Allow:/nomeves/sources/
+#Allow:/nomeves/sources/
+Allow: /nomeves/sources/*.css
 
 
 Sitemap: https://master-mari-angeles-estepa.test/sitemap.xml
