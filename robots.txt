@@ -9,7 +9,7 @@ Allow: /oferta-blackfriday/
 User-agent: Googlebot
 Disallow: /oferta-blackfriday/
 # Disallow: /scripts/?prescindible.js 
-Disallow: /scripts/*?prescindible
+Disallow: /scripts/*.js?prescindible
 Allow: /scripts/*.js
 Allow: /scripts/*.json
 Disallow: /nomeves/
@@ -19,7 +19,7 @@ Allow: /nomeves/sources/*.css
 
 User-agent: *
 #Disallow: /scripts/?prescindible.js
-Disallow: /scripts/*?prescindible
+Disallow: /scripts/*.js?prescindible
 Allow: /scripts/*.js
 Allow: /scripts/*.json
 Disallow: /nomeves/
