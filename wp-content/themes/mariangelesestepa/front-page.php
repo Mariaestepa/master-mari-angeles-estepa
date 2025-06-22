@@ -7,6 +7,10 @@ get_header();
              <?php the_title();?>
         </h1>
              <p class="slider">Tan sólo con la mejor calidad se pueden alcanzar los mejores resultados.</p>
+             <?php
+             if (esDispositivoMovil()): ?>
+    <h1>Solo funciono en movil</h1>
+<?php endif; ?>
     </div>
 </section>
  <section id="contenido">

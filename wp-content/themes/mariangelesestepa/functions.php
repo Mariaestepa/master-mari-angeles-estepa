@@ -43,4 +43,17 @@ function crear_post_type_noticias() {
 
 add_action('init', 'crear_post_type_noticias');
 
+
+
+function esDispositivoMovil() {
+    $userAgent = strtolower($_SERVER['HTTP_USER_AGENT']); 
+    $patronesMoviles = '/(android|iphone|ipad|ipod|blackberry|windows phone|opera mini|opera mobi|palm|symbian|nokia|fennec|kindle|silk|playbook|bb10|meego|webos|mobile|tablet|smartphone)/i';
+    return preg_match($patronesMoviles, $userAgent);
+}
+/*
+<?php
+if (esDispositivoMovil()): ?>
+    <p>Solo funciono en movil</p>
+<?php endif; ?>
+*/
 ?>

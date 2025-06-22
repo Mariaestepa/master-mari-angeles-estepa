@@ -6,6 +6,10 @@ get_header();
         <h1>
              <?php the_title();?>Hola Carlos
         </h1>
+        <?php
+if (esDispositivoMovil()): ?>
+    <h1>Solo funciono en movil</h1>
+<?php endif; ?>
              <p >Tan sólo con la mejor calidad se pueden alcanzar los mejores resultados.</p>
      </div> 
 </section>
