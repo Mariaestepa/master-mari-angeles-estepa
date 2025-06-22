@@ -1,116 +1,112 @@
 <?php
 function wp_seofooter() {
-  if (!function_exists('get_field')) {
-        return; // Salimos si ACF no está disponible
-    }
-    $protocol = isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === "on" ? 'https' : 'http';
+    
+    $protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
     $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?');
     $term = get_queried_object();
-    $proyectoname = "Ejemplo";
 
-    if ($term) {
-        $meta_footer = get_field('custom_meta_footer', $term);
-        if ($meta_footer) {
-            echo $meta_footer;
-        }
-  
-  if (is_home() || (is_front_page() && is_page())) {
 
+    the_field('custom_meta_footer', $term);
+
+    // Mostrar datos estructurados en la página de inicio o la de 'nosotros'
+    if (is_front_page() || is_page()) {
         ?>
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Mª Ángeles Estepa",
-          "url": "<?php echo esc_url($url_sin_string); ?>",
-          "logo": "<?php echo esc_url(get_template_directory_uri()); ?>/imagenes/logo.png"
+          "url": "<?php echo ($url_sin_string);?>",
+          "logo": "<?php echo (get_template_directory_uri()); ?>/imagenes/logo.png",
+          "name": "Mª Ángeles Estepa"
         }
         </script>
         <?php
-    }
-    // Mostrar script solo en productos
-    elseif (is_singular('product')) {
+
+     // PRODUCT
+    } elseif (is_product()) {
+        global $product;
+
+        if (!isset($product) || !($product instanceof WC_Product)) {
+            $product = wc_get_product(get_the_ID());
+        }
+
+        if ($product instanceof WC_Product) {
+            $product_id = $product->get_id();
+            $name = $product->get_name();
+            $description = wp_strip_all_tags($product->get_description());
+            $sku = $product->get_sku();
+            $price = $product->get_price();
+            $currency = get_woocommerce_currency();
+            $availability = $product->is_in_stock() ? "https://schema.org/InStock" : "https://schema.org/OutOfStock";
+            $brand_name = get_field('marca');
+            if (empty($brand_name)) {
+            $brand_name = 'Sin marca';}
+            $images = [];
+            $main_image = wp_get_attachment_url($product->get_image_id());
+            if ($main_image) {
+                $images[] = esc_url($main_image);
+            }
+            foreach ($product->get_gallery_image_ids() as $img_id) {
+                $images[] = esc_url(wp_get_attachment_url($img_id));
+            }
+
+            $average = $product->get_average_rating();
+            $count = $product->get_review_count();
+            ?>
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "Product",
+                "name": "<?php echo esc_js($name); ?>",
+                "image": <?php echo str_replace('\\/', '/', json_encode($images)); ?>,
+                "description": "<?php echo esc_js($description); ?>",
+                "sku": "<?php echo esc_js($sku); ?>",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "<?php echo esc_js($brand_name); ?>"
+                },
+                <?php if ($count > 0): ?>
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "<?php echo esc_js($average); ?>",
+                    "reviewCount": "<?php echo esc_js($count); ?>"
+                },
+                <?php endif; ?>
+                "offers": {
+                    "@type": "Offer",
+                    "url": "<?php echo esc_url(get_permalink($product_id)); ?>",
+                    "priceCurrency": "<?php echo esc_js($currency); ?>",
+                    "price": "<?php echo esc_js($price); ?>",
+                    "priceValidUntil": "<?php echo date('Y-m-d', strtotime('+1 year')); ?>",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "availability": "<?php echo $availability; ?>"
+                }
+            }
+            </script>
+            <?php
+        }
+
+    // NEWSARTICLE
+    } elseif (is_singular('post')) {
         ?>
         <script type="application/ld+json">
         {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "<?php the_title(); ?>",
-          "image": [
-            "<?php the_field('product_image'); ?>" 
-          ],
-          "description": "<?php the_field('metadescripcion'); ?>",
-          "sku": "<?php the_field('sku'); ?>",
-          "mpn": "<?php the_ID(); ?>",
-          "brand": {
-            "@type": "Brand",
-            "name": "<?php the_field('marca'); ?>"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "<?php echo $url_sin_string; ?>",
-            "priceCurrency": "EUR",
-            "price": "<?php the_field('precio'); ?>",
-            "availability": "<?php the_field( 'disponib' ); ?>"
-          }
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "<?php echo esc_url($url_sin_string); ?>"
+            },
+            "headline": "<?php echo esc_js(get_the_title()); ?>",
+            "image": "<?php echo the_field('imagen_cabecera'); ?>",
+            "datePublished": "<?php echo get_the_date('c'); ?>",
+            "dateModified": "<?php echo get_the_modified_date('c'); ?>",
+            "description": "<?php echo the_field('metadescripcion'); ?>"
         }
         </script>
         <?php
     }
-    // Mostrar script en otras páginas o posts individuales
-    elseif (is_singular()) {
-        ?>
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "<?php echo $url_sin_string;?>"
-          },
-          "headline": "<?php the_title(); ?>",
-          "image": [
-            "<?php the_field('imagen_cabecera'); ?>"
-          ],
-          "datePublished": "<?php echo get_the_date('c'); ?>",
-          "dateModified": "<?php echo get_the_modified_date('c'); ?>",
-          "description": "<?php the_field('metadescripcion'); ?>"
-        }
-        </script>
-        <?php
-    }
-   }
-    }
-     
+}
+
 add_action('wp_footer', 'wp_seofooter');
 ?>
-
-
-// Obtener los datos básicos del producto
-        $product_name = $product->get_name();
-        $product_url = get_permalink($product->get_id());
-        $product_image = wp_get_attachment_url($product->get_image_id());
-        $product_sku = $product->get_sku();
-        $currency = get_woocommerce_currency();
-        $product_availability = $product->is_in_stock() ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
-
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "<?php echo esc_js($product_name); ?>",
-            "image": "<?php echo esc_url($product_image); ?>",
-            "description": <?php echo json_encode($product_description); ?>,
-            "sku": "<?php echo esc_js($product_sku); ?>",
-            "mpn": "<?php echo esc_js($product_sku); ?>",
-            "offers": {
-                "@type": "AggregateOffer",
-                "url": "<?php echo esc_url($product_url); ?>",
-                "priceCurrency": "<?php echo esc_js($currency); ?>",
-                "lowPrice": "<?php echo esc_js($product_price_min); ?>",
-                "highPrice": "<?php echo esc_js($product_price_max); ?>",
-                "priceValidUntil": "<?php echo date('Y-m-d', strtotime('+1 year')); ?>",
-                "availability": "<?php echo esc_js($product_availability); ?>",
-                "itemCondition": "https://schema.org/NewCondition"
-                 }
-        </script>
