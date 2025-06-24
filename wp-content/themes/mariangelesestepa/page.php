@@ -50,8 +50,24 @@ echo the_content();
           </div>
          </section>
 
+           <section>
+      <h2>Preguntas frecuentes</h2>
+      <!--Sección acordeón-->
+        <details>
+           <summary>¿Qué hacer para aprender SEO técnico?</summary>
+           <p>Lo primero que tienes que hacer es un master.</p>
+         </details>
+         <details>
+           <summary>¿Es posible aprender SEO técnico en un mes?</summary>
+           <p>No, al menos necesitas de 6 a 8 meses para entenderlo bien.</p>
+         </details>
+         <details>
+           <summary>¿Aprenderé todas las etiquetas SEO importantes?</summary>
+           <p>Si, es posible aprenderlas.</p>
+         </details>
+   </section>   
+
    <section>
-   
         <h2>Localización agencia marketing digital</h2>
         <div id="iframeboxing" onclick="load_on_iframe()" style="background: url('https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/onload-iframe.webp');">
         <iframe id="iframeonclick" class="hidden" style="border: 0;" src="" width="600" height="450" allowfullscreen="allowfullscreen"></iframe></div>
