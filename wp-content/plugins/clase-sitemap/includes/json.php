@@ -6,7 +6,12 @@ function wp_seofooter() {
     $term = get_queried_object();
 
 
-    the_field('custom_meta_footer', $term);
+  $schema = get_field('custom_meta_footer', $term);
+if ($schema) {
+    echo '<script type="application/ld+json">' . $schema . '</script>';
+}
+
+    
 
     // Mostrar datos estructurados en la página de inicio o la de 'nosotros'
     if (is_front_page() || is_page()) {
