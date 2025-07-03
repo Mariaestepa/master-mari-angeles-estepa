@@ -5,13 +5,7 @@ function wp_seofooter() {
     $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?');
     $term = get_queried_object();
 
-
-  $schema = get_field('custom_meta_footer', $term);
-if ($schema) {
-    echo '<script type="application/ld+json">' . $schema . '</script>';
-}
-
-    
+echo get_field('custom_meta_footer', $term);
 
     // Mostrar datos estructurados en la página de inicio o la de 'nosotros'
     if (is_front_page() || is_page()) {
