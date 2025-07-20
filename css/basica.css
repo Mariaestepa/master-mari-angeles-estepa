@@ -30,6 +30,39 @@ iframe#iframeonclick{
     visibility: hidden;
 }
 
+.language-box {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  background-color: #f9f9f9;
+}
+
+.language-box:hover {
+  transform: scale(1.05);
+}
+
+.language-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.language-box a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #3b3bff;
+  font-weight: bold;
+}
+
+
+
 @media all and (min-width: 400px) and (max-width: 800px){
     nav {
         padding: 20px;
