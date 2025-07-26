@@ -1,10 +1,9 @@
 <IfModule mod_rewrite.c>
 RewriteCond %{HTTPS} off
-RewriteRule (.*) https://master-mari-angeles-estepa.test/ [R=301,L]
+RewriteRule (.*) https://master-mari-angeles-estepa.test/$1 [R=301,L,QSA]
 </IfModule>
 
 RewriteEngine on
-
 # Rewrite /foo/bar to /foo/bar.php
 RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
 
@@ -16,6 +15,16 @@ RewriteRule .* - [L,R=404]
 ExpiresActive On
 ExpiresByType text/css "access plus 2 months"
 </IfModule>
+
+#Redirecciones
+# Redirecciona un directorio completo a otro directorio completo 
+# RedirectMatch 301 ^/servicios(.*)$ https://master-mari-angeles-estepa.test/productos$1
+
+# RedirectMatch 503 ^/servicios$
+
+# Redirecciona un directorio completo a la raíz de otro directorio 
+# RedirectMatch 302 ^/servicios/(.*)$ https://master-mari-angeles-estepa.test/productos/
+
 
 # NOTE! FOR APACHE ON WINDOWS: Add [NC] to RewriteCond like this:
 # RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
