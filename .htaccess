@@ -16,6 +16,24 @@ ExpiresActive On
 ExpiresByType text/css "access plus 2 months"
 </IfModule>
 
+
+<If "%{THE_REQUEST} =~ m# /carpeta#i">
+Header set X-Robots-Tag "noindex"
+</if>
+
+<If "%{THE_REQUEST} =~ m# /basica#i>
+Header set Link "<https://master-mari-angeles-estepa.test/sobre-mi; rel='canonical'"
+</if>
+
+<If "%{THE_REQUEST} =~ m# /idiomas#i">
+Header set Link "<https://master-mari-angeles-estepa.test/idiomas>; rel='alternate'; hreflang='es', <https://master-mari-angeles-estepa.test/en/languages>; rel='alternate'; hreflang='en'"
+</If>
+
+<If "%{THE_REQUEST} =~ m# /en/languages#i">
+Header set Link "<https://master-mari-angeles-estepa.test/idiomas>; rel='alternate'; hreflang='es', <https://master-mari-angeles-estepa.test/en/languages>; rel='alternate'; hreflang='en'"
+</If>
+
+
 #Redirecciones
 # Redirecciona un directorio completo a otro directorio completo 
 # RedirectMatch 301 ^/servicios(.*)$ https://master-mari-angeles-estepa.test/productos$1
