@@ -21,6 +21,28 @@ Require valid-user
 </IfModule>
 </If>
 
+<IfModule mod_brotli.c>
+AddType x-font/woff .woff
+AddType x-font/ttf .ttf
+AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+AddOutputFilterByType BROTLI_COMPRESS image/x-icon
+AddOutputFilterByType BROTLI_COMPRESS text/plain
+AddOutputFilterByType BROTLI_COMPRESS text/html
+AddOutputFilterByType BROTLI_COMPRESS text/css
+AddOutputFilterByType BROTLI_COMPRESS application/pdf
+AddOutputFilterByType BROTLI_COMPRESS text/javascript
+AddOutputFilterByType BROTLI_COMPRESS application/xml
+AddOutputFilterByType BROTLI_COMPRESS application/xhtml+xml
+AddOutputFilterByType BROTLI_COMPRESS application/rss+xml
+AddOutputFilterByType BROTLI_COMPRESS application/javascript
+AddOutputFilterByType BROTLI_COMPRESS application/x-javascript
+AddOutputFilterByType BROTLI_COMPRESS application/x-font-ttf
+AddOutputFilterByType BROTLI_COMPRESS application/vnd.ms-fontobject
+AddOutputFilterByType BROTLI_COMPRESS font/opentype font/ttf font/eot font/otf
+AddOutputFilterByType BROTLI_COMPRESS font/woff
+AddOutputFilterByType BROTLI_COMPRESS font/woff2
+</IfModule>
+
 
 <IfModule mod_rewrite.c>
 RewriteCond %{HTTPS} off
@@ -37,7 +59,21 @@ RewriteRule .* - [L,R=404]
 
 <IfModule mod_expires.c>
 ExpiresActive On
-ExpiresByType text/css "access plus 2 months"
+ExpiresDefault "access plus 4 months"
+ExpiresByType image/webp "access plus 4 months"
+ExpiresByType image/gif "access plus 4 months"
+ExpiresByType image/png "access plus 4 months"
+ExpiresByType image/jpg "access plus 4 months"
+ExpiresByType image/jpeg "access plus 4 months"
+ExpiresByType video/mp4 "access plus 4 months"
+ExpiresByType image/ico "access plus 11 months"
+ExpiresByType image/svg+xml "access plus 4 months"
+ExpiresByType text/css "access plus 4 months"
+ExpiresByType text/javascript "access plus 4 months"
+ExpiresByType application/javascript "access plus 4 months"
+ExpiresByType application/x-javascript "access plus 4 months"
+ExpiresByType application/font-woff "access plus 1 year"
+ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
 
