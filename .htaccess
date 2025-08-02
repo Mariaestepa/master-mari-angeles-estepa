@@ -1,3 +1,27 @@
+RewriteEngine ON
+RewriteCond %{HTTP_USER_AGENT} ^.*(INVENTADO|SEMRUSHBOT-BA|SEMRUSHBOT-SI|CHATGPT-USER|SCREAMING.*FROG.*SEO.*SPIDER).*$ [NC]
+# Para bloquear el acesso a una URL en concreto
+# RewriteCond %{REQUEST_URI} ^/sobre-mi [NC]
+RewriteRule ^.*$ - [F,L]
+ErrorDocument 401 '<h1>La contraseña no es correcta</h1>'
+ErrorDocument 403 '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="initial-scale=1, maximum-scale=6"><title>403 Acceso no permitido</title><style>html{height:100%;background:#FAF7FB;display:flex;align-items:flex-start;justify-content:space-around}p{font-size:20px}</style></head><body><h1 style="font-size:40px;color:#8D096B;">Error 403 Acceso no permitido</h1><p>Est&aacute;s siendo bloqueado para esta p&aacute;gina, mala suerte.</p></body></html>'
+
+<Files sitemap-lan.xml>
+  order deny,allow
+  deny from all
+  allow from 5.169.42.126
+</Files>
+
+<If "%{HTTP_HOST} == 'master-mari-angeles-estepa.test'">
+<IfModule mod_authn_file.c>
+AuthUserFile C:/Users\maest\Documents\Github\master-mari-angeles-estepa\pass\.htpasswd
+AuthName "Iniciar sesión requerido"
+AuthType Basic
+Require valid-user
+</IfModule>
+</If>
+
+
 <IfModule mod_rewrite.c>
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://master-mari-angeles-estepa.test/$1 [R=301,L,QSA]
