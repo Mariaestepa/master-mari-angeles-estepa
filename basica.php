@@ -52,4 +52,3 @@ $imgcover="https://querkus.es/wp-content/uploads/2019/10/banner-granada-educa.jp
     <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>
-   

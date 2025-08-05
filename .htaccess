@@ -12,14 +12,14 @@ ErrorDocument 403 '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><m
   allow from 5.169.42.126
 </Files>
 
-<If "%{HTTP_HOST} == 'master-mari-angeles-estepa.test'">
-<IfModule mod_authn_file.c>
-AuthUserFile C:/Users\maest\Documents\Github\master-mari-angeles-estepa\pass\.htpasswd
-AuthName "Iniciar sesión requerido"
-AuthType Basic
-Require valid-user
-</IfModule>
-</If>
+# <If "%{HTTP_HOST} == 'master-mari-angeles-estepa.test'">
+# <IfModule mod_authn_file.c>
+# AuthUserFile C:/Users\maest\Documents\Github\master-mari-angeles-estepa\pass\.htpasswd
+# AuthName "Iniciar sesión requerido"
+# AuthType Basic
+# Require valid-user
+# </IfModule>
+# </If>
 
 <IfModule mod_brotli.c>
 AddType x-font/woff .woff
@@ -101,6 +101,14 @@ Header set Link "<https://master-mari-angeles-estepa.test/idiomas>; rel='alterna
 Header set Link "<https://master-mari-angeles-estepa.test/idiomas>; rel='alternate'; hreflang='es', <https://master-mari-angeles-estepa.test/en/languages>; rel='alternate'; hreflang='en'"
 </If>
 
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^https://master-mari-angeles-estepa.test/ [NC]
+RewriteCond %{HTTP_REFERER} ^https://(www\.)?google\. [NC]
+RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png|gif|webp)$ [NC]
+RewriteRule ^ - [R=204,L]
+</IfModule>
 
 #Redirecciones
 # Redirecciona un directorio completo a otro directorio completo 
