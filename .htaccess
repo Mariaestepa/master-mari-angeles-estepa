@@ -56,8 +56,11 @@ RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
 RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
 RewriteRule .* - [L,R=404]
 
+
+
 <IfModule mod_expires.c>
 ExpiresActive On
+
 ExpiresDefault "access plus 4 months"
 ExpiresByType image/webp "access plus 4 months"
 ExpiresByType image/gif "access plus 4 months"
@@ -71,8 +74,10 @@ ExpiresByType text/css "access plus 4 months"
 ExpiresByType text/javascript "access plus 4 months"
 ExpiresByType application/javascript "access plus 4 months"
 ExpiresByType application/x-javascript "access plus 4 months"
-ExpiresByType application/font-woff "access plus 2 year"
-ExpiresByType application/font-woff2 "access plus 2 year"
+
+#actualizar mimetype
+ExpiresByType font/woff "access plus 5 years"
+ExpiresByType font/woff2 "access plus 5 years"
 </IfModule>
 
 # Indirección estándar
