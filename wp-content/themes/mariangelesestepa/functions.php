@@ -50,6 +50,7 @@ function esDispositivoMovil() {
     $patronesMoviles = '/(android|iphone|ipad|ipod|blackberry|windows phone|opera mini|opera mobi|palm|symbian|nokia|fennec|kindle|silk|playbook|bb10|meego|webos|mobile|tablet|smartphone)/i';
     return preg_match($patronesMoviles, $userAgent);
 }
+
 /*
 <?php
 if (esDispositivoMovil()): ?>
