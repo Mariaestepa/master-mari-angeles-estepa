@@ -12,14 +12,14 @@ ErrorDocument 403 '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><m
   allow from 5.169.42.126
 </Files>
 
-<If "%{HTTP_HOST} == 'master-mari-angeles-estepa.test'">
-<IfModule mod_authn_file.c>
-AuthUserFile C:/Users\maest\Documents\Github\master-mari-angeles-estepa\pass\.htpasswd
-AuthName "Iniciar sesión requerido"
-AuthType Basic
-Require valid-user
-</IfModule>
-</If>
+# <If "%{HTTP_HOST} == 'master-mari-angeles-estepa.test'">
+# <IfModule mod_authn_file.c>
+# AuthUserFile C:/Users\maest\Documents\Github\master-mari-angeles-estepa\pass\.htpasswd
+# AuthName "Iniciar sesión requerido"
+# AuthType Basic
+# Require valid-user
+# </IfModule>
+# </If>
 
 <IfModule mod_brotli.c>
 AddType x-font/woff .woff
