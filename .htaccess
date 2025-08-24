@@ -58,27 +58,26 @@ RewriteRule .* - [L,R=404]
 
 
 
-<IfModule mod_expires.c>
-ExpiresActive On
-
-ExpiresDefault "access plus 4 months"
-ExpiresByType image/webp "access plus 4 months"
-ExpiresByType image/gif "access plus 4 months"
-ExpiresByType image/png "access plus 4 months"
-ExpiresByType image/jpg "access plus 4 months"
-ExpiresByType image/jpeg "access plus 4 months"
-ExpiresByType video/mp4 "access plus 4 months"
-ExpiresByType image/ico "access plus 11 months"
-ExpiresByType image/svg+xml "access plus 4 months"
-ExpiresByType text/css "access plus 4 months"
-ExpiresByType text/javascript "access plus 4 months"
-ExpiresByType application/javascript "access plus 4 months"
-ExpiresByType application/x-javascript "access plus 4 months"
+# <IfModule mod_expires.c>
+# ExpiresActive On
+# ExpiresDefault "access plus 4 months"
+# ExpiresByType image/webp "access plus 4 months"
+# ExpiresByType image/gif "access plus 4 months"
+# ExpiresByType image/png "access plus 4 months"
+# ExpiresByType image/jpg "access plus 4 months"
+# ExpiresByType image/jpeg "access plus 4 months"
+# ExpiresByType video/mp4 "access plus 4 months"
+# ExpiresByType image/ico "access plus 11 months"
+# ExpiresByType image/svg+xml "access plus 4 months"
+# ExpiresByType text/css "access plus 4 months"
+# ExpiresByType text/javascript "access plus 4 months"
+# ExpiresByType application/javascript "access plus 4 months"
+# ExpiresByType application/x-javascript "access plus 4 months"
 
 #actualizar mimetype
-ExpiresByType font/woff "access plus 5 years"
-ExpiresByType font/woff2 "access plus 5 years"
-</IfModule>
+# ExpiresByType font/woff "access plus 5 years"
+# ExpiresByType font/woff2 "access plus 5 years"
+# </IfModule>
 
 # Indirección estándar
 <IfModule mod_rewrite.c>

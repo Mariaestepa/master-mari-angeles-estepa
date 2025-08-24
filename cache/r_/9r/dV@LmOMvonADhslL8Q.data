@@ -18,7 +18,7 @@ nav>ul {
 }
 body {
     margin-top: 65px;
-    font-family: "Catamaran", serif;
+    font-family: "Pepeimaginario";
 }
 .tabla {
     background-color: var(--verde);
@@ -215,7 +215,7 @@ to {background: var(--naranja);}
     }
     body {
         margin-top: 190px;
-        font-family: "Catamaran", serif;
+        font-family: "Pepeimaginario";
 
     }
     img {
