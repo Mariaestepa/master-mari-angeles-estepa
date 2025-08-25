@@ -4,6 +4,20 @@ es mejor hacerlo con get header que es la función que se hace con wordpress
 include_once __DIR__. ('/../header.php');*/
 $plantillas = __DIR__.'/plantillas/';
 
+function custom_rewrite_query_vars($vars) {
+$vars[] = 'fake_blog';
+return $vars;
+}
+add_filter('query_vars', 'custom_rewrite_query_vars');
+function custom_rewrite_rules($rules) {
+$new_rules = array(
+'blog/(.*)?$' => 'index.php?name=$matches[1]&fake_blog=1'
+);
+return $new_rules + $rules;
+}
+add_filter('rewrite_rules_array', 'custom_rewrite_rules');
+
+
 function tresposts(){
     $plantillas = __DIR__.'/plantillas/';
     include $plantillas .'trespost.php';
@@ -50,6 +64,7 @@ function esDispositivoMovil() {
     $patronesMoviles = '/(android|iphone|ipad|ipod|blackberry|windows phone|opera mini|opera mobi|palm|symbian|nokia|fennec|kindle|silk|playbook|bb10|meego|webos|mobile|tablet|smartphone)/i';
     return preg_match($patronesMoviles, $userAgent);
 }
+
 
 /*
 <?php
