@@ -2,108 +2,86 @@ server {
     listen 80;
     listen 443 ssl;
     server_name master-mari-angeles-estepa.test *.master-mari-angeles-estepa.test;
+
     root "C:/Users/maest/Documents/Github/master-mari-angeles-estepa";
     index index.html index.htm index.php;
-	
-	#location ~ \.php$ {
-	 #if ($request_uri ~ ^/articulo/estrategias-contenido-seo/?$) {
-     #add_header X-Robots-Tag "noindex";
-     #add_header Link '<https://master-mari-angeles-estepa.test/articulo/estrategias-contenido-seo/>; rel="canonical"';
-	 #if ($request_uri ~ ^/wp-content/uploads/2025/01/contenido-seo.jpg?$) {
-     #add_header X-Robots-Tag "noindex";
-    #}
-	#}
-	location ~ \.php$ {
-	if ($request_uri ~ ^/wp-content/uploads/2025/01/contenido-seo.jpg?$) {
-    add_header X-Robots-Tag "noindex";
-    }
-    location ~ ^/articulo/ {
-    add_header X-Robots-Tag "noindex, nofollow";
-    }
-	
-	
-    #location = /contacto/{
-    #return 301 https://master-mari-angeles-estepa.test/;
-    #}
 
-    #Redirecciona la raíz de un directorio a la raiz de otro directorio
-    #rewrite ^(/articulo/)(.*)$ https://master-mari-angeles-estepa.test/blog/$2 permanent;
-
-    #location = /nosotros/{
-    #return 503;
-    #}
-
-    # La configuración Brotli es más potente, pero no tenemos la configuración en laragon para ponerla por eso ponemos gzip
+    # --- Compresión (ok en server context en Laragon) ---
     gzip on;
     gzip_types text/plain application/xml;
     gzip_proxied no-cache no-store private expired auth;
     gzip_min_length 1000;
 
-    # La M significa meses y la m minutos
+    # --- Caching estáticos ---
     location ~* \.(css|js)$ {
         expires 8M;
     }
-
-    #location ~* \.woff2?$ {
-      #  expires 1y;
-   # }
-
     location ~* \.(xml)$ {
         expires 20m;
     }
 
-    location / {
-        try_files $uri $uri/ /index.php$is_args$args;
-        autoindex on;
-    }
-
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass php_upstream;
-        #fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-    }
-
-    #auth_basic "Administrator's Area";
-    #auth_basic_user_file C:\Users\maest\Documents\Github\master-mari-angeles-estepa\pass\.htpasswd;
-
+    # --- Bloqueo de YandexBot global ---
     if ($http_user_agent ~* 'YandexBot') {
         return 403;
     }
-	
-	location = /articulo/estrategias-contenido-seo/ {
-    if ($http_user_agent ~* "ChatGPT-User") {
-        return 403;
+
+    # --- Cabecera global de la casa ---
+    add_header X-Asdrubal "Pagina con el SEO revisado por Asdrubal SEO SL";
+
+    # --- Página concreta: bloquear solo a ChatGPT-User ---
+    location = /articulo/estrategias-contenido-seo/ {
+        if ($http_user_agent ~* "ChatGPT-User") {
+            return 403;
+        }
+        try_files $uri $uri/ /index.php?$args;
     }
 
-    # Resto de configuración normal de WordPress para esta ruta
-    try_files $uri $uri/ /index.php?$args;
+    # --- Prefijo /articulo/ con noindex,nofollow ---
+    # Usa ^~ para que este location tenga prioridad sobre regex y no caiga en el bloque PHP
+    location ^~ /articulo/ {
+        add_header X-Robots-Tag "noindex, nofollow" always;
+        try_files $uri $uri/ /index.php?$args;
     }
-	
-	add_header X-Asdrubal "Pagina con el SEO revisado por Asdrubal SEO SL";
-	
 
-    # Enable SSL
-    ssl_certificate "C:/laragon/etc/ssl/laragon.crt";
+    # --- Imagen concreta con noindex ---
+    location = /wp-content/uploads/2025/01/contenido-seo.jpg {
+        add_header X-Robots-Tag "noindex" always;
+        try_files $uri =404;
+    }
+
+    # --- Raíz (routing típico estilo WordPress/Front) ---
+    location / {
+        try_files $uri $uri/ /index.php?$is_args$args;
+        autoindex on;
+    }
+
+    # --- PHP: un único bloque, limpio ---
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass php_upstream;   # esto en Laragon suele estar definido
+        # fastcgi_pass unix:/run/php/php7.0-fpm.sock;  # no usar en Windows
+    }
+
+    # --- Utilidades ---
+    location = /favicon.ico {
+        access_log off; log_not_found off;
+    }
+    location = /robots.txt {
+        access_log off; log_not_found off;
+    }
+    location ~ /\.ht {
+        deny all;
+    }
+
+    # --- SSL (para local está bien, aunque los protocolos son antiguos) ---
+    ssl_certificate     "C:/laragon/etc/ssl/laragon.crt";
     ssl_certificate_key "C:/laragon/etc/ssl/laragon.key";
     ssl_session_timeout 5m;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv3:+EXP;
     ssl_prefer_server_ciphers on;
+
     charset utf-8;
-
-    location = /favicon.ico {
-        access_log off;
-        log_not_found off;
-    }
-
-    location = /robots.txt {
-        access_log off;
-        log_not_found off;
-    }
-
-    location ~ /\.ht {
-        deny all;
-    }
 }
 # This file is auto-generated.
 # If you want Laragon to respect your changes, just remove the [auto.] prefix
