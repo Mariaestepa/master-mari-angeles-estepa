@@ -6,74 +6,58 @@ server {
     root "C:/Users/maest/Documents/Github/master-mari-angeles-estepa";
     index index.html index.htm index.php;
 
-    # --- Compresión (ok en server context en Laragon) ---
+    # Compresión
     gzip on;
     gzip_types text/plain application/xml;
     gzip_proxied no-cache no-store private expired auth;
     gzip_min_length 1000;
 
-    # --- Caching estáticos ---
-    location ~* \.(css|js)$ {
-        expires 8M;
-    }
-    location ~* \.(xml)$ {
-        expires 20m;
-    }
+    # Caching
+    location ~* \.(css|js)$ { expires 8M; }
+    location ~* \.(xml)$    { expires 20m; }
 
-    # --- Bloqueo de YandexBot global ---
-    if ($http_user_agent ~* 'YandexBot') {
-        return 403;
-    }
+    # Bloqueo UA
+    if ($http_user_agent ~* 'YandexBot') { return 403; }
 
-    # --- Cabecera global de la casa ---
+    # Cabecera global
     add_header X-Asdrubal "Pagina con el SEO revisado por Asdrubal SEO SL";
 
-    # --- Página concreta: bloquear solo a ChatGPT-User ---
+    # Ruta exacta: bloquear ChatGPT-User
     location = /articulo/estrategias-contenido-seo/ {
-        if ($http_user_agent ~* "ChatGPT-User") {
-            return 403;
-        }
+        if ($http_user_agent ~* "ChatGPT-User") { return 403; }
         try_files $uri $uri/ /index.php?$args;
     }
 
-    # --- Prefijo /articulo/ con noindex,nofollow ---
-    # Usa ^~ para que este location tenga prioridad sobre regex y no caiga en el bloque PHP
+    # Prefijo /articulo/ con noindex
     location ^~ /articulo/ {
         add_header X-Robots-Tag "noindex, nofollow" always;
         try_files $uri $uri/ /index.php?$args;
     }
 
-    # --- Imagen concreta con noindex ---
+    # Imagen concreta con noindex
     location = /wp-content/uploads/2025/01/contenido-seo.jpg {
         add_header X-Robots-Tag "noindex" always;
         try_files $uri =404;
     }
 
-    # --- Raíz (routing típico estilo WordPress/Front) ---
+    # Raíz
     location / {
         try_files $uri $uri/ /index.php?$is_args$args;
         autoindex on;
     }
 
-    # --- PHP: un único bloque, limpio ---
+    # PHP (único bloque)
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass php_upstream;   # esto en Laragon suele estar definido
-        # fastcgi_pass unix:/run/php/php7.0-fpm.sock;  # no usar en Windows
+        fastcgi_pass php_upstream;  # definido por Laragon en php_upstream.conf
     }
 
-    # --- Utilidades ---
-    location = /favicon.ico {
-        access_log off; log_not_found off;
-    }
-    location = /robots.txt {
-        access_log off; log_not_found off;
-    }
-    location ~ /\.ht {
-        deny all;
-    }
+    # Utilidades
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+    location ~ /\.ht        { deny all; }
 
-    # --- SSL (para local está bien, aunque los protocolos son antiguos) ---
+    # SSL local
     ssl_certificate     "C:/laragon/etc/ssl/laragon.crt";
     ssl_certificate_key "C:/laragon/etc/ssl/laragon.key";
     ssl_session_timeout 5m;
@@ -83,5 +67,3 @@ server {
 
     charset utf-8;
 }
-# This file is auto-generated.
-# If you want Laragon to respect your changes, just remove the [auto.] prefix
