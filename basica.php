@@ -45,10 +45,11 @@ $imgcover="https://querkus.es/wp-content/uploads/2019/10/banner-granada-educa.jp
       location.href='https://master-mari-angeles-estepa.test/sobre-mi';
       }
     </script>
+      
      <div id="iframeboxing" onclick="load_on_iframe()" style="background: url('https://carlos.sanchezdonate.com/wp-content/uploads/onload-iframe.jpg');">
           <iframe id="iframeonclick" class="hidden" src="" width="600" height="450"allowfullscreen="allowfullscreen"></iframe>
         </div>
- 
+
     <?php 
       include $_SERVER['DOCUMENT_ROOT'].'/assets/footer.php';
      ?>

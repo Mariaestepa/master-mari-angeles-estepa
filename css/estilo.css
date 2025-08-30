@@ -18,7 +18,7 @@ nav>ul {
 }
 body {
     margin-top: 65px;
-    font-family: "Pepeimaginario";
+    font-family: Papyrus, Lucida;
 }
 .tabla {
     background-color: var(--verde);
@@ -42,7 +42,7 @@ body {
     width: auto;
 }
 h1 {
-    font-family: cursive;
+    font-family: Papyrus, Lucida;
     color: var(--rosa);
     display: flex;
     justify-content: space-around;
@@ -72,7 +72,7 @@ section.imagenderecha {
     padding: 25px;
     width: fit-content;
     height: fit-content;
-    font-family: math;
+    font-family: Papyrus, Lucida;
     font-size: medium;
 }
 div.bloque.texto.largo {
@@ -215,7 +215,7 @@ to {background: var(--naranja);}
     }
     body {
         margin-top: 190px;
-        font-family: "Pepeimaginario";
+        font-family: Papyrus, Lucida;
 
     }
     img {

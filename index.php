@@ -1,4 +1,3 @@
-  
   <?php 
      $titulo = "Página de Inicio";
      $producto1="camisetasrojas";
@@ -24,9 +23,6 @@
          Respuesta: Ahora esta todo correcto, no influye en nada, va perfecto
          <h1 class="clase" id="headinginicio">Hola soy Mari Ángeles Estepa <?php echo date("d/M/Y"); echo " Bienvenido a mi web sin forma 😬";?></h1> 
          En cuanto a los cambios es normal, hay que guardar los cambios para poder verlos en la página-->
-
-         
-
 
 
          <noscript> Código en noscript con php <?php echo date("d/M/Y"); echo " Bienvenido a mi web 😬";?></noscript>

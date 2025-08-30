@@ -72,6 +72,6 @@ iframe#iframeonclick{
  @media all and (min-width: 400px) and (max-width: 800px){
     body {
         margin-top: 250px;
-        font-family: "Catamaran", serif;
+        font-family: Papyrus, Lucida;
     }
     }

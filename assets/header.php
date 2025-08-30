@@ -4,8 +4,8 @@
       <!--Viewport, metaetiqueta que indica que la web está adaptada a móviles-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8">
-       <link href="/css/fonts.css?esto-es-un-parametro" rel="stylesheet">
-       <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST'];?>/css/estilo.css?vale-cualquier-cosa">
+       <link href="/css/fonts.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST'];?>/css/estilo.css">
        <?php
        include_once $_SERVER['DOCUMENT_ROOT'].'/assets/functions.php';
        ?>

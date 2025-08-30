@@ -15,7 +15,6 @@ function eliminaelemento() {
     document.getElementById("borrarelemento").outerHTML = "<h3>He cambiado el elemento entero</h3>";
   }
 
-
   document.addEventListener("DOMContentLoaded", function () {
     // Selecciona todas las etiquetas <a> con target="_blank"
     const links = document.querySelectorAll('a[target="_blank"]');
