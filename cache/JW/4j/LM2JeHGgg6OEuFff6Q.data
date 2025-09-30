@@ -1,0 +1,415 @@
+/*
+Theme Name: mariangelesestepa
+Author: Mª Ángeles Estepa (Alumno master de SEO Técnico)
+Description: Tema personalizado mariangelesestepa
+Version: 1.3
+*/
+
+:root{
+    --naranja: rgb(235, 138, 102);
+    --rosa: rgb(217, 49, 181); 
+    --verde: rgb(101, 233, 101);
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    margin: 0px;
+    top: 0;
+    height: 50px;
+}
+body {
+    margin-top: 65px;
+    font-family: "Catamaran", serif;
+}
+.tabla {
+    background-color: var(--verde);
+    height: 7cm;
+    width: 10cm;
+    text-align: center;
+    padding: 1cm;
+    display: flex;
+    border: solid chocolate 0.5cm;
+    margin: 2cm 7cm;
+    font-size: medium;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+#preguntas-frecuentes {
+    padding: 40px;
+    background: var(--rosa);
+    margin: 30px;
+    width: auto;
+}
+h1 {
+    font-family: cursive;
+    color: var(--rosa);
+    display: flex;
+    justify-content: space-around;
+}
+section.imagenizquierda {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    margin: 60px 300px;
+}
+section.imagenderecha {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+h2 {
+    color: olive;
+    position: relative;
+    font-size: 40px;
+    display: flex;
+    font-weight: 600;;
+    align-content: stretch;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+.bloque.texto {
+    padding: 25px;
+    width: fit-content;
+    height: fit-content;
+    font-family: math;
+    font-size: medium;
+}
+div.bloque.texto.largo {
+    width: calc(100% - 40px);
+    text-align: justify;
+    margin: 15px;
+    font-size: 20px;
+    }
+.herencias>p {
+    text-align: center;
+}
+.herencias p {
+    font-size: 20px;
+    width: 100vw;
+}
+.imagenfondo {
+    height: 800px;
+    width: 1200px;
+    background-image: url(/imagenes/perritos.jpg);
+    margin: auto;
+    background-attachment: fixed;
+    background-size: 600px;
+}
+.imagenfondonorepeat {
+    height: 500px;
+    width: 1200px;
+    background-image: url(/imagenes/carrito.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a[href^="https:"] {
+    color: rgb(36, 30, 206);
+    padding-right: 20px;
+    padding-left: 5px;
+    background-image: url(/imagenes/carrito.png);
+    z-index: 3;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.bloquecito {
+    margin: 60px;
+    width: 1500px;
+    background-color: var(--naranja);
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    font-size: 30px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 20px; 
+}
+
+h2.bloqueprecios { 
+    width: 120px;
+    height: 100px;
+    padding: 50px;
+    background-color: var(--naranja);
+    text-align: center; 
+}
+.boton {
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--naranja);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.intro {
+    background: var(--naranja);
+    width: fit-content;
+    height: auto;
+    padding: 30px;
+    align-content: center;
+    margin: 25px;
+    border: solid 20px var(--rosa);
+}
+p.intro {
+background: yellow;
+width: max(50%);
+animation-name: cambiocolor;
+animation-duration: 4s;
+}
+
+.acordeon {
+    padding: 100px;
+    margin-left: 50px;
+    text-align: -webkit-auto;
+}
+
+@keyframes cambiocolor {
+from {background: yellow;}
+to {background: var(--naranja);}
+}
+
+.intro.cita {
+    color: white;
+    font-size: 25px;
+    width: max(50%);
+}
+
+section.footer {
+    background-color: #ff7f504d;
+    width: -webkit-fill-available;
+    height: 150px;
+}
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px auto;
+}
+.post-card a {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #ff00ff1c;
+    padding: 0px;
+}
+
+.post-card a .post-name{
+    text-decoration: auto;
+    background: coral;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    min-height: 2em;
+    box-sizing: border-box;
+}
+.post-card a .post-desc{
+    color: rgb(0, 0, 0);
+    text-decoration: auto;
+    padding: 20px;
+}
+.post-card {
+    display: flex;
+    flex-direction: column;
+}
+img.cabecerapost {
+    aspect-ratio: 6 / 1;
+    object-fit: contain;
+}
+/* Las imágenes decorativas necesitan alto y ancho */
+section.imagencabecera {
+    width: 2000px;
+    height: 600px;
+    background-image: url(https://master-mari-angeles-estepa.test/wp-content/themes/mariangelesestepa/imagenes/agenciamarketingdigital.jpg);
+    background-repeat: no-repeat;
+}
+.cabecera {
+    padding: 20px;
+    text-align: -webkit-center;
+}
+p.slider {
+    font-size: 26px;
+}
+#iframeboxing {
+    width: 600px;
+    padding-top: 450px;
+    margin: auto;
+    cursor: pointer;
+    background-size: cover!important;
+    position: relative;
+    overflow: hidden;
+    }
+    iframe#iframeonclick{
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%; height: 100%;
+    border: none;
+    }
+    .hidden {
+    visibility: hidden;
+    }
+
+
+    .zona-servicios {
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .tarjetas {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .tarjeta {
+        background-color: #fff;
+        padding: 30px 20px;
+        border-radius: 20px;
+        width: 300px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      
+      .icono {
+        margin-bottom: 20px;
+      }
+      
+      .icono img {
+        width: 50px;
+        opacity: 0.4;
+      }
+      
+      .tarjeta h3 {
+        background-color:var(--rosa);
+        margin: 0 -20px 10px;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+      
+      .tarjeta p {
+        font-size: 14px;
+        color: #333;
+      }
+
+      a.boton {
+        display: inline-block;
+        background: linear-gradient(90deg, #f6baba, var(--rosa)); /* gradiente rosado-rojizo */
+        color: #ffffff;
+        padding: 5px 25px;
+        border-radius: 9999px; /* forma de píldora */
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        display:flex;
+      }
+      
+      .boton:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+   
+      }
+  
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+  
+      .item {
+        flex: 1;
+        min-width: 280px;
+        max-width: 360px;
+      }
+  
+      .item h3 {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 700;
+        color: var(--rosa);
+     
+      }
+  
+      .item p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      
+      
+/* Modificación elementos responsive */
+@media all and (min-width: 400px) and (max-width: 800px){
+    nav>ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: fixed;
+        width: 100%;
+        background: white;
+        margin: 0px;
+        top: 0;
+        height: 50px;
+        flex-direction: column;
+        align-content: space-around;
+        padding: 20px;
+        z-index: auto;
+    }
+    nav>ul li {
+        margin: 2px 0px;
+    }
+    body {
+        margin-top: 190px;
+        font-family: "Catamaran", serif;
+
+    }
+    img {
+        max-width: 100%;
+    }
+    html {
+        max-width: 1500px;
+        margin: auto;
+    }
+}
+
