@@ -11,7 +11,7 @@ add_action('admin_init', function () {
     $table = $wpdb->prefix . 'geohatllm_visits';
 
     // === GET filters ===
-    $filter_sources = isset($_GET['source']) ? array_map('sanitize_text_field', (array) $_GET['source']) : ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral'];
+    $filter_sources = isset($_GET['source']) ? array_map('sanitize_text_field', (array) $_GET['source']) : ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral', 'venice'];
     $filter_from   = isset($_GET['from_date']) ? sanitize_text_field($_GET['from_date']) : '';
     $filter_to     = isset($_GET['to_date']) ? sanitize_text_field($_GET['to_date']) : '';
     $filter_url    = isset($_GET['url']) ? sanitize_text_field($_GET['url']) : '';

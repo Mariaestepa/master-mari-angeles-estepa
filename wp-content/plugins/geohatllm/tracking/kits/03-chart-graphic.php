@@ -8,7 +8,7 @@ global $wpdb;
 $table = $wpdb->prefix . 'geohatllm_visits';
 
 // === Retrieve filters from URL ===
-$filter_sources = isset($_GET['source']) ? array_map('sanitize_text_field', (array) $_GET['source']) : ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral'];
+$filter_sources = isset($_GET['source']) ? array_map('sanitize_text_field', (array) $_GET['source']) : ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral','venice'];
 $filter_from   = isset($_GET['from_date']) ? sanitize_text_field($_GET['from_date']) : '';
 $filter_to     = isset($_GET['to_date']) ? sanitize_text_field($_GET['to_date']) : '';
 
@@ -33,6 +33,7 @@ $claude_data  = [];
 $copilot_data = [];
 $perplexity_data = [];
 $mistral_data  = [];
+$venice_data  = [];
 
 foreach ($days as $date) {
     // ChatGPT
@@ -74,6 +75,13 @@ foreach ($days as $date) {
       $mistral_data[] = (!in_array('mistral', $filter_sources)) ? 0 :
         (int)$wpdb->get_var($wpdb->prepare(
             "SELECT SUM(hits) FROM $table WHERE source='mistral' AND DATE(visit_date) = %s",
+            $date
+        ));
+
+    // Venice
+      $venice_data[] = (!in_array('venice', $filter_sources)) ? 0 :
+        (int)$wpdb->get_var($wpdb->prepare(
+            "SELECT SUM(hits) FROM $table WHERE source='venice' AND DATE(visit_date) = %s",
             $date
         ));
 }
@@ -126,7 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'Claude     ': '/wp-content/plugins/geohatllm/core/img/ai-logos/claude.svg',
     'Copilot     ': '/wp-content/plugins/geohatllm/core/img/ai-logos/bing.svg',
     'Perplexity     ': '/wp-content/plugins/geohatllm/core/img/ai-logos/perplexity.svg',
-    'Mistral': '/wp-content/plugins/geohatllm/core/img/ai-logos/mistral.png'
+    'Mistral      ': '/wp-content/plugins/geohatllm/core/img/ai-logos/mistral.png',
+    'Venice': '/wp-content/plugins/geohatllm/core/img/ai-logos/venice.svg'
   };
 
   // === Carga de imágenes ===
@@ -194,10 +203,21 @@ document.addEventListener('DOMContentLoaded', function() {
           fill: true,
         },
         {
-          label: 'Mistral',
+          label: 'Mistral      ',
           data: <?= json_encode($mistral_data); ?>,
           borderColor: 'rgba(255,130,5,1)',
           backgroundColor: gradient('rgba(179,93,32,0.4)', 'rgba(211,129,47,0.5)'),
+          borderWidth: 2,
+          tension: 0.4,
+          pointRadius: 0,
+          fill: true,
+        }
+        ,
+        {
+          label: 'Venice',
+          data: <?= json_encode($venice_data); ?>,
+          borderColor: 'rgba(219,51,0,1)',
+          backgroundColor: gradient('rgba(226,224,208,0.4)', 'rgba(66,153,225,0.5)'),
           borderWidth: 2,
           tension: 0.4,
           pointRadius: 0,

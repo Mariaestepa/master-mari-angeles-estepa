@@ -58,32 +58,19 @@
     }, 'withInspectorControls');
     addFilter('editor.BlockEdit', 'geohat/with-inspector-controls', withInspectorControls);
 
-    // 3. NUEVO: Modificar el contenido guardado para envolver en <span>
-    const modifyBlockSaveContent = createHigherOrderComponent((BlockListBlock) => {
-        return (props) => {
-            return createElement(BlockListBlock, props);
-        };
-    }, 'modifyBlockSaveContent');
-    
-    addFilter('editor.BlockListBlock', 'geohat/modify-block-save', modifyBlockSaveContent);
-
-    // 4. Modificar el HTML final guardado
-    addFilter('blocks.getSaveElement', 'geohat/wrap-content-in-span', function(element, blockType, attributes) {
+    // 3. ✅ CRÍTICO: Envolver TODO EL BLOQUE en un <span> con los atributos
+    // Esto asegura que data-nosnippet funcione correctamente en <p>, <h1>, etc.
+    addFilter('blocks.getSaveElement', 'geohat/wrap-in-span', function(element, blockType, attributes) {
+        // Si no hay atributos activados, no hacer nada
         if (!attributes.dataNosnippetGeohat && !attributes.dataNosnippet) {
             return element;
         }
 
-        // Solo aplicar a bloques de texto (p, h1-h6, li, etc.)
-        const textBlocks = ['core/paragraph', 'core/heading', 'core/list-item', 'core/quote'];
-        if (!textBlocks.includes(blockType.name)) {
-            return element;
-        }
-
-        // Extraer el contenido del elemento
-        const children = element.props.children;
+        // Crear atributos para el span wrapper
+        const spanAttrs = {
+            className: 'geohat-wrapper' // Clase opcional para identificar el wrapper
+        };
         
-        // Crear atributos para el span
-        const spanAttrs = {};
         if (attributes.dataNosnippetGeohat) {
             spanAttrs['data-nosnippet-geohat'] = 'true';
         }
@@ -91,21 +78,15 @@
             spanAttrs['data-nosnippet'] = 'true';
         }
 
-        // Envolver el contenido en un <span>
-        const wrappedChildren = createElement('span', spanAttrs, children);
-
-        // Retornar el elemento original con el contenido envuelto
-        return createElement(
-            element.type,
-            element.props,
-            wrappedChildren
-        );
+        // ✅ Envolver TODO el elemento original en un <span>
+        // Esto convierte: <p>texto</p> → <span data-nosnippet="true"><p>texto</p></span>
+        return createElement('span', spanAttrs, element);
     });
 
 })(window.wp);
 
 
-// Elementor
+// Elementor - Aplicar atributos dinámicamente
 
 function applyGeoHatAttributes() {
     const elements = document.querySelectorAll('.elementor-element[data-settings]');

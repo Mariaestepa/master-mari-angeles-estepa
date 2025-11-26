@@ -11,7 +11,7 @@ function asdrubal_disable_cache_for_bots() {
     $ua = strtolower(asdrubal_get_effective_user_agent());
     
     // CORRECCIÓN: Asegurar que $allowed_bots siempre sea un array
-    $allowed_bots = get_option('asdrubal_llm_selected_bots', []);
+    $allowed_bots = get_option('asdrubal_llm_selected_bots', array());
     if (!is_array($allowed_bots)) {
         $allowed_bots = [];
     }
@@ -70,7 +70,7 @@ function asdrubal_litespeed_bypass_for_bots($can_cache) {
 
     $ua = strtolower(asdrubal_get_effective_user_agent());
     
-    $allowed_bots = get_option('asdrubal_llm_selected_bots', []);
+    $allowed_bots = get_option('asdrubal_llm_selected_bots', array());
     if (!is_array($allowed_bots)) {
         $allowed_bots = [];
     }
@@ -100,7 +100,7 @@ function asdrubal_litespeed_control_init() {
 
     $ua = strtolower(asdrubal_get_effective_user_agent());
     
-    $allowed_bots = get_option('asdrubal_llm_selected_bots', []);
+    $allowed_bots = get_option('asdrubal_llm_selected_bots', array());
     if (!is_array($allowed_bots)) {
         $allowed_bots = [];
     }
@@ -125,7 +125,7 @@ function asdrubal_litespeed_control_init() {
 add_filter('do_rocket_generate_caching_files', 'asdrubal_exclude_bots_from_cache');
 function asdrubal_exclude_bots_from_cache($can_cache) {
     $ua = strtolower(asdrubal_get_effective_user_agent());
-    $allowed_bots = get_option('asdrubal_llm_selected_bots', []);
+    $allowed_bots = get_option('asdrubal_llm_selected_bots', array());
     $custom = get_option('asdrubal_llm_custom_bots', '');
     $custom_list = array_filter(array_map('trim', explode("\n", $custom)));
     $allowed_bots = array_merge($allowed_bots, $custom_list);

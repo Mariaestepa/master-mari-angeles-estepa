@@ -30,37 +30,37 @@ add_filter('mce_buttons_2', function($buttons) {
 // 2) Add "GEOhat" group with its options, preserving previous formats
 add_filter('tiny_mce_before_init', function($init_array) {
     // Retrieve existing formats (if any)
-    $existing_formats = [];
+    $existing_formats = array();
     if (!empty($init_array['style_formats'])) {
         $existing_formats = json_decode($init_array['style_formats'], true);
         if (!is_array($existing_formats)) {
-            $existing_formats = [];
+            $existing_formats = array();
         }
     }
 
     // GEOhat group in the "Formats" menu
-    $geohat_group = [
+    $geohat_group = array(
         'title' => __('GEOhat', 'geohatllm'),
-        'items' => [
-            [
+        'items' => array(
+            array(
                 'title' => __('Hide from bots (GEOhat)', 'geohatllm'),
                 'inline' => 'span',
-                'attributes' => [
+                'attributes' => array(
                     'data-nosnippet-geohat' => 'true'
-                ]
-            ],
-            [
+                )
+            ),
+            array(
                 'title' => __('Hide from search engines', 'geohatllm'),
                 'inline' => 'span', // valid for data-nosnippet
-                'attributes' => [
+                'attributes' => array(
                     'data-nosnippet' => 'true'
-                ]
-            ],
-        ],
-    ];
+                )
+            )
+        )
+    );
 
     // Merge with previous without overwriting
-    $merged_formats = array_merge($existing_formats, [$geohat_group]);
+    $merged_formats = array_merge($existing_formats, array($geohat_group));
 
     // Return to TinyMCE
     $init_array['style_formats'] = wp_json_encode($merged_formats);
@@ -73,7 +73,7 @@ add_filter('tiny_mce_before_init', function($init_array) {
 add_filter('wp_kses_allowed_html', function($allowed_tags, $context) {
     foreach ($allowed_tags as $tag => &$attributes) {
         $attributes['data-nosnippet-geohat'] = true;
-        if (in_array($tag, ['div', 'section', 'span'])) {
+        if (in_array($tag, array('div', 'section', 'span'))) {
             $attributes['data-nosnippet'] = true;
         }
     }
@@ -81,20 +81,29 @@ add_filter('wp_kses_allowed_html', function($allowed_tags, $context) {
 }, 10, 2);
 
 add_action('enqueue_block_editor_assets', function() {
+    // Construir URL con parámetros personalizados
+    $script_url = add_query_arg(
+        array(
+            'v' => '02',
+            'date' => date('y-m')
+        ),
+        plugin_dir_url(__FILE__) . 'js/editor.js'
+    );
+    
     // Main editor script
-wp_enqueue_script(
-    'geohatllm-editor-script',
-    plugin_dir_url(__FILE__) . 'js/editor.js',
-    ['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-compose', 'wp-edit-post', 'wp-data'],
-    GEOHATLLM_VERSION,
-    true
-);
+    wp_enqueue_script(
+        'geohatllm-editor-script',
+        $script_url,  // ← Usar la URL con parámetros
+        array('wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-compose', 'wp-edit-post', 'wp-data'),
+        GEOHATLLM_VERSION,
+        true
+    );
 /*
     // Additional editor script
     wp_enqueue_script(
         'asdrubal-editor',
         plugin_dir_url(__FILE__) . 'assets/editor.js',
-        ['wp-blocks', 'wp-element', 'wp-i18n', 'wp-editor'],
+        array('wp-blocks', 'wp-element', 'wp-i18n', 'wp-editor'),
         '1.0',
         true
     );
@@ -113,10 +122,19 @@ wp_enqueue_script(
 add_action('elementor/editor/after_enqueue_scripts', 'asdrubal_enqueue_editor_script');
 
 function asdrubal_enqueue_editor_script() {
+    // Construir URL con parámetros personalizados
+    $script_url = add_query_arg(
+        array(
+            'v' => '02',
+            'date' => date('y-m')
+        ),
+        plugin_dir_url(__FILE__) . 'js/editor.js'
+    );
+    
     wp_enqueue_script(
         'geohat-editor',
-        plugin_dir_url(__FILE__) . 'js/editor.js',
-        [], // You can add ['jquery'] if needed
+        $script_url,  // ← Usar la URL con parámetros
+        array(), // You can add array('jquery') if needed
         null,
         true
     );
@@ -125,28 +143,28 @@ function asdrubal_enqueue_editor_script() {
 add_action('elementor/element/common/section_advanced/before_section_end', function($element, $section_id) {
     $element->add_control(
         'asdrubal_data_nosnippet_geohat',
-        [
+        array(
             'label' => __('Hide from LLMs (Geohat)', 'geohatllm'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('Yes', 'geohatllm'),
             'label_off' => __('No', 'geohatllm'),
             'return_value' => 'yes',
             'default' => '',
-            'separator' => 'before',
-        ]
+            'separator' => 'before'
+        )
     );
 
     $element->add_control(
         'asdrubal_data_nosnippet',
-        [
+        array(
             'label' => __('Hide from search engines', 'geohatllm'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('Yes', 'geohatllm'),
             'label_off' => __('No', 'geohatllm'),
             'return_value' => 'yes',
             'default' => '',
-            'separator' => 'after',
-        ]
+            'separator' => 'after'
+        )
     );
 }, 10, 2);
 
@@ -195,34 +213,34 @@ function asdrubal_elementor_set_attributes($should_render, $element) {
 add_action('elementor/element/common/section_advanced/after_section_end', function($element, $section_id) {
     $element->start_controls_section(
         'asdrubal_section_geohatllm',
-        [
+        array(
             'label' => __('GEOhat LLM', 'geohatllm'),
-            'tab' => \Elementor\Controls_Manager::TAB_ADVANCED,
-        ]
+            'tab' => \Elementor\Controls_Manager::TAB_ADVANCED
+        )
     );
 
     $element->add_control(
         'asdrubal_data_nosnippet_geohat',
-        [
+        array(
             'label' => __('Hide from LLMs (Geohat)', 'geohatllm'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('Yes', 'geohatllm'),
             'label_off' => __('No', 'geohatllm'),
             'return_value' => 'yes',
-            'default' => '',
-        ]
+            'default' => ''
+        )
     );
 
     $element->add_control(
         'asdrubal_data_nosnippet',
-        [
+        array(
             'label' => __('Hide from search engines', 'geohatllm'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('Yes', 'geohatllm'),
             'label_off' => __('No', 'geohatllm'),
             'return_value' => 'yes',
-            'default' => '',
-        ]
+            'default' => ''
+        )
     );
 
     $element->end_controls_section();
@@ -251,7 +269,7 @@ if ( class_exists('ET_Builder_Module') ) {
 
     function geohat_divi_add_nosnippet_fields_by_slug( $fields, $slug ) {
         // Apply only to compatible modules (you can add more here)
-        $modulos_compatibles = [
+        $modulos_compatibles = array(
             'et_pb_accordion',
             'et_pb_text',
             'et_pb_toggle',
@@ -259,35 +277,35 @@ if ( class_exists('ET_Builder_Module') ) {
             'et_pb_cta',
             'et_pb_section',
             'et_pb_row',
-            'et_pb_column',
-        ];
+            'et_pb_column'
+        );
 
         if ( in_array($slug, $modulos_compatibles, true) ) {
-            $fields['geohat_data_nosnippet'] = [
+            $fields['geohat_data_nosnippet'] = array(
                 'label'        => __('Hide from search engine snippets (data-nosnippet)', 'geohatllm'),
                 'type'         => 'yes_no_button',
-                'options'      => [
+                'options'      => array(
                     'off' => __('No', 'geohatllm'),
-                    'on'  => __('Yes', 'geohatllm'),
-                ],
+                    'on'  => __('Yes', 'geohatllm')
+                ),
                 'default'      => 'off',
                 'tab_slug'     => 'advanced',
                 'toggle_slug'  => 'visibility',
-                'description'  => __('Adds data-nosnippet="true" (only valid on section/div/span).', 'geohatllm'),
-            ];
+                'description'  => __('Adds data-nosnippet="true" (only valid on section/div/span).', 'geohatllm')
+            );
 
-            $fields['geohat_data_nosnippet_geohat'] = [
+            $fields['geohat_data_nosnippet_geohat'] = array(
                 'label'        => __('Hide from LLMs (data-nosnippet-geohat)', 'geohatllm'),
                 'type'         => 'yes_no_button',
-                'options'      => [
+                'options'      => array(
                     'off' => __('No', 'geohatllm'),
-                    'on'  => __('Yes', 'geohatllm'),
-                ],
+                    'on'  => __('Yes', 'geohatllm')
+                ),
                 'default'      => 'off',
                 'tab_slug'     => 'advanced',
                 'toggle_slug'  => 'visibility',
-                'description'  => __('Adds data-nosnippet-geohat="true".', 'geohatllm'),
-            ];
+                'description'  => __('Adds data-nosnippet-geohat="true".', 'geohatllm')
+            );
         }
 
         return $fields;
@@ -299,7 +317,7 @@ if ( class_exists('ET_Builder_Module') ) {
             return $output;
         }
 
-        $attrs_to_add = [];
+        $attrs_to_add = array();
 
         if ( isset($atts['geohat_data_nosnippet']) && $atts['geohat_data_nosnippet'] === 'on' ) {
             $attrs_to_add['data-nosnippet'] = 'true';
@@ -333,17 +351,17 @@ if ( class_exists('ET_Builder_Module') ) {
     }, 10, 3);
 
     add_filter('et_pb_all_fields_unprocessed_et_pb_section', function($fields) {
-        $fields['geohat_data_nosnippet'] = [
+        $fields['geohat_data_nosnippet'] = array(
             'label'       => __('Hide from search engines (data-nosnippet)', 'geohatllm'),
             'type'        => 'yes_no_button',
-            'options'     => [ 
+            'options'     => array( 
                 'off' => __('No', 'geohatllm'), 
                 'on' => __('Yes', 'geohatllm') 
-            ],
+            ),
             'default'     => 'off',
             'tab_slug'    => 'advanced',
-            'toggle_slug' => 'visibility',
-        ];
+            'toggle_slug' => 'visibility'
+        );
         return $fields;
     }, 20);
 
@@ -375,33 +393,33 @@ function asdrubal_add_nosnippet_option_to_vc_modules() {
     $vc_elements = WPBMap::getShortCodes();
 
     foreach ($vc_elements as $tag => $settings) {
-        vc_add_param($tag, [
+        vc_add_param($tag, array(
             'type' => 'checkbox',
             'heading' => __('Prevent content from being shown to selected LLMs in GEOhat', 'geohatllm'),
             'param_name' => 'asdrubal_data_nosnippet_geohat',
-            'value' => [__('Yes', 'geohatllm') => 'yes'],
-            'group' => __('Geohat', 'geohatllm'),
-        ]);
+            'value' => array(__('Yes', 'geohatllm') => 'yes'),
+            'group' => __('Geohat', 'geohatllm')
+        ));
 
-        vc_add_param($tag, [
+        vc_add_param($tag, array(
             'type' => 'checkbox',
             'heading' => __('Prevent content from appearing in Google rich snippets', 'geohatllm'),
             'param_name' => 'asdrubal_data_nosnippet_google',
-            'value' => [__('Yes', 'geohatllm') => 'yes'],
-            'group' => __('Geohat', 'geohatllm'),
-        ]);
+            'value' => array(__('Yes', 'geohatllm') => 'yes'),
+            'group' => __('Geohat', 'geohatllm')
+        ));
     }
 }
 add_action('vc_after_init', 'asdrubal_add_nosnippet_option_to_vc_modules');
 
 function asdrubal_render_vc_module($atts, $content = null) {
-    $atts = shortcode_atts([
+    $atts = shortcode_atts(array(
         'asdrubal_data_nosnippet_geohat' => '',
-        'asdrubal_data_nosnippet' => '',
-    ], $atts);
+        'asdrubal_data_nosnippet' => ''
+    ), $atts);
 
     $attributes = '';
-    $classes = [];
+    $classes = array();
 
     // Only apply if wrapped in a div
     if ($atts['asdrubal_data_nosnippet_geohat'] === 'yes') {

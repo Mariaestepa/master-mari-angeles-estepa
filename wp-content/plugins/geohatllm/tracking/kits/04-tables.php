@@ -30,6 +30,7 @@ echo '<div class="overflow-x-auto rounded-xl border border-blue-100 shadow-sm mt
         echo '<th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-blue-700 uppercase tracking-wider ghbot-t">Copilot <span class="gh-user-agent ghlabel-copilot"></span></th>';
         echo '<th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-blue-700 uppercase tracking-wider ghbot-t">Perplexity <span class="gh-user-agent ghlabel-perplexity"></span></th>';
         echo '<th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-blue-700 uppercase tracking-wider ghbot-t">Mistral <span class="gh-user-agent ghlabel-mistral"></span></th>';
+        echo '<th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-blue-700 uppercase tracking-wider ghbot-t">Venice <span class="gh-user-agent ghlabel-venice"></span></th>';
         echo '</tr>';
         echo '</thead>';
         echo '<tbody class="divide-y divide-gray-100">';
@@ -40,6 +41,8 @@ echo '<div class="overflow-x-auto rounded-xl border border-blue-100 shadow-sm mt
             $copilot_count  = $wpdb->get_var($wpdb->prepare("SELECT SUM(hits) FROM $table WHERE source='copilot' AND visit_date >= %s", $since));
             $perplexity_count  = $wpdb->get_var($wpdb->prepare("SELECT SUM(hits) FROM $table WHERE source='perplexity' AND visit_date >= %s", $since));
             $mistral_count  = $wpdb->get_var($wpdb->prepare("SELECT SUM(hits) FROM $table WHERE source='mistral' AND visit_date >= %s", $since));
+            $venice_count  = $wpdb->get_var($wpdb->prepare("SELECT SUM(hits) FROM $table WHERE source='venice' AND visit_date >= %s", $since));
+
 
 
             echo '<tr class="odd:bg-white even:bg-blue-50/40 hover:bg-[#8d096c15] transition-colors">';
@@ -50,6 +53,7 @@ echo '<div class="overflow-x-auto rounded-xl border border-blue-100 shadow-sm mt
             echo '<td class="px-4 py-2 text-sm text-gray-700">' . intval($copilot_count ?: 0) . '</td>';
             echo '<td class="px-4 py-2 text-sm text-gray-700">' . intval($perplexity_count ?: 0) . '</td>';
             echo '<td class="px-4 py-2 text-sm text-gray-700">' . intval($mistral_count ?: 0) . '</td>';
+            echo '<td class="px-4 py-2 text-sm text-gray-700">' . intval($venice_count ?: 0) . '</td>';
             echo '</tr>';
 }
 

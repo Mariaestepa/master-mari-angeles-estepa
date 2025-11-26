@@ -45,7 +45,7 @@
   // ==========================
   // Filtros
   // ==========================
-  $filter_sources = isset($_GET['source']) ? array_map('sanitize_text_field', (array) $_GET['source']) : ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral'];
+  $filter_sources = isset($_GET['source']) ? array_map('sanitize_text_field', (array) $_GET['source']) : ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral','venice'];
   $filter_from    = isset($_GET['from_date']) ? sanitize_text_field($_GET['from_date']) : '';
   $filter_to      = isset($_GET['to_date']) ? sanitize_text_field($_GET['to_date']) : '';
   $filter_url     = isset($_GET['url']) ? sanitize_text_field($_GET['url']) : '';
@@ -152,7 +152,7 @@
               <button type="button" id="llm-multiselect-btn" class="button"><?php _e('Select LLMs', 'geohatllm'); ?></button>
               <div id="llm-dropdown" style="display:none; position:absolute; z-index:10; background:white; border:1px solid #ccc; padding:8px; border-radius:6px;">
               <?php 
-              $sources_all = ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral'];
+              $sources_all = ['chatgpt', 'gemini', 'claude', 'copilot', 'perplexity', 'mistral','venice'];
               $selected_sources = isset($_GET['source']) ? (array) $_GET['source'] : $sources_all;
               foreach ($sources_all as $src): ?>
                   <label style="display:block; margin-bottom:3px;">

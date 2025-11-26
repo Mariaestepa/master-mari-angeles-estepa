@@ -46,6 +46,12 @@ function geohatllm_sanitize_ip_blacklist($input) {
 // Get server's own IP addresses
 // ==========================
 function geohatllm_get_server_ips() {
+    // ✅ Si es dominio .test, no bloquear ninguna IP
+    if (!empty($_SERVER['SERVER_NAME']) 
+        && strpos(strtolower($_SERVER['SERVER_NAME']), '.test') !== false) {
+        return array();
+    }
+    
     $server_ips = [];
     
     // 1. Server's main IP
@@ -74,7 +80,6 @@ function geohatllm_get_server_ips() {
     
     return array_unique($server_ips);
 }
-
 // ==========================
 // Check if an IP is blacklisted
 // ==========================

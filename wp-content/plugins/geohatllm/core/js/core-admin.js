@@ -96,11 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
   // Devuelve el input de URL más razonable cerca del trigger
   const findClosestUrlInput = (startEl) => {
-    // Intentamos acotar al mismo formulario o contenedor de filtros
     const scope =
       startEl.closest('form, .filtro-urls, .url-filters, .filters, .filtros-urls') || document;
 
-    // Buscamos por tipos/atributos habituales
     return (
       scope.querySelector('input[type="url"]') ||
       scope.querySelector('input[id*="url"]') ||
@@ -108,16 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
       scope.querySelector('input[data-filter="url"]') ||
       scope.querySelector('input[placeholder*="url" i]') ||
       scope.querySelector('input[placeholder*="/" i]') ||
-      // Último recurso: cualquier text input dentro del scope
       scope.querySelector('input[type="text"]')
     );
   };
 
-  const ensureDefaultSlash = (inputEl) => {
+  // Devuelve true si el checkbox "Check HTTP status" está activado
+  const isCheckStatusEnabled = (scope) => {
+    const form =
+      scope instanceof HTMLFormElement
+        ? scope
+        : scope.closest('form, .filtro-urls, .url-filters, .filters, .filtros-urls');
+    const check = form?.querySelector('input[name="check_status"]');
+    return check?.checked === true;
+  };
+
+  const ensureDefaultSlash = (inputEl, scope) => {
     if (!inputEl) return;
+    // 🚫 Solo poner '/' si está activado "Check HTTP Status"
+    if (!isCheckStatusEnabled(scope)) return;
     if (String(inputEl.value).trim() === '') {
       inputEl.value = '/';
-      // Disparamos eventos por si hay listeners que reaccionan al cambio
       inputEl.dispatchEvent(new Event('input', { bubbles: true }));
       inputEl.dispatchEvent(new Event('change', { bubbles: true }));
     }
@@ -142,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       if (!trigger) return;
 
-      // Si no coincide por ID/clase/dataset, comprobamos por texto visible
       const looksLikeCheck =
         trigger.id === 'check-http-status' ||
         trigger.dataset?.action === 'check-http-status' ||
@@ -152,27 +159,26 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!looksLikeCheck) return;
 
       const urlInput = findClosestUrlInput(trigger);
-      ensureDefaultSlash(urlInput);
+      ensureDefaultSlash(urlInput, trigger);
     },
-    true // captura, para ejecutar antes de que otros manejadores lean el valor
+    true
   );
 
-  // 2) Submit del formulario (por si se lanza con Enter o submit programático)
+  // 2) Submit del formulario
   document.addEventListener(
     'submit',
     (ev) => {
       const form = ev.target;
       if (!(form instanceof HTMLFormElement)) return;
-      // Sólo actuamos si el form parece de filtros de URL
+
       const isUrlFilterScope =
         form.matches('.filtro-urls, .url-filters, .filters, .filtros-urls') ||
-        // o si contiene algún control típico de URL
         form.querySelector('input[type="url"], input[name*="url"], input[id*="url"]');
 
       if (!isUrlFilterScope) return;
 
       const urlInput = findClosestUrlInput(form);
-      ensureDefaultSlash(urlInput);
+      ensureDefaultSlash(urlInput, form);
     },
     true
   );
@@ -183,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = e.target;
     if (!(target instanceof HTMLInputElement)) return;
 
-    // ¿Parece un input de URL?
     const isUrlish =
       target.type === 'url' ||
       /url/i.test(target.name || '') ||
@@ -192,6 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!isUrlish) return;
 
-    ensureDefaultSlash(target);
+    ensureDefaultSlash(target, target);
   });
 });

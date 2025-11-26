@@ -104,6 +104,9 @@ td.ai-tracker-list {line-height: 1.8;}
 .ghlabel-AmazonBot:after{
         background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/amazon.ico);
 }
+.ghlabel-venice:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/venice.svg);
+}
 .ghlabel-Twitterbot:after, .ghlabel-Grok:after{
         background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/x.svg);
 }
@@ -212,4 +215,10 @@ div#llm-dropdown {
 }
 .ip-blacklist-section {
     margin-top: 3em;
+}
+input[type=checkbox], input[type=radio]{
+    margin: 0px;
+}
+.gh-max-chw {
+    max-width: 120ch;
 }
