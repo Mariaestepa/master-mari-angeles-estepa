@@ -1,0 +1,656 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-10-14 15:02+0200\n"
+"PO-Revision-Date: 2025-10-15 08:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x;_n;esc_html__;esc_html_e;esc_attr__;esc_attr_e;esc_js__;esc_js_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: geohatllm.php\n"
+"X-Poedit-SearchPath-2: tracking/llm-track.php\n"
+"X-Poedit-SearchPath-3: tracking/kits/01-last-visit.php\n"
+"X-Poedit-SearchPath-4: tracking/kits/02-visual-chart.php\n"
+"X-Poedit-SearchPath-5: tracking/kits/03-chart-graphic.php\n"
+"X-Poedit-SearchPath-6: tracking/kits/04-tables.php\n"
+"X-Poedit-SearchPath-7: tracking/kits/05-delete-data.php\n"
+"X-Poedit-SearchPath-8: tracking/kits/06-export-csv.php\n"
+"X-Poedit-SearchPath-9: tracking/kits/07-ip-blacklist.php\n"
+"X-Poedit-SearchPath-10: tracking/kits/track.css\n"
+"X-Poedit-SearchPath-11: key/key.php\n"
+"X-Poedit-SearchPath-12: core/cache.php\n"
+"X-Poedit-SearchPath-13: core/cookie.php\n"
+"X-Poedit-SearchPath-14: core/editors.php\n"
+"X-Poedit-SearchPath-15: core/llm-css.php\n"
+"X-Poedit-SearchPath-16: core/start.php\n"
+
+#: core/cookie.php:13
+msgid "👁️ LLM Mode: ACTIVE"
+msgstr "👁️ LLM模式：已激活"
+
+#: core/cookie.php:14
+msgid "🕵️ Enable LLM Mode"
+msgstr "🕵️ 启用LLM模式"
+
+#: core/cookie.php:35
+msgid "You are viewing as an LLM Bot"
+msgstr "您正在以LLM机器人身份浏览"
+
+#: core/editors.php:43
+msgid "GEOhat"
+msgstr "GEOhat"
+
+#: core/editors.php:46
+msgid "Hide from bots (GEOhat)"
+msgstr "对机器人隐藏 (GEOhat)"
+
+#: core/editors.php:53 core/editors.php:142 core/editors.php:219
+msgid "Hide from search engines"
+msgstr "对搜索引擎隐藏"
+
+#: core/editors.php:129 core/editors.php:207
+msgid "Hide from LLMs (Geohat)"
+msgstr "对LLM隐藏 (Geohat)"
+
+#: core/editors.php:131 core/editors.php:144 core/editors.php:209
+#: core/editors.php:221 core/editors.php:271 core/editors.php:284
+#: core/editors.php:341 core/editors.php:382 core/editors.php:390
+msgid "Yes"
+msgstr "是"
+
+#: core/editors.php:132 core/editors.php:145 core/editors.php:210
+#: core/editors.php:222 core/editors.php:270 core/editors.php:283
+#: core/editors.php:340
+msgid "No"
+msgstr "否"
+
+#: core/editors.php:199 core/start.php:71
+msgid "GEOhat LLM"
+msgstr "GEOhat LLM"
+
+#: core/editors.php:267
+msgid "Hide from search engine snippets (data-nosnippet)"
+msgstr "对搜索引擎摘要隐藏 (data-nosnippet)"
+
+#: core/editors.php:276
+msgid "Adds data-nosnippet=\"true\" (only valid on section/div/span)."
+msgstr "添加 data-nosnippet=\"true\" (仅在 section/div/span 上有效)。"
+
+#: core/editors.php:280
+msgid "Hide from LLMs (data-nosnippet-geohat)"
+msgstr "对LLM隐藏 (data-nosnippet-geohat)"
+
+#: core/editors.php:289
+msgid "Adds data-nosnippet-geohat=\"true\"."
+msgstr "添加 data-nosnippet-geohat=\"true\"。"
+
+#: core/editors.php:337
+msgid "Hide from search engines (data-nosnippet)"
+msgstr "对搜索引擎隐藏 (data-nosnippet)"
+
+#: core/editors.php:380
+msgid "Prevent content from being shown to selected LLMs in GEOhat"
+msgstr "防止内容显示给GEOhat中选定的LLM"
+
+#: core/editors.php:383 core/editors.php:391
+msgid "Geohat"
+msgstr "Geohat"
+
+#: core/editors.php:388
+msgid "Prevent content from appearing in Google rich snippets"
+msgstr "防止内容出现在Google富媒体摘要中"
+
+#: core/functions/authors.php:8
+msgid "Information for LLM"
+msgstr "LLM信息"
+
+#: core/functions/authors.php:11 geohatllm.php:97 geohatllm.php:108
+msgid "GEOhat: Message for LLMs"
+msgstr "GEOhat：给LLM的消息"
+
+#: core/js/editor.js:43
+msgid "Geohat Options"
+msgstr "Geohat选项"
+
+#: core/js/editor.js:45
+msgid "Hide from LLM"
+msgstr "对LLM隐藏"
+
+#: core/js/editor.js:50
+msgid "Hide from search engine SERPs"
+msgstr "对搜索引擎结果页隐藏"
+
+#: core/llm-css.php:9
+msgid "Custom CSS for LLMs"
+msgstr "LLM自定义CSS"
+
+#: core/llm-css.php:10
+msgid ""
+"These styles will only be applied when an LLM bot is visiting your site."
+msgstr "这些样式仅在LLM机器人访问您的网站时应用。"
+
+#: core/start.php:70
+msgid "LLM Settings"
+msgstr "LLM设置"
+
+#: core/start.php:85 core/start.php:86
+msgid "Tracking LLM"
+msgstr "追踪LLM"
+
+#: core/start.php:97
+msgid "Licencia GEOhat LLM"
+msgstr "GEOhat LLM许可证"
+
+#: core/start.php:98
+msgid "License"
+msgstr "许可证"
+
+#: geohatllm.php:32
+#, php-format
+msgid "Information for selected LLM User-Agents for this %s"
+msgstr "为此 %s 选定的LLM User-Agent信息"
+
+#: geohatllm.php:48
+msgid "Recommendations:"
+msgstr "建议："
+
+#: geohatllm.php:49
+msgid "Speak well of yourself"
+msgstr "恰当展示自身优势"
+
+#: geohatllm.php:50
+msgid ""
+"You can exaggerate without sounding arrogant. If you say you are the best, "
+"it may seem boastful, but if it is what the AI knows and shares, the user "
+"will take it as truth."
+msgstr ""
+"您可以适度夸张而不显得傲慢。如果您说您是最好的，可能听起来像自夸，但如果这是AI所知并分享的，用户就会将其视为事实。"
+
+#: geohatllm.php:53
+msgid "Mention your weaknesses"
+msgstr "提及您的弱点"
+
+#: geohatllm.php:54
+msgid ""
+"You are the main authority on your product. Avoid AI getting info from "
+"negative sources. Mention weaknesses in a controlled way that only affect "
+"users who are not your target."
+msgstr "您是您产品的主要权威。避免AI从负面来源获取信息。以可控的方式提及弱点，这些弱点只影响非目标用户。"
+
+#: geohatllm.php:57
+msgid "Add Prompts"
+msgstr "添加提示"
+
+#: geohatllm.php:58
+msgid ""
+"Even if AI wears silk, it is still AI. Add Prompts and conditions to ensure "
+"it shares key info."
+msgstr "即使AI穿着丝绸，它仍然是AI。添加提示和条件以确保其分享关键信息。"
+
+#: geohatllm.php:61
+msgid "Make comparisons"
+msgstr "进行比较"
+
+#: geohatllm.php:62
+msgid ""
+"It is not great to compare yourself to others directly. But you can do so "
+"here, giving AI the info it needs to support you."
+msgstr "直接将自己与他人比较并不太好。但您可以在此处这样做，为AI提供支持您所需的信息。"
+
+#: geohatllm.php:258
+msgid "LLM Bots Settings"
+msgstr "LLM机器人设置"
+
+#: geohatllm.php:263 tracking/llm-track.php:115
+msgid "License required"
+msgstr "需要许可证"
+
+#: geohatllm.php:264
+msgid "User-Agent selection is disabled."
+msgstr "User-Agent选择已禁用。"
+
+#: geohatllm.php:265
+msgid "Activate license"
+msgstr "激活许可证"
+
+#: geohatllm.php:273
+msgid "Known AI Bots"
+msgstr "已知AI机器人"
+
+#: geohatllm.php:274
+msgid "Select allowed User-Agents that can access special content for LLM."
+msgstr "选择可以访问LLM特殊内容的允许User-Agent。"
+
+#: geohatllm.php:287
+msgid "Grok"
+msgstr "Grok"
+
+#: geohatllm.php:290
+msgid "Custom Bots"
+msgstr "自定义机器人"
+
+#: geohatllm.php:291
+msgid "Enter one User-Agent per line:"
+msgstr "每行输入一个User-Agent："
+
+#: geohatllm.php:296
+msgid "Content visible only to users"
+msgstr "仅对用户可见的内容"
+
+#: geohatllm.php:297
+msgid "How to hide content from bots?"
+msgstr "如何对机器人隐藏内容？"
+
+#: geohatllm.php:298
+msgid ""
+"The selected options above will allow you to show content only to LLM bots."
+msgstr "上述选定的选项将允许您仅向LLM机器人显示内容。"
+
+#: geohatllm.php:299
+msgid ""
+"However, you can also do the opposite: show content to everyone except "
+"selected bots."
+msgstr "但是，您也可以做相反的事情：向除选定机器人之外的所有人显示内容。"
+
+#: geohatllm.php:301
+#, php-format
+msgid ""
+"You can hide any block, section or module from selected user-agents by "
+"simply adding %1$s as an attribute or the class %2$s to its HTML."
+msgstr "您可以通过简单地将 %1$s 添加为属性或将类 %2$s 添加到其HTML中，从而对选定的user-agent隐藏任何块、部分或模块。"
+
+#: geohatllm.php:306
+msgid "from block tab (Geohat Options)"
+msgstr "从块选项卡 (Geohat选项)"
+
+#: geohatllm.php:307
+msgid "Advanced tab → after \"CSS Classes\""
+msgstr "高级选项卡 → \"CSS类\"之后"
+
+#: geohatllm.php:308
+msgid "More tools → Formats → Hide from bots"
+msgstr "更多工具 → 格式 → 对机器人隐藏"
+
+#: geohatllm.php:309
+msgid "Any editor"
+msgstr "任何编辑器"
+
+#: geohatllm.php:309
+msgid "Add the class or attribute manually"
+msgstr "手动添加类或属性"
+
+#: geohatllm.php:311
+msgid ""
+"If the bot matches one of the selected user-agents, this content will not be "
+"shown."
+msgstr "如果机器人匹配选定的user-agent之一，则不会显示此内容。"
+
+#: geohatllm.php:314
+msgid "Disable Cache"
+msgstr "禁用缓存"
+
+#: geohatllm.php:315
+msgid ""
+"Enable this option only if you use WP Rocket, LiteSpeed or other systems "
+"that cache HTML and you do not see the plugin working."
+msgstr "仅当您使用WP Rocket、LiteSpeed或其他缓存HTML的系统且未看到插件工作时，才启用此选项。"
+
+#: geohatllm.php:316
+msgid "Disable cache for these bots"
+msgstr "对这些机器人禁用缓存"
+
+#: geohatllm.php:321
+msgid "Remove ChatGPT traces"
+msgstr "移除ChatGPT痕迹"
+
+#: geohatllm.php:322
+msgid ""
+"Enable this option if you want to remove invisible HTML attributes used by "
+"LLM tools like ChatGPT, Claude, Bard, etc. Attributes removed:"
+msgstr "如果您想移除ChatGPT、Claude、Bard等LLM工具使用的不可见HTML属性，请启用此选项。移除的属性："
+
+#: geohatllm.php:325
+msgid "Remove ChatGPT traces from your content"
+msgstr "从您的内容中移除ChatGPT痕迹"
+
+#: key/key.php:32
+#, php-format
+msgid ""
+"✅ License verified successfully.<br>Created on <strong>%s</"
+"strong><br>Expires on <strong>%s</strong><br><strong>%d days</strong> "
+"remaining."
+msgstr "✅ 许可证验证成功。<br>创建于 <strong>%s</strong><br>过期于 <strong>%s</strong><br>剩余 <strong>%d 天</strong>。"
+
+#: key/key.php:40
+#, php-format
+msgid "❌ Invalid license: %s"
+msgstr "❌ 无效许可证：%s"
+
+#: key/key.php:55
+msgid "🔐 GEOhat LLM License"
+msgstr "🔐 GEOhat LLM许可证"
+
+#: key/key.php:62
+msgid "License Key"
+msgstr "许可证密钥"
+
+#: key/key.php:65
+msgid "Enter the complete key."
+msgstr "输入完整的密钥。"
+
+#: key/key.php:69
+msgid "Verify License"
+msgstr "验证许可证"
+
+#: key/key.php:73
+msgid "Current Status"
+msgstr "当前状态"
+
+#: key/key.php:80
+msgid "Authorized Domain:"
+msgstr "授权域名："
+
+#: key/key.php:81
+msgid "License Created:"
+msgstr "许可证创建于："
+
+#: key/key.php:82
+msgid "Expires on:"
+msgstr "过期于："
+
+#: key/key.php:87
+#, php-format
+msgid "🟢 %d days remaining (%.1f months)"
+msgstr "🟢 剩余 %d 天 (%.1f 个月)"
+
+#: key/key.php:97
+#, php-format
+msgid "🔴 License expired %d days ago"
+msgstr "🔴 许可证已于 %d 天前过期"
+
+#: key/key.php:108
+#, php-format
+msgid "❌ The saved license is no longer valid: %s"
+msgstr "❌ 保存的许可证不再有效：%s"
+
+#: key/key.php:128
+msgid "Incorrect format, please acquire a valid license."
+msgstr "格式不正确，请获取有效的许可证。"
+
+#: key/key.php:148
+msgid "Invalid domain"
+msgstr "无效域名"
+
+#: key/key.php:154
+msgid "The key is not for this domain."
+msgstr "此密钥不适用于此域名。"
+
+#: key/key.php:164
+msgid "Hash does not match. Key is corrupted or tampered."
+msgstr "哈希不匹配。密钥已损坏或遭篡改。"
+
+#: key/key.php:185
+#, php-format
+msgid "License expired %d days ago (expired on %s)"
+msgstr "许可证已于 %d 天前过期 (过期于 %s)"
+
+#: tracking/kits/01-last-visit.php:178
+msgid "Source:"
+msgstr "来源："
+
+#: tracking/kits/01-last-visit.php:180
+msgid "All"
+msgstr "全部"
+
+#: tracking/kits/01-last-visit.php:191
+msgid "From:"
+msgstr "从："
+
+#: tracking/kits/01-last-visit.php:195
+msgid "To:"
+msgstr "到："
+
+#: tracking/kits/01-last-visit.php:199
+msgid "URL contains:"
+msgstr "URL包含："
+
+#: tracking/kits/01-last-visit.php:203
+msgid "View:"
+msgstr "查看："
+
+#: tracking/kits/01-last-visit.php:205
+msgid "Detailed (date and time)"
+msgstr "详细 (日期和时间)"
+
+#: tracking/kits/01-last-visit.php:206
+msgid "Grouped by day"
+msgstr "按日分组"
+
+#: tracking/kits/01-last-visit.php:207
+msgid "Grouped by month"
+msgstr "按月分组"
+
+#: tracking/kits/01-last-visit.php:208
+msgid "Grouped by year"
+msgstr "按年分组"
+
+#: tracking/kits/01-last-visit.php:209
+msgid "Global total"
+msgstr "全局总计"
+
+#: tracking/kits/01-last-visit.php:213
+msgid "Filter"
+msgstr "筛选"
+
+#: tracking/kits/01-last-visit.php:217
+msgid "Last recorded visits"
+msgstr "最后记录的访问"
+
+#: tracking/kits/01-last-visit.php:223
+msgid "⬇ Download CSV"
+msgstr "⬇ 下载CSV"
+
+#: tracking/kits/01-last-visit.php:228
+msgid "No data available yet."
+msgstr "尚无可用数据。"
+
+#: tracking/kits/01-last-visit.php:234
+msgid "Date and Time"
+msgstr "日期和时间"
+
+#: tracking/kits/01-last-visit.php:235 tracking/kits/06-export-csv.php:139
+msgid "Source"
+msgstr "来源"
+
+#: tracking/kits/01-last-visit.php:236 tracking/kits/06-export-csv.php:140
+msgid "URL"
+msgstr "URL"
+
+#: tracking/kits/01-last-visit.php:237 tracking/kits/06-export-csv.php:141
+msgid "Visits"
+msgstr "访问次数"
+
+#: tracking/kits/01-last-visit.php:246
+msgid "All URLs"
+msgstr "所有URL"
+
+#: tracking/kits/03-chart-graphic.php:67
+msgid "Visits Chart"
+msgstr "访问图表"
+
+#: tracking/kits/03-chart-graphic.php:69
+msgid "All LLMs"
+msgstr "所有LLM"
+
+#: tracking/kits/04-tables.php:5
+msgid "Visits Summary"
+msgstr "访问摘要"
+
+#: tracking/kits/04-tables.php:14
+msgid "Last Day"
+msgstr "最近一天"
+
+#: tracking/kits/04-tables.php:15
+msgid "Last Week"
+msgstr "最近一周"
+
+#: tracking/kits/04-tables.php:16
+msgid "Last Month"
+msgstr "最近一月"
+
+#: tracking/kits/04-tables.php:17
+msgid "Last Quarter"
+msgstr "最近一季度"
+
+#: tracking/kits/04-tables.php:18
+msgid "Last Year"
+msgstr "最近一年"
+
+#: tracking/kits/04-tables.php:26
+msgid "Period"
+msgstr "期间"
+
+#: tracking/kits/05-delete-data.php:1
+msgid "Delete Records"
+msgstr "删除记录"
+
+#: tracking/kits/05-delete-data.php:5
+msgid "🧨 Delete all records"
+msgstr "🧨 删除所有记录"
+
+#: tracking/kits/05-delete-data.php:28
+msgid "Are you completely sure?"
+msgstr "您完全确定吗？"
+
+#: tracking/kits/05-delete-data.php:32
+msgid ""
+"This action will delete <strong>all records</strong> from the LLM visit "
+"tracking. The information cannot be recovered once deleted. We recommend <a "
+"href=\"#descargar-datos\" style=\"color:blue;\">downloading the information</"
+"a> before deleting the data."
+msgstr ""
+"此操作将从LLM访问跟踪中删除<strong>所有记录</strong>。信息一旦删除无法恢复。我们建议在删除数据之前<a "
+"href=\"#descargar-datos\" style=\"color:blue;\">下载信息</a>。"
+
+#: tracking/kits/05-delete-data.php:38
+msgid "Yes, delete everything"
+msgstr "是的，删除所有内容"
+
+#: tracking/kits/05-delete-data.php:39
+msgid "Cancel"
+msgstr "取消"
+
+#: tracking/kits/05-delete-data.php:63
+msgid "⚠️ Final confirmation: Are you sure you want to delete all records?"
+msgstr "⚠️ 最终确认：您确定要删除所有记录吗？"
+
+#: tracking/kits/05-delete-data.php:81
+msgid "✅ Records deleted successfully."
+msgstr "✅ 记录删除成功。"
+
+#: tracking/kits/06-export-csv.php:138
+msgid "Date"
+msgstr "日期"
+
+#: tracking/kits/06-export-csv.php:155
+msgid "No data"
+msgstr "无数据"
+
+#: tracking/kits/07-ip-blacklist.php:102
+msgid "🚫 IP Blacklist"
+msgstr "🚫 IP黑名单"
+
+#: tracking/kits/07-ip-blacklist.php:104
+msgid ""
+"List of IP addresses that <strong>will not be tracked</strong>. This is "
+"useful if you want to test and don't want them recorded in analytics. Enter "
+"one IP per line. Invalid IPs will be automatically ignored."
+msgstr ""
+"<strong>不会被跟踪</strong>的IP地址列表。如果您想测试且不希望它们被记录在分析中，这很有用。每行输入一个IP。无效的IP将被自动忽略。"
+
+#: tracking/kits/07-ip-blacklist.php:110
+msgid "Blocked IPs"
+msgstr "已阻止的IP"
+
+#: tracking/kits/07-ip-blacklist.php:127
+#, php-format
+msgid "💡 Your current IP: <code>%s</code>"
+msgstr "💡 您当前的IP：<code>%s</code>"
+
+#: tracking/kits/07-ip-blacklist.php:132
+msgid "Blocked"
+msgstr "已阻止"
+
+#: tracking/kits/07-ip-blacklist.php:134
+msgid "Allowed"
+msgstr "允许"
+
+#: tracking/kits/07-ip-blacklist.php:135
+msgid "➕ Add my IP"
+msgstr "➕ 添加我的IP"
+
+#: tracking/kits/07-ip-blacklist.php:148
+#, php-format
+msgid "📊 Total blocked IPs: <strong>%d</strong>"
+msgstr "📊 总计阻止的IP数：<strong>%d</strong>"
+
+#: tracking/kits/07-ip-blacklist.php:169
+msgid "Could not detect your IP."
+msgstr "无法检测到您的IP。"
+
+#: tracking/kits/07-ip-blacklist.php:179
+msgid "Your IP is already in the blacklist."
+msgstr "您的IP已在黑名单中。"
+
+#: tracking/kits/07-ip-blacklist.php:191
+msgid "✅ IP added"
+msgstr "✅ IP已添加"
+
+#: tracking/llm-track.php:21
+msgid ""
+"✅ <strong>LLM visit tracking automatically enabled</strong> after verifying "
+"your valid license."
+msgstr "✅ 验证您的有效许可证后，<strong>LLM访问跟踪已自动启用</strong>。"
+
+#: tracking/llm-track.php:86
+msgid "Other LLMs"
+msgstr "其他LLM"
+
+#: tracking/llm-track.php:104
+msgid "LLM Tracking"
+msgstr "LLM跟踪"
+
+#: tracking/llm-track.php:113
+msgid "Enable visit tracking?"
+msgstr "启用访问跟踪？"
+
+#: tracking/llm-track.php:124
+msgid "Allowed Sources"
+msgstr "允许的来源"
+
+#: tracking/llm-track.php:137
+msgid "Coming Soon"
+msgstr "即将推出"
+
+#: tracking/llm-track.php:163
+msgid "Save Blacklist"
+msgstr "保存黑名单"
+
+msgid "Select LLMs"
+msgstr "选择 LLMs"
+
+msgid "Latest registered visits"
+msgstr "最新注册访问"
+
+msgid "Download CSV"
+msgstr "下载 CSV 文件"
+
+msgid "Date and time"
+msgstr "日期和时间"

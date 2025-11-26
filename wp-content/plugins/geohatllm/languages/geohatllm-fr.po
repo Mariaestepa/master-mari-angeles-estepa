@@ -1,0 +1,613 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-10-14 15:02+0200\n"
+"PO-Revision-Date: 2025-10-15 07:55+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;esc_html__;esc_html_e;esc_attr__;esc_attr_e;esc_js__;esc_js_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: geohatllm.php\n"
+"X-Poedit-SearchPath-2: tracking/llm-track.php\n"
+"X-Poedit-SearchPath-3: tracking/kits/01-last-visit.php\n"
+"X-Poedit-SearchPath-4: tracking/kits/02-visual-chart.php\n"
+"X-Poedit-SearchPath-5: tracking/kits/03-chart-graphic.php\n"
+"X-Poedit-SearchPath-6: tracking/kits/04-tables.php\n"
+"X-Poedit-SearchPath-7: tracking/kits/05-delete-data.php\n"
+"X-Poedit-SearchPath-8: tracking/kits/06-export-csv.php\n"
+"X-Poedit-SearchPath-9: tracking/kits/07-ip-blacklist.php\n"
+"X-Poedit-SearchPath-10: tracking/kits/track.css\n"
+"X-Poedit-SearchPath-11: key/key.php\n"
+"X-Poedit-SearchPath-12: core/cache.php\n"
+"X-Poedit-SearchPath-13: core/cookie.php\n"
+"X-Poedit-SearchPath-14: core/editors.php\n"
+"X-Poedit-SearchPath-15: core/llm-css.php\n"
+"X-Poedit-SearchPath-16: core/start.php\n"
+
+#: core/cookie.php:13
+msgid "👁️ LLM Mode: ACTIVE"
+msgstr "👁️ Mode LLM : ACTIF"
+
+#: core/cookie.php:14
+msgid "🕵️ Enable LLM Mode"
+msgstr "🕵️ Activer le mode LLM"
+
+#: core/cookie.php:35
+msgid "You are viewing as an LLM Bot"
+msgstr "Vous visualisez en tant que Bot LLM"
+
+#: core/editors.php:43
+msgid "GEOhat"
+msgstr "GEOhat"
+
+#: core/editors.php:46
+msgid "Hide from bots (GEOhat)"
+msgstr "Masquer aux bots (GEOhat)"
+
+#: core/editors.php:53 core/editors.php:142 core/editors.php:219
+msgid "Hide from search engines"
+msgstr "Masquer aux moteurs de recherche"
+
+#: core/editors.php:129 core/editors.php:207
+msgid "Hide from LLMs (Geohat)"
+msgstr "Masquer aux LLM (Geohat)"
+
+#: core/editors.php:131 core/editors.php:144 core/editors.php:209 core/editors.php:221 core/editors.php:271 core/editors.php:284 core/editors.php:341 core/editors.php:382 core/editors.php:390
+msgid "Yes"
+msgstr "Oui"
+
+#: core/editors.php:132 core/editors.php:145 core/editors.php:210 core/editors.php:222 core/editors.php:270 core/editors.php:283 core/editors.php:340
+msgid "No"
+msgstr "Non"
+
+#: core/editors.php:199 core/start.php:71
+msgid "GEOhat LLM"
+msgstr "GEOhat LLM"
+
+#: core/editors.php:267
+msgid "Hide from search engine snippets (data-nosnippet)"
+msgstr "Masquer des extraits de moteurs de recherche (data-nosnippet)"
+
+#: core/editors.php:276
+msgid "Adds data-nosnippet=\"true\" (only valid on section/div/span)."
+msgstr "Ajoute data-nosnippet=\"true\" (valide uniquement sur section/div/span)."
+
+#: core/editors.php:280
+msgid "Hide from LLMs (data-nosnippet-geohat)"
+msgstr "Masquer aux LLM (data-nosnippet-geohat)"
+
+#: core/editors.php:289
+msgid "Adds data-nosnippet-geohat=\"true\"."
+msgstr "Ajoute data-nosnippet-geohat=\"true\"."
+
+#: core/editors.php:337
+msgid "Hide from search engines (data-nosnippet)"
+msgstr "Masquer aux moteurs de recherche (data-nosnippet)"
+
+#: core/editors.php:380
+msgid "Prevent content from being shown to selected LLMs in GEOhat"
+msgstr "Empêcher l'affichage du contenu aux LLM sélectionnés dans GEOhat"
+
+#: core/editors.php:383 core/editors.php:391
+msgid "Geohat"
+msgstr "Geohat"
+
+#: core/editors.php:388
+msgid "Prevent content from appearing in Google rich snippets"
+msgstr "Empêcher l'apparition du contenu dans les extraits enrichis Google"
+
+#: core/functions/authors.php:8
+msgid "Information for LLM"
+msgstr "Information pour LLM"
+
+#: core/functions/authors.php:11 geohatllm.php:97 geohatllm.php:108
+msgid "GEOhat: Message for LLMs"
+msgstr "GEOhat : Message pour les LLM"
+
+#: core/js/editor.js:43
+msgid "Geohat Options"
+msgstr "Options Geohat"
+
+#: core/js/editor.js:45
+msgid "Hide from LLM"
+msgstr "Masquer aux LLM"
+
+#: core/js/editor.js:50
+msgid "Hide from search engine SERPs"
+msgstr "Masquer des SERP des moteurs de recherche"
+
+#: core/llm-css.php:9
+msgid "Custom CSS for LLMs"
+msgstr "CSS personnalisé pour les LLM"
+
+#: core/llm-css.php:10
+msgid "These styles will only be applied when an LLM bot is visiting your site."
+msgstr "Ces styles ne seront appliqués que lorsqu'un bot LLM visite votre site."
+
+#: core/start.php:70
+msgid "LLM Settings"
+msgstr "Paramètres LLM"
+
+#: core/start.php:85 core/start.php:86
+msgid "Tracking LLM"
+msgstr "Suivi LLM"
+
+#: core/start.php:97
+msgid "Licencia GEOhat LLM"
+msgstr "Licence GEOhat LLM"
+
+#: core/start.php:98
+msgid "License"
+msgstr "Licence"
+
+#: geohatllm.php:32
+#, php-format
+msgid "Information for selected LLM User-Agents for this %s"
+msgstr "Informations pour les User-Agents LLM sélectionnés pour ce %s"
+
+#: geohatllm.php:48
+msgid "Recommendations:"
+msgstr "Recommandations :"
+
+#: geohatllm.php:49
+msgid "Speak well of yourself"
+msgstr "Parlez bien de vous"
+
+#: geohatllm.php:50
+msgid "You can exaggerate without sounding arrogant. If you say you are the best, it may seem boastful, but if it is what the AI knows and shares, the user will take it as truth."
+msgstr "Vous pouvez exagérer sans paraître arrogant. Si vous dites que vous êtes le meilleur, cela peut sembler vaniteux, mais si c'est ce que l'IA sait et partage, l'utilisateur le prendra pour vérité."
+
+#: geohatllm.php:53
+msgid "Mention your weaknesses"
+msgstr "Mentionnez vos faiblesses"
+
+#: geohatllm.php:54
+msgid "You are the main authority on your product. Avoid AI getting info from negative sources. Mention weaknesses in a controlled way that only affect users who are not your target."
+msgstr "Vous êtes l'autorité principale sur votre produit. Évitez que l'IA obtienne des informations de sources négatives. Mentionnez les faiblesses de manière contrôlée qui n'affectent que les utilisateurs qui ne sont pas votre cible."
+
+#: geohatllm.php:57
+msgid "Add Prompts"
+msgstr "Ajoutez des Prompts"
+
+#: geohatllm.php:58
+msgid "Even if AI wears silk, it is still AI. Add Prompts and conditions to ensure it shares key info."
+msgstr "Même si l'IA porte de la soie, c'est toujours de l'IA. Ajoutez des Prompts et des conditions pour garantir qu'elle partage les informations clés."
+
+#: geohatllm.php:61
+msgid "Make comparisons"
+msgstr "Faites des comparaisons"
+
+#: geohatllm.php:62
+msgid "It is not great to compare yourself to others directly. But you can do so here, giving AI the info it needs to support you."
+msgstr "Il n'est pas idéal de vous comparer directement aux autres. Mais vous pouvez le faire ici, en donnant à l'IA les informations dont elle a besoin pour vous soutenir."
+
+#: geohatllm.php:258
+msgid "LLM Bots Settings"
+msgstr "Paramètres des Bots LLM"
+
+#: geohatllm.php:263 tracking/llm-track.php:115
+msgid "License required"
+msgstr "Licence requise"
+
+#: geohatllm.php:264
+msgid "User-Agent selection is disabled."
+msgstr "La sélection de User-Agent est désactivée."
+
+#: geohatllm.php:265
+msgid "Activate license"
+msgstr "Activer la licence"
+
+#: geohatllm.php:273
+msgid "Known AI Bots"
+msgstr "Bots IA connus"
+
+#: geohatllm.php:274
+msgid "Select allowed User-Agents that can access special content for LLM."
+msgstr "Sélectionnez les User-Agents autorisés qui peuvent accéder au contenu spécial pour LLM."
+
+#: geohatllm.php:287
+msgid "Grok"
+msgstr "Grok"
+
+#: geohatllm.php:290
+msgid "Custom Bots"
+msgstr "Bots personnalisés"
+
+#: geohatllm.php:291
+msgid "Enter one User-Agent per line:"
+msgstr "Entrez un User-Agent par ligne :"
+
+#: geohatllm.php:296
+msgid "Content visible only to users"
+msgstr "Contenu visible uniquement pour les utilisateurs"
+
+#: geohatllm.php:297
+msgid "How to hide content from bots?"
+msgstr "Comment masquer le contenu aux bots ?"
+
+#: geohatllm.php:298
+msgid "The selected options above will allow you to show content only to LLM bots."
+msgstr "Les options sélectionnées ci-dessus vous permettront d'afficher du contenu uniquement aux bots LLM."
+
+#: geohatllm.php:299
+msgid "However, you can also do the opposite: show content to everyone except selected bots."
+msgstr "Cependant, vous pouvez également faire l'inverse : afficher le contenu à tout le monde sauf aux bots sélectionnés."
+
+#: geohatllm.php:301
+#, php-format
+msgid "You can hide any block, section or module from selected user-agents by simply adding %1$s as an attribute or the class %2$s to its HTML."
+msgstr "Vous pouvez masquer n'importe quel bloc, section ou module aux user-agents sélectionnés en ajoutant simplement %1$s comme attribut ou la classe %2$s à son HTML."
+
+#: geohatllm.php:306
+msgid "from block tab (Geohat Options)"
+msgstr "depuis l'onglet bloc (Options Geohat)"
+
+#: geohatllm.php:307
+msgid "Advanced tab → after \"CSS Classes\""
+msgstr "Onglet Avancé → après \"Classes CSS\""
+
+#: geohatllm.php:308
+msgid "More tools → Formats → Hide from bots"
+msgstr "Plus d'outils → Formats → Masquer aux bots"
+
+#: geohatllm.php:309
+msgid "Any editor"
+msgstr "N'importe quel éditeur"
+
+#: geohatllm.php:309
+msgid "Add the class or attribute manually"
+msgstr "Ajoutez la classe ou l'attribut manuellement"
+
+#: geohatllm.php:311
+msgid "If the bot matches one of the selected user-agents, this content will not be shown."
+msgstr "Si le bot correspond à l'un des user-agents sélectionnés, ce contenu ne sera pas affiché."
+
+#: geohatllm.php:314
+msgid "Disable Cache"
+msgstr "Désactiver le cache"
+
+#: geohatllm.php:315
+msgid "Enable this option only if you use WP Rocket, LiteSpeed or other systems that cache HTML and you do not see the plugin working."
+msgstr "Activez cette option uniquement si vous utilisez WP Rocket, LiteSpeed ou d'autres systèmes qui mettent en cache le HTML et que vous ne voyez pas le plugin fonctionner."
+
+#: geohatllm.php:316
+msgid "Disable cache for these bots"
+msgstr "Désactiver le cache pour ces bots"
+
+#: geohatllm.php:321
+msgid "Remove ChatGPT traces"
+msgstr "Supprimer les traces ChatGPT"
+
+#: geohatllm.php:322
+msgid "Enable this option if you want to remove invisible HTML attributes used by LLM tools like ChatGPT, Claude, Bard, etc. Attributes removed:"
+msgstr "Activez cette option si vous souhaitez supprimer les attributs HTML invisibles utilisés par les outils LLM comme ChatGPT, Claude, Bard, etc. Attributs supprimés :"
+
+#: geohatllm.php:325
+msgid "Remove ChatGPT traces from your content"
+msgstr "Supprimer les traces ChatGPT de votre contenu"
+
+#: key/key.php:32
+#, php-format
+msgid "✅ License verified successfully.<br>Created on <strong>%s</strong><br>Expires on <strong>%s</strong><br><strong>%d days</strong> remaining."
+msgstr "✅ Licence vérifiée avec succès.<br>Créée le <strong>%s</strong><br>Expire le <strong>%s</strong><br><strong>%d jours</strong> restants."
+
+#: key/key.php:40
+#, php-format
+msgid "❌ Invalid license: %s"
+msgstr "❌ Licence invalide : %s"
+
+#: key/key.php:55
+msgid "🔐 GEOhat LLM License"
+msgstr "🔐 Licence GEOhat LLM"
+
+#: key/key.php:62
+msgid "License Key"
+msgstr "Clé de licence"
+
+#: key/key.php:65
+msgid "Enter the complete key."
+msgstr "Entrez la clé complète."
+
+#: key/key.php:69
+msgid "Verify License"
+msgstr "Vérifier la licence"
+
+#: key/key.php:73
+msgid "Current Status"
+msgstr "Statut actuel"
+
+#: key/key.php:80
+msgid "Authorized Domain:"
+msgstr "Domaine autorisé :"
+
+#: key/key.php:81
+msgid "License Created:"
+msgstr "Licence créée :"
+
+#: key/key.php:82
+msgid "Expires on:"
+msgstr "Expire le :"
+
+#: key/key.php:87
+#, php-format
+msgid "🟢 %d days remaining (%.1f months)"
+msgstr "🟢 %d jours restants (%.1f mois)"
+
+#: key/key.php:97
+#, php-format
+msgid "🔴 License expired %d days ago"
+msgstr "🔴 Licence expirée il y a %d jours"
+
+#: key/key.php:108
+#, php-format
+msgid "❌ The saved license is no longer valid: %s"
+msgstr "❌ La licence enregistrée n'est plus valide : %s"
+
+#: key/key.php:128
+msgid "Incorrect format, please acquire a valid license."
+msgstr "Format incorrect, veuillez acquérir une licence valide."
+
+#: key/key.php:148
+msgid "Invalid domain"
+msgstr "Domaine invalide"
+
+#: key/key.php:154
+msgid "The key is not for this domain."
+msgstr "La clé n'est pas pour ce domaine."
+
+#: key/key.php:164
+msgid "Hash does not match. Key is corrupted or tampered."
+msgstr "Le hash ne correspond pas. La clé est corrompue ou altérée."
+
+#: key/key.php:185
+#, php-format
+msgid "License expired %d days ago (expired on %s)"
+msgstr "Licence expirée il y a %d jours (expirée le %s)"
+
+#: tracking/kits/01-last-visit.php:178
+msgid "Source:"
+msgstr "Source :"
+
+#: tracking/kits/01-last-visit.php:180
+msgid "All"
+msgstr "Tout"
+
+#: tracking/kits/01-last-visit.php:191
+msgid "From:"
+msgstr "De :"
+
+#: tracking/kits/01-last-visit.php:195
+msgid "To:"
+msgstr "À :"
+
+#: tracking/kits/01-last-visit.php:199
+msgid "URL contains:"
+msgstr "L'URL contient :"
+
+#: tracking/kits/01-last-visit.php:203
+msgid "View:"
+msgstr "Affichage :"
+
+#: tracking/kits/01-last-visit.php:205
+msgid "Detailed (date and time)"
+msgstr "Détaillé (date et heure)"
+
+#: tracking/kits/01-last-visit.php:206
+msgid "Grouped by day"
+msgstr "Groupé par jour"
+
+#: tracking/kits/01-last-visit.php:207
+msgid "Grouped by month"
+msgstr "Groupé par mois"
+
+#: tracking/kits/01-last-visit.php:208
+msgid "Grouped by year"
+msgstr "Groupé par année"
+
+#: tracking/kits/01-last-visit.php:209
+msgid "Global total"
+msgstr "Total global"
+
+#: tracking/kits/01-last-visit.php:213
+msgid "Filter"
+msgstr "Filtrer"
+
+#: tracking/kits/01-last-visit.php:217
+msgid "Last recorded visits"
+msgstr "Dernières visites enregistrées"
+
+#: tracking/kits/01-last-visit.php:223
+msgid "⬇ Download CSV"
+msgstr "⬇ Télécharger CSV"
+
+#: tracking/kits/01-last-visit.php:228
+msgid "No data available yet."
+msgstr "Aucune donnée disponible pour le moment."
+
+#: tracking/kits/01-last-visit.php:234
+msgid "Date and Time"
+msgstr "Date et heure"
+
+#: tracking/kits/01-last-visit.php:235 tracking/kits/06-export-csv.php:139
+msgid "Source"
+msgstr "Source"
+
+#: tracking/kits/01-last-visit.php:236 tracking/kits/06-export-csv.php:140
+msgid "URL"
+msgstr "URL"
+
+#: tracking/kits/01-last-visit.php:237 tracking/kits/06-export-csv.php:141
+msgid "Visits"
+msgstr "Visites"
+
+#: tracking/kits/01-last-visit.php:246
+msgid "All URLs"
+msgstr "Toutes les URL"
+
+#: tracking/kits/03-chart-graphic.php:67
+msgid "Visits Chart"
+msgstr "Graphique des visites"
+
+#: tracking/kits/03-chart-graphic.php:69
+msgid "All LLMs"
+msgstr "Tous les LLM"
+
+#: tracking/kits/04-tables.php:5
+msgid "Visits Summary"
+msgstr "Résumé des visites"
+
+#: tracking/kits/04-tables.php:14
+msgid "Last Day"
+msgstr "Dernier jour"
+
+#: tracking/kits/04-tables.php:15
+msgid "Last Week"
+msgstr "Dernière semaine"
+
+#: tracking/kits/04-tables.php:16
+msgid "Last Month"
+msgstr "Dernier mois"
+
+#: tracking/kits/04-tables.php:17
+msgid "Last Quarter"
+msgstr "Dernier trimestre"
+
+#: tracking/kits/04-tables.php:18
+msgid "Last Year"
+msgstr "Dernière année"
+
+#: tracking/kits/04-tables.php:26
+msgid "Period"
+msgstr "Période"
+
+#: tracking/kits/05-delete-data.php:1
+msgid "Delete Records"
+msgstr "Supprimer les enregistrements"
+
+#: tracking/kits/05-delete-data.php:5
+msgid "🧨 Delete all records"
+msgstr "🧨 Supprimer tous les enregistrements"
+
+#: tracking/kits/05-delete-data.php:28
+msgid "Are you completely sure?"
+msgstr "Êtes-vous complètement sûr ?"
+
+#: tracking/kits/05-delete-data.php:32
+msgid "This action will delete <strong>all records</strong> from the LLM visit tracking. The information cannot be recovered once deleted. We recommend <a href=\"#descargar-datos\" style=\"color:blue;\">downloading the information</a> before deleting the data."
+msgstr "Cette action supprimera <strong>tous les enregistrements</strong> du suivi des visites LLM. Les informations ne pourront pas être récupérées une fois supprimées. Nous recommandons de <a href=\"#descargar-datos\" style=\"color:blue;\">télécharger les informations</a> avant de supprimer les données."
+
+#: tracking/kits/05-delete-data.php:38
+msgid "Yes, delete everything"
+msgstr "Oui, tout supprimer"
+
+#: tracking/kits/05-delete-data.php:39
+msgid "Cancel"
+msgstr "Annuler"
+
+#: tracking/kits/05-delete-data.php:63
+msgid "⚠️ Final confirmation: Are you sure you want to delete all records?"
+msgstr "⚠️ Confirmation finale : Êtes-vous sûr de vouloir supprimer tous les enregistrements ?"
+
+#: tracking/kits/05-delete-data.php:81
+msgid "✅ Records deleted successfully."
+msgstr "✅ Enregistrements supprimés avec succès."
+
+#: tracking/kits/06-export-csv.php:138
+msgid "Date"
+msgstr "Date"
+
+#: tracking/kits/06-export-csv.php:155
+msgid "No data"
+msgstr "Aucune donnée"
+
+#: tracking/kits/07-ip-blacklist.php:102
+msgid "🚫 IP Blacklist"
+msgstr "🚫 Liste noire d'IP"
+
+#: tracking/kits/07-ip-blacklist.php:104
+msgid "List of IP addresses that <strong>will not be tracked</strong>. This is useful if you want to test and don't want them recorded in analytics. Enter one IP per line. Invalid IPs will be automatically ignored."
+msgstr "Liste d'adresses IP qui <strong>ne seront pas suivies</strong>. Ceci est utile si vous souhaitez tester sans que cela soit enregistré dans les analyses. Entrez une IP par ligne. Les IP invalides seront automatiquement ignorées."
+
+#: tracking/kits/07-ip-blacklist.php:110
+msgid "Blocked IPs"
+msgstr "IP bloquées"
+
+#: tracking/kits/07-ip-blacklist.php:127
+#, php-format
+msgid "💡 Your current IP: <code>%s</code>"
+msgstr "💡 Votre IP actuelle : <code>%s</code>"
+
+#: tracking/kits/07-ip-blacklist.php:132
+msgid "Blocked"
+msgstr "Bloquée"
+
+#: tracking/kits/07-ip-blacklist.php:134
+msgid "Allowed"
+msgstr "Autorisée"
+
+#: tracking/kits/07-ip-blacklist.php:135
+msgid "➕ Add my IP"
+msgstr "➕ Ajouter mon IP"
+
+#: tracking/kits/07-ip-blacklist.php:148
+#, php-format
+msgid "📊 Total blocked IPs: <strong>%d</strong>"
+msgstr "📊 Total d'IP bloquées : <strong>%d</strong>"
+
+#: tracking/kits/07-ip-blacklist.php:169
+msgid "Could not detect your IP."
+msgstr "Impossible de détecter votre IP."
+
+#: tracking/kits/07-ip-blacklist.php:179
+msgid "Your IP is already in the blacklist."
+msgstr "Votre IP est déjà dans la liste noire."
+
+#: tracking/kits/07-ip-blacklist.php:191
+msgid "✅ IP added"
+msgstr "✅ IP ajoutée"
+
+#: tracking/llm-track.php:21
+msgid "✅ <strong>LLM visit tracking automatically enabled</strong> after verifying your valid license."
+msgstr "✅ <strong>Suivi des visites LLM automatiquement activé</strong> après vérification de votre licence valide."
+
+#: tracking/llm-track.php:86
+msgid "Other LLMs"
+msgstr "Autres LLM"
+
+#: tracking/llm-track.php:104
+msgid "LLM Tracking"
+msgstr "Suivi LLM"
+
+#: tracking/llm-track.php:113
+msgid "Enable visit tracking?"
+msgstr "Activer le suivi des visites ?"
+
+#: tracking/llm-track.php:124
+msgid "Allowed Sources"
+msgstr "Sources autorisées"
+
+#: tracking/llm-track.php:137
+msgid "Coming Soon"
+msgstr "Prochainement"
+
+#: tracking/llm-track.php:163
+msgid "Save Blacklist"
+msgstr "Enregistrer la liste noire"
+
+msgid "Select LLMs"
+msgstr "Sélectionner les LLMs"
+
+msgid "Latest registered visits"
+msgstr "Dernières visites enregistrées"
+
+msgid "Download CSV"
+msgstr "Télécharger le CSV"
+
+msgid "Date and time"
+msgstr "Date et heure"

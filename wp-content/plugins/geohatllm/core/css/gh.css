@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+nav.gh-main-nav {
+    margin-left: -20px;
+    width: calc(100% + 20px) !important;
+    background: #ffffffc9;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    font-family: "Sedgwick Ave", cursive;
+    box-shadow: 0px 4px 6px 3px #0000000a;
+}
+.gh-long-titlenavbar {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.gh-title-nav {
+    font-size: 1.8em;
+}
+.gh-nav-desc {
+    font-size: 16px;
+    text-decoration: underline;
+}
+.gh-title-nav {
+    font-size: 1.8em;
+    margin-left: 5px;
+}
+div#wpcontent {
+    overflow-x: hidden;
+}
+.gh-bots-selection label {
+    font-size: 16px;
+}
+label.gh-user-agent, .ghbot-t {
+    position: relative;
+    cursor: pointer;
+}
+.gh-bots-selection {
+    display: grid;
+    gap: 16px 24px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 2em;
+}
+.gh-user-agent:after {
+    content: '';
+    height: 1.5em;
+    width: 1.5em;
+    background-image: url(/wp-content/plugins/geohatllm/core/img/user-bot.svg);
+    margin-left: 5px;
+    display: inline-flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 1px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.ghbot-t .gh-user-agent {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, 10px);
+}
+td.ai-tracker-list {line-height: 1.8;}
+.ghlabel-ChatGPT-User:after, .ghlabel-GPT-bot:after, .ghlabel-OAI-SearchBot:after
+, .ghlabel-chatgpt:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/chatgpt.svg);
+}
+.ghlabel-Applebot:after, .ghlabel-Applebot-Extended:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/apple.svg);
+}
+.ghlabel-anthropic-ai:after, .ghlabel-ClaudeBot:after, .ghlabel-claude-web:after, .ghlabel-Claude-User:after
+, .ghlabel-claude:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/claude.svg);
+}
+.ghlabel-MistralBot:after, .ghlabel-MistralAI-User:after, .ghlabel-LeChat:after
+, .ghlabel-mistral:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/mistral.png);
+}
+.ghlabel-Perplexity-User:after, .ghlabel-PerplexityBot:after
+, .ghlabel-perplexity:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/perplexity.svg);
+}
+.ghlabel-DeepseekBot:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/deepseek.svg);
+}
+.ghlabel-Bytespider:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/tiktok.ico);
+}
+.ghlabel-BingBot:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/bing.svg);
+}
+.ghlabel-copilot:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/copilot.svg);
+}
+.ghlabel-Google-Extended:after
+, .ghlabel-gemini:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/gemini.svg);
+}
+.ghlabel-DuckAssistBot:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/duck.svg);
+}
+.ghlabel-AmazonBot:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/amazon.ico);
+}
+.ghlabel-Twitterbot:after, .ghlabel-Grok:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/x.svg);
+}
+.ghlabel-LLaMA-Bot:after, .ghlabel-meta-webindexer:after
+, .ghlabel-meta-externalagent:after, .ghlabel-meta-externalfetcher:after{
+        background-image: url(/wp-content/plugins/geohatllm/core/img/ai-logos/llama.ico);
+}
+p {
+    max-width: 100ch;
+}
+
+.last-visist-selector {
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    margin: 2em auto;
+    padding: 12px;
+    background: linear-gradient(105deg, #5b68eb 0, #3ab5c7 100%);
+    border-radius: 13px;
+    color: white;
+    font-size: 20px;
+}
+.leyenda-ocultar-contenido summary {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 15px;
+}
+span.readtutorial {
+    color: grey;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.inside-leyenda {
+    margin-left: 2em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 2em;
+}
+.filtros-info {
+    margin: 1em auto;
+    width: fit-content;
+    font-size: 20px;
+    display: flex;
+    gap: 8px;
+    background: linear-gradient(105deg, #5b68eb 0, #3ab5c7 100%);
+    padding: 10px;
+    color: white;
+    border-radius: 13px;
+    align-items: center;
+}
+.gh-lastv.ghdates {
+    font-weight: 600;
+}
+.gh-lastv.ghsources {
+    font-weight: 100;
+}
+
+#gh-last-visits th {
+  transition: background 0.2s, color 0.2s;
+}
+#gh-last-visits th:hover {
+  background-color: rgba(59,130,246,0.1);
+}
+#gh-last-visits th.text-blue-700 {
+  background-color: rgba(59,130,246,0.08);
+}
+.ghrc {
+    font-weight: 600;
+}
+.gh-rc-green {
+    color: green;
+}
+.gh-rc-blue {
+    color: blue;
+}
+.gh-rc-red {
+    color: red;
+}
+.gh-rc-orange {
+    color: darkorange;
+}
+.flechith {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 17px;
+    color: black;
+}
+.last-visist-selector input {
+    cursor: pointer;
+}
+div#llm-dropdown {
+    color: black;
+    min-width: max-content;
+}
+
+.gh-paginacion {
+    margin: auto;
+    width: fit-content;
+}
+.ip-blacklist-section {
+    margin-top: 3em;
+}

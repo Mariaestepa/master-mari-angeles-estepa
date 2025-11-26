@@ -1,0 +1,629 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-10-14 15:02+0200\n"
+"PO-Revision-Date: 2025-10-15 14:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;esc_html__;esc_html_e;esc_attr__;esc_attr_e;esc_js__;esc_js_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: geohatllm.php\n"
+"X-Poedit-SearchPath-2: tracking/llm-track.php\n"
+"X-Poedit-SearchPath-3: tracking/kits/01-last-visit.php\n"
+"X-Poedit-SearchPath-4: tracking/kits/02-visual-chart.php\n"
+"X-Poedit-SearchPath-5: tracking/kits/03-chart-graphic.php\n"
+"X-Poedit-SearchPath-6: tracking/kits/04-tables.php\n"
+"X-Poedit-SearchPath-7: tracking/kits/05-delete-data.php\n"
+"X-Poedit-SearchPath-8: tracking/kits/06-export-csv.php\n"
+"X-Poedit-SearchPath-9: tracking/kits/07-ip-blacklist.php\n"
+"X-Poedit-SearchPath-10: tracking/kits/track.css\n"
+"X-Poedit-SearchPath-11: key/key.php\n"
+"X-Poedit-SearchPath-12: core/cache.php\n"
+"X-Poedit-SearchPath-13: core/cookie.php\n"
+"X-Poedit-SearchPath-14: core/editors.php\n"
+"X-Poedit-SearchPath-15: core/llm-css.php\n"
+"X-Poedit-SearchPath-16: core/start.php\n"
+
+#: core/cookie.php:13
+msgid "👁️ LLM Mode: ACTIVE"
+msgstr "👁️ LLM 모드: 활성화"
+
+#: core/cookie.php:14
+msgid "🕵️ Enable LLM Mode"
+msgstr "🕵️ LLM 모드 활성화"
+
+#: core/cookie.php:35
+msgid "You are viewing as an LLM Bot"
+msgstr "LLM 봇으로 보기 중입니다"
+
+#: core/editors.php:43
+msgid "GEOhat"
+msgstr "GEOhat"
+
+#: core/editors.php:46
+msgid "Hide from bots (GEOhat)"
+msgstr "봇에게 숨기기 (GEOhat)"
+
+#: core/editors.php:53 core/editors.php:142 core/editors.php:219
+msgid "Hide from search engines"
+msgstr "검색 엔진에게 숨기기"
+
+#: core/editors.php:129 core/editors.php:207
+msgid "Hide from LLMs (Geohat)"
+msgstr "LLM에게 숨기기 (Geohat)"
+
+#: core/editors.php:131 core/editors.php:144 core/editors.php:209 core/editors.php:221 core/editors.php:271 core/editors.php:284 core/editors.php:341
+#: core/editors.php:382 core/editors.php:390
+msgid "Yes"
+msgstr "예"
+
+#: core/editors.php:132 core/editors.php:145 core/editors.php:210 core/editors.php:222 core/editors.php:270 core/editors.php:283 core/editors.php:340
+msgid "No"
+msgstr "아니오"
+
+#: core/editors.php:199 core/start.php:71
+msgid "GEOhat LLM"
+msgstr "GEOhat LLM"
+
+#: core/editors.php:267
+msgid "Hide from search engine snippets (data-nosnippet)"
+msgstr "검색 엔진 스니펫에서 숨기기 (data-nosnippet)"
+
+#: core/editors.php:276
+msgid "Adds data-nosnippet=\"true\" (only valid on section/div/span)."
+msgstr "data-nosnippet=\"true\" 추가 (section/div/span에서만 유효)"
+
+#: core/editors.php:280
+msgid "Hide from LLMs (data-nosnippet-geohat)"
+msgstr "LLM에게 숨기기 (data-nosnippet-geohat)"
+
+#: core/editors.php:289
+msgid "Adds data-nosnippet-geohat=\"true\"."
+msgstr "data-nosnippet-geohat=\"true\" 추가."
+
+#: core/editors.php:337
+msgid "Hide from search engines (data-nosnippet)"
+msgstr "검색 엔진에게 숨기기 (data-nosnippet)"
+
+#: core/editors.php:380
+msgid "Prevent content from being shown to selected LLMs in GEOhat"
+msgstr "GEOhat에서 선택된 LLM에게 콘텐츠 표시 방지"
+
+#: core/editors.php:383 core/editors.php:391
+msgid "Geohat"
+msgstr "Geohat"
+
+#: core/editors.php:388
+msgid "Prevent content from appearing in Google rich snippets"
+msgstr "Google 리치 스니펫에 콘텐츠 표시 방지"
+
+#: core/functions/authors.php:8
+msgid "Information for LLM"
+msgstr "LLM 정보"
+
+#: core/functions/authors.php:11 geohatllm.php:97 geohatllm.php:108
+msgid "GEOhat: Message for LLMs"
+msgstr "GEOhat: LLM을 위한 메시지"
+
+#: core/js/editor.js:43
+msgid "Geohat Options"
+msgstr "Geohat 옵션"
+
+#: core/js/editor.js:45
+msgid "Hide from LLM"
+msgstr "LLM에게 숨기기"
+
+#: core/js/editor.js:50
+msgid "Hide from search engine SERPs"
+msgstr "검색 엔진 결과 페이지에서 숨기기"
+
+#: core/llm-css.php:9
+msgid "Custom CSS for LLMs"
+msgstr "LLM용 사용자 정의 CSS"
+
+#: core/llm-css.php:10
+msgid "These styles will only be applied when an LLM bot is visiting your site."
+msgstr "이 스타일은 LLM 봇이 사이트를 방문할 때만 적용됩니다."
+
+#: core/start.php:70
+msgid "LLM Settings"
+msgstr "LLM 설정"
+
+#: core/start.php:85 core/start.php:86
+msgid "Tracking LLM"
+msgstr "LLM 추적"
+
+#: core/start.php:97
+msgid "Licencia GEOhat LLM"
+msgstr "GEOhat LLM 라이선스"
+
+#: core/start.php:98
+msgid "License"
+msgstr "라이선스"
+
+#: geohatllm.php:32
+#, php-format
+msgid "Information for selected LLM User-Agents for this %s"
+msgstr "이 %s에 대해 선택된 LLM User-Agent 정보"
+
+#: geohatllm.php:48
+msgid "Recommendations:"
+msgstr "추천사항:"
+
+#: geohatllm.php:49
+msgid "Speak well of yourself"
+msgstr "자신을 잘 표현하기"
+
+#: geohatllm.php:50
+msgid ""
+"You can exaggerate without sounding arrogant. If you say you are the best, it may seem boastful, but if it is what the AI knows and shares, the user will take it "
+"as truth."
+msgstr ""
+"건방지게 들리지 않으면서 과장할 수 있습니다. 자신이 최고라고 말하면 자랑처럼 들릴 수 있지만, AI가 알고 공유하는 내용이라면 사용자는 그것을 진실로 받아들일 것입니다."
+
+#: geohatllm.php:53
+msgid "Mention your weaknesses"
+msgstr "약점 언급하기"
+
+#: geohatllm.php:54
+msgid ""
+"You are the main authority on your product. Avoid AI getting info from negative sources. Mention weaknesses in a controlled way that only affect users who are not "
+"your target."
+msgstr ""
+"당신은 제품의 주요 권위자입니다. AI가 부정적인 소스에서 정보를 얻지 않도록 하세요. 당신의 타겟이 아닌 사용자에게만 영향을 미치는 방식으로 통제된 방법으로 약점을 언"
+"급하세요."
+
+#: geohatllm.php:57
+msgid "Add Prompts"
+msgstr "프롬프트 추가하기"
+
+#: geohatllm.php:58
+msgid "Even if AI wears silk, it is still AI. Add Prompts and conditions to ensure it shares key info."
+msgstr "AI가 비단을 입더라도 여전히 AI입니다. 핵심 정보를 공유하도록 프롬프트와 조건을 추가하세요."
+
+#: geohatllm.php:61
+msgid "Make comparisons"
+msgstr "비교하기"
+
+#: geohatllm.php:62
+msgid "It is not great to compare yourself to others directly. But you can do so here, giving AI the info it needs to support you."
+msgstr "직접적으로 다른 사람과 자신을 비교하는 것은 좋지 않습니다. 하지만 여기서는 AI가 당신을 지원하는 데 필요한 정보를 제공하여 그렇게 할 수 있습니다."
+
+#: geohatllm.php:258
+msgid "LLM Bots Settings"
+msgstr "LLM 봇 설정"
+
+#: geohatllm.php:263 tracking/llm-track.php:115
+msgid "License required"
+msgstr "라이선스 필요"
+
+#: geohatllm.php:264
+msgid "User-Agent selection is disabled."
+msgstr "User-Agent 선택이 비활성화되었습니다."
+
+#: geohatllm.php:265
+msgid "Activate license"
+msgstr "라이선스 활성화"
+
+#: geohatllm.php:273
+msgid "Known AI Bots"
+msgstr "알려진 AI 봇"
+
+#: geohatllm.php:274
+msgid "Select allowed User-Agents that can access special content for LLM."
+msgstr "LLM용 특별 콘텐츠에 접근할 수 있는 허용된 User-Agent를 선택하세요."
+
+#: geohatllm.php:287
+msgid "Grok"
+msgstr "Grok"
+
+#: geohatllm.php:290
+msgid "Custom Bots"
+msgstr "사용자 정의 봇"
+
+#: geohatllm.php:291
+msgid "Enter one User-Agent per line:"
+msgstr "한 줄에 하나의 User-Agent를 입력하세요:"
+
+#: geohatllm.php:296
+msgid "Content visible only to users"
+msgstr "사용자에게만 보이는 콘텐츠"
+
+#: geohatllm.php:297
+msgid "How to hide content from bots?"
+msgstr "봇에게 콘텐츠를 숨기는 방법?"
+
+#: geohatllm.php:298
+msgid "The selected options above will allow you to show content only to LLM bots."
+msgstr "위에서 선택한 옵션을 통해 LLM 봇에게만 콘텐츠를 표시할 수 있습니다."
+
+#: geohatllm.php:299
+msgid "However, you can also do the opposite: show content to everyone except selected bots."
+msgstr "그러나 반대로도 할 수 있습니다: 선택된 봇을 제외한 모든 사람에게 콘텐츠를 표시합니다."
+
+#: geohatllm.php:301
+#, php-format
+msgid "You can hide any block, section or module from selected user-agents by simply adding %1$s as an attribute or the class %2$s to its HTML."
+msgstr "선택된 user-agent로부터 블록, 섹션 또는 모듈을 숨기려면 HTML에 %1$s를 속성으로 추가하거나 %2$s 클래스를 추가하기만 하면 됩니다."
+
+#: geohatllm.php:306
+msgid "from block tab (Geohat Options)"
+msgstr "블록 탭에서 (Geohat 옵션)"
+
+#: geohatllm.php:307
+msgid "Advanced tab → after \"CSS Classes\""
+msgstr "고급 탭 → \"CSS 클래스\" 이후"
+
+#: geohatllm.php:308
+msgid "More tools → Formats → Hide from bots"
+msgstr "더 많은 도구 → 서식 → 봇에게 숨기기"
+
+#: geohatllm.php:309
+msgid "Any editor"
+msgstr "모든 편집기"
+
+#: geohatllm.php:309
+msgid "Add the class or attribute manually"
+msgstr "클래스 또는 속성 수동 추가"
+
+#: geohatllm.php:311
+msgid "If the bot matches one of the selected user-agents, this content will not be shown."
+msgstr "봇이 선택된 user-agent 중 하나와 일치하면 이 콘텐츠는 표시되지 않습니다."
+
+#: geohatllm.php:314
+msgid "Disable Cache"
+msgstr "캐시 비활성화"
+
+#: geohatllm.php:315
+msgid "Enable this option only if you use WP Rocket, LiteSpeed or other systems that cache HTML and you do not see the plugin working."
+msgstr "WP Rocket, LiteSpeed 또는 HTML을 캐시하는 다른 시스템을 사용하고 플러그인이 작동하지 않는 경우에만 이 옵션을 활성화하세요."
+
+#: geohatllm.php:316
+msgid "Disable cache for these bots"
+msgstr "이러한 봇에 대해 캐시 비활성화"
+
+#: geohatllm.php:321
+msgid "Remove ChatGPT traces"
+msgstr "ChatGPT 흔적 제거"
+
+#: geohatllm.php:322
+msgid "Enable this option if you want to remove invisible HTML attributes used by LLM tools like ChatGPT, Claude, Bard, etc. Attributes removed:"
+msgstr "ChatGPT, Claude, Bard 등 LLM 도구에서 사용하는 보이지 않는 HTML 속성을 제거하려면 이 옵션을 활성화하세요. 제거된 속성:"
+
+#: geohatllm.php:325
+msgid "Remove ChatGPT traces from your content"
+msgstr "콘텐츠에서 ChatGPT 흔적 제거"
+
+#: key/key.php:32
+#, php-format
+msgid "✅ License verified successfully.<br>Created on <strong>%s</strong><br>Expires on <strong>%s</strong><br><strong>%d days</strong> remaining."
+msgstr "✅ 라이선스가 성공적으로 확인되었습니다.<br>생성일: <strong>%s</strong><br>만료일: <strong>%s</strong><br>남은 기간: <strong>%d일</strong>"
+
+#: key/key.php:40
+#, php-format
+msgid "❌ Invalid license: %s"
+msgstr "❌ 잘못된 라이선스: %s"
+
+#: key/key.php:55
+msgid "🔐 GEOhat LLM License"
+msgstr "🔐 GEOhat LLM 라이선스"
+
+#: key/key.php:62
+msgid "License Key"
+msgstr "라이선스 키"
+
+#: key/key.php:65
+msgid "Enter the complete key."
+msgstr "전체 키를 입력하세요."
+
+#: key/key.php:69
+msgid "Verify License"
+msgstr "라이선스 확인"
+
+#: key/key.php:73
+msgid "Current Status"
+msgstr "현재 상태"
+
+#: key/key.php:80
+msgid "Authorized Domain:"
+msgstr "승인된 도메인:"
+
+#: key/key.php:81
+msgid "License Created:"
+msgstr "라이선스 생성일:"
+
+#: key/key.php:82
+msgid "Expires on:"
+msgstr "만료일:"
+
+#: key/key.php:87
+#, php-format
+msgid "🟢 %d days remaining (%.1f months)"
+msgstr "🟢 남은 기간 %d일 (%.1f개월)"
+
+#: key/key.php:97
+#, php-format
+msgid "🔴 License expired %d days ago"
+msgstr "🔴 라이선스가 %d일 전에 만료됨"
+
+#: key/key.php:108
+#, php-format
+msgid "❌ The saved license is no longer valid: %s"
+msgstr "❌ 저장된 라이선스가 더 이상 유효하지 않습니다: %s"
+
+#: key/key.php:128
+msgid "Incorrect format, please acquire a valid license."
+msgstr "잘못된 형식입니다. 유효한 라이선스를 획득하세요."
+
+#: key/key.php:148
+msgid "Invalid domain"
+msgstr "잘못된 도메인"
+
+#: key/key.php:154
+msgid "The key is not for this domain."
+msgstr "이 키는 이 도메인용이 아닙니다."
+
+#: key/key.php:164
+msgid "Hash does not match. Key is corrupted or tampered."
+msgstr "해시가 일치하지 않습니다. 키가 손상되었거나 조작되었습니다."
+
+#: key/key.php:185
+#, php-format
+msgid "License expired %d days ago (expired on %s)"
+msgstr "라이선스가 %d일 전에 만료됨 (만료일: %s)"
+
+#: tracking/kits/01-last-visit.php:178
+msgid "Source:"
+msgstr "소스:"
+
+#: tracking/kits/01-last-visit.php:180
+msgid "All"
+msgstr "모두"
+
+#: tracking/kits/01-last-visit.php:191
+msgid "From:"
+msgstr "부터:"
+
+#: tracking/kits/01-last-visit.php:195
+msgid "To:"
+msgstr "까지:"
+
+#: tracking/kits/01-last-visit.php:199
+msgid "URL contains:"
+msgstr "URL 포함:"
+
+#: tracking/kits/01-last-visit.php:203
+msgid "View:"
+msgstr "보기:"
+
+#: tracking/kits/01-last-visit.php:205
+msgid "Detailed (date and time)"
+msgstr "상세 (날짜 및 시간)"
+
+#: tracking/kits/01-last-visit.php:206
+msgid "Grouped by day"
+msgstr "일별 그룹화"
+
+#: tracking/kits/01-last-visit.php:207
+msgid "Grouped by month"
+msgstr "월별 그룹화"
+
+#: tracking/kits/01-last-visit.php:208
+msgid "Grouped by year"
+msgstr "연도별 그룹화"
+
+#: tracking/kits/01-last-visit.php:209
+msgid "Global total"
+msgstr "전체 합계"
+
+#: tracking/kits/01-last-visit.php:213
+msgid "Filter"
+msgstr "필터"
+
+#: tracking/kits/01-last-visit.php:217
+msgid "Last recorded visits"
+msgstr "마지막 기록된 방문"
+
+#: tracking/kits/01-last-visit.php:223
+msgid "⬇ Download CSV"
+msgstr "⬇ CSV 다운로드"
+
+#: tracking/kits/01-last-visit.php:228
+msgid "No data available yet."
+msgstr "아직 사용 가능한 데이터가 없습니다."
+
+#: tracking/kits/01-last-visit.php:234
+msgid "Date and Time"
+msgstr "날짜 및 시간"
+
+#: tracking/kits/01-last-visit.php:235 tracking/kits/06-export-csv.php:139
+msgid "Source"
+msgstr "소스"
+
+#: tracking/kits/01-last-visit.php:236 tracking/kits/06-export-csv.php:140
+msgid "URL"
+msgstr "URL"
+
+#: tracking/kits/01-last-visit.php:237 tracking/kits/06-export-csv.php:141
+msgid "Visits"
+msgstr "방문 수"
+
+#: tracking/kits/01-last-visit.php:246
+msgid "All URLs"
+msgstr "모든 URL"
+
+#: tracking/kits/03-chart-graphic.php:67
+msgid "Visits Chart"
+msgstr "방문 차트"
+
+#: tracking/kits/03-chart-graphic.php:69
+msgid "All LLMs"
+msgstr "모든 LLM"
+
+#: tracking/kits/04-tables.php:5
+msgid "Visits Summary"
+msgstr "방문 요약"
+
+#: tracking/kits/04-tables.php:14
+msgid "Last Day"
+msgstr "지난 1일"
+
+#: tracking/kits/04-tables.php:15
+msgid "Last Week"
+msgstr "지난 1주"
+
+#: tracking/kits/04-tables.php:16
+msgid "Last Month"
+msgstr "지난 1개월"
+
+#: tracking/kits/04-tables.php:17
+msgid "Last Quarter"
+msgstr "지난 분기"
+
+#: tracking/kits/04-tables.php:18
+msgid "Last Year"
+msgstr "지난 1년"
+
+#: tracking/kits/04-tables.php:26
+msgid "Period"
+msgstr "기간"
+
+#: tracking/kits/05-delete-data.php:1
+msgid "Delete Records"
+msgstr "기록 삭제"
+
+#: tracking/kits/05-delete-data.php:5
+msgid "🧨 Delete all records"
+msgstr "🧨 모든 기록 삭제"
+
+#: tracking/kits/05-delete-data.php:28
+msgid "Are you completely sure?"
+msgstr "정말로 확실합니까?"
+
+#: tracking/kits/05-delete-data.php:32
+msgid ""
+"This action will delete <strong>all records</strong> from the LLM visit tracking. The information cannot be recovered once deleted. We recommend <a "
+"href=\"#descargar-datos\" style=\"color:blue;\">downloading the information</a> before deleting the data."
+msgstr ""
+"이 작업은 LLM 방문 추적에서 <strong>모든 기록</strong>을 삭제합니다. 삭제된 정보는 복구할 수 없습니다. 데이터를 삭제하기 전에 <a href=\"#descargar-datos\" "
+"style=\"color:blue;\">정보를 다운로드</a>하는 것을 권장합니다."
+
+#: tracking/kits/05-delete-data.php:38
+msgid "Yes, delete everything"
+msgstr "예, 모두 삭제합니다"
+
+#: tracking/kits/05-delete-data.php:39
+msgid "Cancel"
+msgstr "취소"
+
+#: tracking/kits/05-delete-data.php:63
+msgid "⚠️ Final confirmation: Are you sure you want to delete all records?"
+msgstr "⚠️ 최종 확인: 정말로 모든 기록을 삭제하시겠습니까?"
+
+#: tracking/kits/05-delete-data.php:81
+msgid "✅ Records deleted successfully."
+msgstr "✅ 기록이 성공적으로 삭제되었습니다."
+
+#: tracking/kits/06-export-csv.php:138
+msgid "Date"
+msgstr "날짜"
+
+#: tracking/kits/06-export-csv.php:155
+msgid "No data"
+msgstr "데이터 없음"
+
+#: tracking/kits/07-ip-blacklist.php:102
+msgid "🚫 IP Blacklist"
+msgstr "🚫 IP 블랙리스트"
+
+#: tracking/kits/07-ip-blacklist.php:104
+msgid ""
+"List of IP addresses that <strong>will not be tracked</strong>. This is useful if you want to test and don't want them recorded in analytics. Enter one IP per "
+"line. Invalid IPs will be automatically ignored."
+msgstr ""
+"<strong>추적되지 않을</strong> IP 주소 목록입니다. 테스트하고 분석에 기록되지 않도록 하려는 경우 유용합니다. 한 줄에 하나의 IP를 입력하세요. 잘못된 IP는 자동으로 무"
+"시됩니다."
+
+#: tracking/kits/07-ip-blacklist.php:110
+msgid "Blocked IPs"
+msgstr "차단된 IP"
+
+#: tracking/kits/07-ip-blacklist.php:127
+#, php-format
+msgid "💡 Your current IP: <code>%s</code>"
+msgstr "💡 현재 IP: <code>%s</code>"
+
+#: tracking/kits/07-ip-blacklist.php:132
+msgid "Blocked"
+msgstr "차단됨"
+
+#: tracking/kits/07-ip-blacklist.php:134
+msgid "Allowed"
+msgstr "허용됨"
+
+#: tracking/kits/07-ip-blacklist.php:135
+msgid "➕ Add my IP"
+msgstr "➕ 내 IP 추가"
+
+#: tracking/kits/07-ip-blacklist.php:148
+#, php-format
+msgid "📊 Total blocked IPs: <strong>%d</strong>"
+msgstr "📊 총 차단된 IP 수: <strong>%d</strong>"
+
+#: tracking/kits/07-ip-blacklist.php:169
+msgid "Could not detect your IP."
+msgstr "IP를 감지할 수 없습니다."
+
+#: tracking/kits/07-ip-blacklist.php:179
+msgid "Your IP is already in the blacklist."
+msgstr "귀하의 IP는 이미 블랙리스트에 있습니다."
+
+#: tracking/kits/07-ip-blacklist.php:191
+msgid "✅ IP added"
+msgstr "✅ IP 추가됨"
+
+#: tracking/llm-track.php:21
+msgid "✅ <strong>LLM visit tracking automatically enabled</strong> after verifying your valid license."
+msgstr "✅ 유효한 라이선스 확인 후 <strong>LLM 방문 추적이 자동으로 활성화되었습니다</strong>."
+
+#: tracking/llm-track.php:86
+msgid "Other LLMs"
+msgstr "기타 LLM"
+
+#: tracking/llm-track.php:104
+msgid "LLM Tracking"
+msgstr "LLM 추적"
+
+#: tracking/llm-track.php:113
+msgid "Enable visit tracking?"
+msgstr "방문 추적을 활성화하시겠습니까?"
+
+#: tracking/llm-track.php:124
+msgid "Allowed Sources"
+msgstr "허용된 소스"
+
+#: tracking/llm-track.php:137
+msgid "Coming Soon"
+msgstr "곧 출시 예정"
+
+#: tracking/llm-track.php:163
+msgid "Save Blacklist"
+msgstr "블랙리스트 저장"
+
+msgid "Select LLMs"
+msgstr "LLM 선택"
+
+msgid "Latest registered visits"
+msgstr "최근 등록된 방문"
+
+msgid "Download CSV"
+msgstr "CSV 다운로드"
+
+msgid "Date and time"
+msgstr "날짜와 시간"
